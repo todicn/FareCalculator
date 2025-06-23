@@ -14,6 +14,13 @@ class Program
 {
     static async Task Main(string[] args)
     {
+        // Check if running in visualization mode
+        if (args.Length > 0 && args[0].ToLower() == "--visualize")
+        {
+            await Visualization.VisualizationDemo.RunAsync();
+            return;
+        }
+
         // Create host with dependency injection
         var host = CreateHostBuilder(args).Build();
         
@@ -50,14 +57,18 @@ class Program
                     context.Configuration.GetSection(GeographyOptions.SectionName));
                 services.Configure<List<Station>>(
                     context.Configuration.GetSection(StationOptions.SectionName));
+                services.Configure<MetroLineOptions>(
+                    context.Configuration.GetSection(MetroLineOptions.SectionName));
 
                 // Register core services
                 services.AddScoped<IStationService, StationService>();
+                services.AddScoped<IMetroLineService, MetroLineService>();
                 services.AddScoped<IFareRuleEngine, FareRuleEngine>();
                 
                 // Register strategy pattern implementations
                 services.AddScoped<IFareCalculationStrategy, Strategies.ZoneBasedFareStrategy>();
                 services.AddScoped<IFareCalculationStrategy, Strategies.DistanceBasedFareStrategy>();
+                services.AddScoped<IFareCalculationStrategy, Strategies.MetroLineFareStrategy>();
                 services.AddScoped<IDiscountStrategy, Strategies.PassengerDiscountStrategy>();
                 services.AddScoped<IDiscountStrategy, Strategies.TimeBasedDiscountStrategy>();
                 
@@ -72,6 +83,9 @@ class Program
                 
                 // Register fare calculation service
                 services.AddScoped<IFareCalculationService, FareCalculationService>();
+                
+                // Register visualization services
+                services.AddScoped<Visualization.MetroMapGenerator>();
             })
             .ConfigureLogging(logging =>
             {

@@ -1,0 +1,41 @@
+Fare Calculation Guide
+=====================
+
+Base Fare Structure:
+-------------------
+  1 zone(s): $2.50
+  2 zone(s): $3.75
+  3 zone(s): $5.00
+
+Metro Line Multipliers:
+----------------------
+  BL (Blue Line): 1.0x multiplier
+  GL (Green Line): 1.0x multiplier
+  RL (Red Line): 1.2x multiplier
+  YL (Yellow Line): 0.8x multiplier
+
+Passenger Discounts:
+-------------------
+  Child: 50% discount
+  Disabled: 50% discount
+  Senior: 30% discount
+  Student: 20% discount
+
+Time-Based Adjustments:
+----------------------
+  Peak Hours Surcharge: 25%
+    Weekday Morning: 7:00-9:00
+    Weekday Evening: 17:00-19:00
+  Off-Peak Discount: 10%
+    Night Hours: 22:00-6:00
+
+Transfer Penalties:
+------------------
+  BL-GL: $0.50
+  BL-RL: $0.25
+  GL-BL: $0.50
+  GL-RL: $0.50
+  GL-YL: $0.75
+  RL-BL: $0.25
+  RL-GL: $0.50
+  YL-GL: $0.75

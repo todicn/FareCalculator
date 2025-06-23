@@ -186,6 +186,11 @@ public class StrategyPriorityOptions
     /// Gets or sets the time-based discount strategy priority.
     /// </summary>
     public int TimeBasedDiscountStrategy { get; set; } = 90;
+
+    /// <summary>
+    /// Gets or sets the metro line fare strategy priority.
+    /// </summary>
+    public int MetroLineFareStrategy { get; set; } = 110;
 }
 
 /// <summary>
@@ -218,4 +223,52 @@ public class StationOptions
     /// Gets or sets the list of configured stations.
     /// </summary>
     public List<Station> Stations { get; set; } = new();
+}
+
+/// <summary>
+/// Configuration options for metro line data.
+/// </summary>
+public class MetroLineOptions
+{
+    /// <summary>
+    /// Configuration section name in appsettings.json.
+    /// </summary>
+    public const string SectionName = "MetroLines";
+
+    /// <summary>
+    /// Gets or sets the list of metro lines in the system.
+    /// </summary>
+    public List<MetroLine> Lines { get; set; } = new();
+
+    /// <summary>
+    /// Gets or sets line-specific fare multipliers.
+    /// </summary>
+    public Dictionary<string, decimal> LineFareMultipliers { get; set; } = new();
+
+    /// <summary>
+    /// Gets or sets transfer penalties between different metro lines.
+    /// </summary>
+    public Dictionary<string, decimal> TransferPenalties { get; set; } = new();
+
+    /// <summary>
+    /// Gets the fare multiplier for a specific metro line code.
+    /// </summary>
+    /// <param name="lineCode">The metro line code.</param>
+    /// <returns>The fare multiplier for the line (default 1.0).</returns>
+    public decimal GetLineFareMultiplier(string lineCode)
+    {
+        return LineFareMultipliers.GetValueOrDefault(lineCode, 1.0m);
+    }
+
+    /// <summary>
+    /// Gets the transfer penalty for switching between metro lines.
+    /// </summary>
+    /// <param name="fromLineCode">The origin line code.</param>
+    /// <param name="toLineCode">The destination line code.</param>
+    /// <returns>The transfer penalty amount (default 0.0).</returns>
+    public decimal GetTransferPenalty(string fromLineCode, string toLineCode)
+    {
+        var key = $"{fromLineCode}-{toLineCode}";
+        return TransferPenalties.GetValueOrDefault(key, 0.0m);
+    }
 } 

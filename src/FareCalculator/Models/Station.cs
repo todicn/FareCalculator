@@ -34,4 +34,22 @@ public class Station
     /// </summary>
     /// <value>The longitude in decimal degrees, used for distance calculations between stations.</value>
     public double Longitude { get; set; }
+
+    /// <summary>
+    /// Gets or sets the collection of metro line IDs that serve this station.
+    /// </summary>
+    /// <value>A list of metro line identifiers indicating which lines stop at this station.</value>
+    public List<int> MetroLineIds { get; set; } = new();
+
+    /// <summary>
+    /// Gets or sets a value indicating whether this station is a transfer station.
+    /// </summary>
+    /// <value>True if the station allows transfers between different metro lines; otherwise, false.</value>
+    public bool IsTransferStation { get; set; } = false;
+
+    /// <summary>
+    /// Gets or sets the station type (e.g., "Standard", "Express", "Terminal").
+    /// </summary>
+    /// <value>A string describing the type or category of the station.</value>
+    public string StationType { get; set; } = "Standard";
 } 

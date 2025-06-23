@@ -1,0 +1,45 @@
+Metro System Map
+================
+
+Concentric Zone Layout:
+┌─────────────────────────────────────────┐
+│              Zone C (Outer)            │
+│  ┌───────────────────────────────────┐  │
+│  │           Zone B (Middle)        │  │
+│  │  ┌─────────────────────────────┐  │  │
+│  │  │      Zone A (Central)      │  │  │
+│  │  └─────────────────────────────┘  │  │
+│  └───────────────────────────────────┘  │
+└─────────────────────────────────────────┘
+
+Zone A Stations:
+  1. Downtown Central (RL, BL) [TRANSFER]
+  2. Uptown North (RL)
+  8. Harbor View (BL)
+
+Zone B Stations:
+  3. Eastside Plaza (BL, GL) [TRANSFER]
+  4. Westwood Terminal (GL)
+  7. University Campus (RL, GL) [TRANSFER]
+
+Zone C Stations:
+  5. Southgate Junction (BL, GL) [TRANSFER]
+  6. Airport Express (YL)
+
+Metro Lines:
+RL - Red Line (Express)
+     Route: Downtown Central → Uptown North → University Campus
+     Fare Multiplier: 1.2x
+
+BL - Blue Line (Local)
+     Route: Downtown Central → Eastside Plaza → Southgate Junction → Harbor View
+     Fare Multiplier: 1.0x
+
+GL - Green Line (Local)
+     Route: Eastside Plaza → Westwood Terminal → Southgate Junction → University Campus
+     Fare Multiplier: 1.0x
+
+YL - Yellow Line (Shuttle)
+     Route: Airport Express
+     Fare Multiplier: 0.8x
+

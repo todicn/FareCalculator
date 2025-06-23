@@ -175,6 +175,11 @@
             Gets or sets the time-based discount strategy priority.
             </summary>
         </member>
+        <member name="P:FareCalculator.Configuration.StrategyPriorityOptions.MetroLineFareStrategy">
+            <summary>
+            Gets or sets the metro line fare strategy priority.
+            </summary>
+        </member>
         <member name="T:FareCalculator.Configuration.GeographyOptions">
             <summary>
             Configuration options for geographical calculations.
@@ -204,6 +209,46 @@
             <summary>
             Gets or sets the list of configured stations.
             </summary>
+        </member>
+        <member name="T:FareCalculator.Configuration.MetroLineOptions">
+            <summary>
+            Configuration options for metro line data.
+            </summary>
+        </member>
+        <member name="F:FareCalculator.Configuration.MetroLineOptions.SectionName">
+            <summary>
+            Configuration section name in appsettings.json.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.MetroLineOptions.Lines">
+            <summary>
+            Gets or sets the list of metro lines in the system.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.MetroLineOptions.LineFareMultipliers">
+            <summary>
+            Gets or sets line-specific fare multipliers.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.MetroLineOptions.TransferPenalties">
+            <summary>
+            Gets or sets transfer penalties between different metro lines.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Configuration.MetroLineOptions.GetLineFareMultiplier(System.String)">
+            <summary>
+            Gets the fare multiplier for a specific metro line code.
+            </summary>
+            <param name="lineCode">The metro line code.</param>
+            <returns>The fare multiplier for the line (default 1.0).</returns>
+        </member>
+        <member name="M:FareCalculator.Configuration.MetroLineOptions.GetTransferPenalty(System.String,System.String)">
+            <summary>
+            Gets the transfer penalty for switching between metro lines.
+            </summary>
+            <param name="fromLineCode">The origin line code.</param>
+            <param name="toLineCode">The destination line code.</param>
+            <returns>The transfer penalty amount (default 0.0).</returns>
         </member>
         <member name="T:FareCalculator.Interfaces.IDiscountStrategy">
             <summary>
@@ -395,6 +440,66 @@
             <returns>The number of zones that will be crossed during the journey, used for fare calculation.</returns>
             <exception cref="T:System.ArgumentNullException">Thrown when either origin or destination parameter is null.</exception>
         </member>
+        <member name="T:FareCalculator.Interfaces.IMetroLineService">
+            <summary>
+            Provides services for managing and retrieving metro line information and operations.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IMetroLineService.GetMetroLineByIdAsync(System.Int32)">
+            <summary>
+            Retrieves a metro line by its unique identifier asynchronously.
+            </summary>
+            <param name="id">The unique identifier of the metro line.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the metro line if found, otherwise null.</returns>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IMetroLineService.GetMetroLineByCodeAsync(System.String)">
+            <summary>
+            Retrieves a metro line by its code asynchronously (case-insensitive search).
+            </summary>
+            <param name="code">The code of the metro line to search for.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the metro line if found, otherwise null.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the code parameter is null or empty.</exception>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IMetroLineService.GetAllMetroLinesAsync">
+            <summary>
+            Retrieves all available metro lines in the system asynchronously.
+            </summary>
+            <returns>A task that represents the asynchronous operation. The task result contains a collection of all metro lines.</returns>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IMetroLineService.GetMetroLinesByStationAsync(FareCalculator.Models.Station)">
+            <summary>
+            Gets all metro lines that serve a specific station asynchronously.
+            </summary>
+            <param name="station">The station to check for metro lines.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains metro lines serving the station.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the station parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IMetroLineService.GetStationsByMetroLineAsync(FareCalculator.Models.MetroLine)">
+            <summary>
+            Gets all stations served by a specific metro line asynchronously.
+            </summary>
+            <param name="metroLine">The metro line to get stations for.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains stations served by the metro line.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the metroLine parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IMetroLineService.HasDirectRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)">
+            <summary>
+            Determines if a direct route exists between two stations on the same metro line.
+            </summary>
+            <param name="origin">The origin station.</param>
+            <param name="destination">The destination station.</param>
+            <returns>A task that represents the asynchronous operation. The task result indicates if a direct route exists.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when either origin or destination parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IMetroLineService.CalculateOptimalRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)">
+            <summary>
+            Calculates the required transfers between two stations and returns the optimal route.
+            </summary>
+            <param name="origin">The origin station.</param>
+            <param name="destination">The destination station.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the optimal route with transfer information.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when either origin or destination parameter is null.</exception>
+        </member>
         <member name="T:FareCalculator.Interfaces.IStationService">
             <summary>
             Provides services for managing and retrieving station information and calculating distances between stations.
@@ -500,6 +605,151 @@
             </summary>
             <value>Human-readable text providing details about how the fare was calculated, including any discounts or surcharges applied.</value>
         </member>
+        <member name="T:FareCalculator.Models.MetroLine">
+            <summary>
+            Represents a metro line with its characteristics and operational information.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.MetroLine.Id">
+            <summary>
+            Gets or sets the unique identifier for the metro line.
+            </summary>
+            <value>A positive integer that uniquely identifies the metro line within the system.</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroLine.Name">
+            <summary>
+            Gets or sets the name of the metro line.
+            </summary>
+            <value>The human-readable name of the metro line (e.g., "Red Line", "Blue Line").</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroLine.Code">
+            <summary>
+            Gets or sets the short code or abbreviation for the metro line.
+            </summary>
+            <value>A short identifier for the metro line (e.g., "RL", "BL", "GL").</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroLine.Color">
+            <summary>
+            Gets or sets the color associated with the metro line for visual identification.
+            </summary>
+            <value>The hex color code or color name used to represent the line on maps and signage.</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroLine.IsOperational">
+            <summary>
+            Gets or sets a value indicating whether the metro line is currently operational.
+            </summary>
+            <value>True if the line is operational; otherwise, false.</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroLine.LineType">
+            <summary>
+            Gets or sets the type of the metro line (e.g., "Express", "Local", "Shuttle").
+            </summary>
+            <value>A string describing the service type of the metro line.</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroLine.FareMultiplier">
+            <summary>
+            Gets or sets the fare multiplier for this metro line.
+            </summary>
+            <value>A decimal multiplier applied to base fares for trips on this line (1.0 = normal fare, 1.5 = 50% premium).</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroLine.OperatingHours">
+            <summary>
+            Gets or sets the operating hours for the metro line.
+            </summary>
+            <value>A string describing the operating hours (e.g., "5:00 AM - 12:00 AM").</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroLine.Notes">
+            <summary>
+            Gets or sets additional notes or information about the metro line.
+            </summary>
+            <value>Optional additional information about the line's characteristics or special services.</value>
+        </member>
+        <member name="T:FareCalculator.Models.MetroRoute">
+            <summary>
+            Represents a calculated route between two stations in the metro system.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.MetroRoute.Origin">
+            <summary>
+            Gets or sets the origin station of the route.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.MetroRoute.Destination">
+            <summary>
+            Gets or sets the destination station of the route.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.MetroRoute.Segments">
+            <summary>
+            Gets or sets the sequence of metro line segments for this route.
+            </summary>
+            <value>A list of route segments, each representing travel on a specific metro line.</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroRoute.TransferCount">
+            <summary>
+            Gets or sets the total number of transfers required for this route.
+            </summary>
+            <value>The number of times a passenger must change metro lines (0 for direct routes).</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroRoute.EstimatedTravelTimeMinutes">
+            <summary>
+            Gets or sets the total estimated travel time in minutes.
+            </summary>
+            <value>The estimated travel time including transfers and waiting time.</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroRoute.TotalDistanceKilometers">
+            <summary>
+            Gets or sets the total distance of the route in kilometers.
+            </summary>
+            <value>The sum of distances for all segments in the route.</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroRoute.IsDirectRoute">
+            <summary>
+            Gets or sets a value indicating whether this is a direct route (no transfers).
+            </summary>
+            <value>True if the route requires no transfers; otherwise, false.</value>
+        </member>
+        <member name="P:FareCalculator.Models.MetroRoute.TransferStations">
+            <summary>
+            Gets or sets the list of transfer stations on this route.
+            </summary>
+            <value>Stations where passengers must transfer between metro lines.</value>
+        </member>
+        <member name="T:FareCalculator.Models.RouteSegment">
+            <summary>
+            Represents a segment of a metro route on a specific metro line.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.RouteSegment.MetroLine">
+            <summary>
+            Gets or sets the metro line for this segment.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.RouteSegment.StartStation">
+            <summary>
+            Gets or sets the starting station for this segment.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.RouteSegment.EndStation">
+            <summary>
+            Gets or sets the ending station for this segment.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.RouteSegment.DistanceKilometers">
+            <summary>
+            Gets or sets the distance of this segment in kilometers.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.RouteSegment.EstimatedTimeMinutes">
+            <summary>
+            Gets or sets the estimated travel time for this segment in minutes.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.RouteSegment.StationCount">
+            <summary>
+            Gets or sets the number of stations traveled in this segment.
+            </summary>
+        </member>
         <member name="T:FareCalculator.Models.PassengerType">
             <summary>
             Defines the types of passengers for fare calculation purposes, each with different discount eligibility.
@@ -564,6 +814,24 @@
             Gets or sets the longitude coordinate of the station's geographical location.
             </summary>
             <value>The longitude in decimal degrees, used for distance calculations between stations.</value>
+        </member>
+        <member name="P:FareCalculator.Models.Station.MetroLineIds">
+            <summary>
+            Gets or sets the collection of metro line IDs that serve this station.
+            </summary>
+            <value>A list of metro line identifiers indicating which lines stop at this station.</value>
+        </member>
+        <member name="P:FareCalculator.Models.Station.IsTransferStation">
+            <summary>
+            Gets or sets a value indicating whether this station is a transfer station.
+            </summary>
+            <value>True if the station allows transfers between different metro lines; otherwise, false.</value>
+        </member>
+        <member name="P:FareCalculator.Models.Station.StationType">
+            <summary>
+            Gets or sets the station type (e.g., "Standard", "Express", "Terminal").
+            </summary>
+            <value>A string describing the type or category of the station.</value>
         </member>
         <member name="T:FareCalculator.Services.FareCalculationService">
             <summary>
@@ -704,6 +972,83 @@
             <param name="startHour">The starting hour of the range (0-23).</param>
             <param name="endHour">The ending hour of the range (0-24).</param>
             <returns>True if the time falls within the specified range; otherwise, false.</returns>
+        </member>
+        <member name="T:FareCalculator.Services.MetroLineService">
+            <summary>
+            Provides metro line management services including line lookup, route calculation, and transfer analysis.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Services.MetroLineService.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.Services.MetroLineService},Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.MetroLineOptions},FareCalculator.Interfaces.IStationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FareCalculator.Services.MetroLineService"/> class.
+            </summary>
+            <param name="logger">The logger for capturing service execution information.</param>
+            <param name="metroLineOptions">Configuration options for metro line data.</param>
+            <param name="stationService">The station service for station operations.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when any parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.MetroLineService.GetMetroLineByIdAsync(System.Int32)">
+            <summary>
+            Retrieves a metro line by its unique identifier asynchronously.
+            </summary>
+            <param name="id">The unique identifier of the metro line.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the metro line if found, otherwise null.</returns>
+        </member>
+        <member name="M:FareCalculator.Services.MetroLineService.GetMetroLineByCodeAsync(System.String)">
+            <summary>
+            Retrieves a metro line by its code asynchronously using case-insensitive search.
+            </summary>
+            <param name="code">The code of the metro line to search for.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the metro line if found, otherwise null.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the code parameter is null or empty.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.MetroLineService.GetAllMetroLinesAsync">
+            <summary>
+            Retrieves all available metro lines in the system asynchronously.
+            </summary>
+            <returns>A task that represents the asynchronous operation. The task result contains a collection of all metro lines.</returns>
+        </member>
+        <member name="M:FareCalculator.Services.MetroLineService.GetMetroLinesByStationAsync(FareCalculator.Models.Station)">
+            <summary>
+            Gets all metro lines that serve a specific station asynchronously.
+            </summary>
+            <param name="station">The station to check for metro lines.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains metro lines serving the station.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the station parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.MetroLineService.GetStationsByMetroLineAsync(FareCalculator.Models.MetroLine)">
+            <summary>
+            Gets all stations served by a specific metro line asynchronously.
+            </summary>
+            <param name="metroLine">The metro line to get stations for.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains stations served by the metro line.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the metroLine parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.MetroLineService.HasDirectRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)">
+            <summary>
+            Determines if a direct route exists between two stations on the same metro line.
+            </summary>
+            <param name="origin">The origin station.</param>
+            <param name="destination">The destination station.</param>
+            <returns>A task that represents the asynchronous operation. The task result indicates if a direct route exists.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when either origin or destination parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.MetroLineService.CalculateOptimalRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)">
+            <summary>
+            Calculates the required transfers between two stations and returns the optimal route.
+            </summary>
+            <param name="origin">The origin station.</param>
+            <param name="destination">The destination station.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the optimal route with transfer information.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when either origin or destination parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.MetroLineService.FindRouteWithTransfersAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)">
+            <summary>
+            Finds a route with transfers between two stations.
+            </summary>
+            <param name="origin">The origin station.</param>
+            <param name="destination">The destination station.</param>
+            <returns>A metro route with transfer information, or null if no route is found.</returns>
         </member>
         <member name="T:FareCalculator.Services.StationService">
             <summary>
@@ -956,6 +1301,120 @@
             <param name="nextState">The proposed next state in the workflow.</param>
             <returns>True if the next state is the base fare calculation state; otherwise, false.</returns>
             <exception cref="T:System.ArgumentNullException">Thrown when the nextState parameter is null.</exception>
+        </member>
+        <member name="T:FareCalculator.Strategies.MetroLineFareStrategy">
+            <summary>
+            Fare calculation strategy that considers metro line characteristics including line multipliers and transfer penalties.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Strategies.MetroLineFareStrategy.StrategyName">
+            <summary>
+            Gets the strategy name for identification purposes.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Strategies.MetroLineFareStrategy.Priority">
+            <summary>
+            Gets the priority of this strategy relative to other fare calculation strategies.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Strategies.MetroLineFareStrategy.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.Strategies.MetroLineFareStrategy},FareCalculator.Interfaces.IMetroLineService,Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.FareCalculationOptions},Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.MetroLineOptions})">
+            <summary>
+            Initializes a new instance of the <see cref="T:FareCalculator.Strategies.MetroLineFareStrategy"/> class.
+            </summary>
+            <param name="logger">The logger for capturing strategy execution information.</param>
+            <param name="metroLineService">The metro line service for route calculations.</param>
+            <param name="fareOptions">Configuration options for fare calculation.</param>
+            <param name="metroLineOptions">Configuration options for metro line settings.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when any parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Strategies.MetroLineFareStrategy.CalculateBaseFareAsync(FareCalculator.Models.FareRequest)">
+            <summary>
+            Calculates the base fare considering metro line characteristics and route complexity.
+            </summary>
+            <param name="request">The fare calculation request containing trip details.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the calculated base fare.</returns>
+        </member>
+        <member name="M:FareCalculator.Strategies.MetroLineFareStrategy.CanHandle(FareCalculator.Models.FareRequest)">
+            <summary>
+            Determines if this strategy can handle the given fare request.
+            </summary>
+            <param name="request">The fare calculation request to evaluate.</param>
+            <returns>True if the strategy can handle the request; otherwise, false.</returns>
+        </member>
+        <member name="M:FareCalculator.Strategies.MetroLineFareStrategy.CalculateSegmentFare(FareCalculator.Models.RouteSegment,FareCalculator.Models.FareRequest)">
+            <summary>
+            Calculates the fare for a specific route segment.
+            </summary>
+            <param name="segment">The route segment to calculate fare for.</param>
+            <param name="request">The original fare request for context.</param>
+            <returns>The calculated fare for the segment.</returns>
+        </member>
+        <member name="M:FareCalculator.Strategies.MetroLineFareStrategy.CalculateTransferPenalty(FareCalculator.Models.MetroRoute)">
+            <summary>
+            Calculates transfer penalties for a route with multiple segments.
+            </summary>
+            <param name="route">The route with transfer information.</param>
+            <returns>The total transfer penalty amount.</returns>
+        </member>
+        <member name="T:FareCalculator.Visualization.MapGeneratorApp">
+            <summary>
+            Console application for generating metro system visualizations.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Visualization.MapGeneratorApp.RunAsync(System.String[])">
+            <summary>
+            Runs the map generator application.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Visualization.MapGeneratorApp.ShowMenuAsync(FareCalculator.Visualization.MetroMapGenerator)">
+            <summary>
+            Shows interactive menu for generating visualizations.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Visualization.MapGeneratorApp.ProcessCommandLineArgs(FareCalculator.Visualization.MetroMapGenerator,System.String[])">
+            <summary>
+            Processes command line arguments for batch generation.
+            </summary>
+        </member>
+        <member name="T:FareCalculator.Visualization.MetroMapGenerator">
+            <summary>
+            Generates visual representations of the metro system for documentation purposes.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Visualization.MetroMapGenerator.GenerateMermaidDiagramAsync">
+            <summary>
+            Generates a Mermaid diagram representation of the metro system.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Visualization.MetroMapGenerator.GenerateAsciiMapAsync">
+            <summary>
+            Generates an ASCII art representation of the metro system.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Visualization.MetroMapGenerator.GenerateHtmlVisualizationAsync">
+            <summary>
+            Generates an HTML/SVG visualization of the metro system.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Visualization.MetroMapGenerator.GenerateFareTableHtmlAsync">
+            <summary>
+            Generates a fare explanation table in HTML format.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Visualization.MetroMapGenerator.CalculateStationPositions(System.Collections.Generic.List{FareCalculator.Models.Station})">
+            <summary>
+            Calculates positions for stations in a circular layout.
+            </summary>
+        </member>
+        <member name="T:FareCalculator.Visualization.VisualizationDemo">
+            <summary>
+            Demo program to showcase metro system visualization capabilities.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Visualization.VisualizationDemo.RunAsync">
+            <summary>
+            Runs the visualization demo.
+            </summary>
         </member>
     </members>
 </doc>

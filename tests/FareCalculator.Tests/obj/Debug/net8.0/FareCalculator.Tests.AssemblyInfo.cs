@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FareCalculator.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46a213e0dbb61e11df945bb35b6a96a4e98bc44a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcaa041a5d181c84dd20686156aa007f0b8053ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("FareCalculator.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FareCalculator.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,65 +1,71 @@
 ```mermaid
-graph TB
-    %% Metro System Map
+flowchart TD
+    %% Metro System Map - Concentric Zone Layout
 
-    %% Stations by Zone
-    subgraph ZoneA["Zone A"]
-        S1(("🚉 Downtown Central"))
-        S2["⚡ Uptown North"]
-        S8["🚇 Harbor View"]
-    end
+    %% Station Definitions - Uniform Style
+    S1["Downtown<br/>Central"]
+    S2["Uptown<br/>North"]
+    S3["Eastside<br/>Plaza"]
+    S4["Westwood<br/>Terminal"]
+    S5["Southgate<br/>Junction"]
+    S6["Airport<br/>Express"]
+    S7["University<br/>Campus"]
+    S8["Harbor<br/>View"]
 
-    subgraph ZoneB["Zone B"]
-        S3(("🚇 Eastside Plaza"))
-        S4["🚉 Westwood Terminal"]
-        S7(("🚇 University Campus"))
-    end
+    %% Geographic Layout - Concentric Zones (Light positioning lines)
+    S1 --- S2
+    S1 --- S8
+    S3 --- S7
+    S4 --- S3
+    S5 --- S6
+    S1 --- S3
+    S3 --- S5
+    S2 --- S7
+    S7 --- S5
+    S4 --- S5
+    S5 --- S8
 
-    subgraph ZoneC["Zone C"]
-        S5(("🚇 Southgate Junction"))
-        S6["🚉 Airport Express"]
-    end
+    %% Metro Line Routes - Colored Lines
+    %% Red Line - Express Service
+    S1 ==>|RL| S2
+    S2 ==>|RL| S7
+    %% Blue Line - Local Service
+    S1 ==>|BL| S3
+    S3 ==>|BL| S5
+    S5 ==>|BL| S8
+    %% Green Line - Local Service
+    S3 ==>|GL| S4
+    S4 ==>|GL| S5
+    S5 ==>|GL| S7
 
-    %% Metro Line Connections
-    %% Red Line (RL)
-    S1 -.->|RL| S2
-    S2 -.->|RL| S7
+    %% Zone-based Station Styling
+    style S1 fill:#1e40af,stroke:#1e3a8a,stroke-width:3px,color:#ffffff
+    style S2 fill:#3b82f6,stroke:#1e3a8a,stroke-width:3px,color:#ffffff
+    style S8 fill:#3b82f6,stroke:#1e3a8a,stroke-width:3px,color:#ffffff
+    style S3 fill:#15803d,stroke:#14532d,stroke-width:3px,color:#ffffff
+    style S4 fill:#22c55e,stroke:#14532d,stroke-width:3px,color:#ffffff
+    style S7 fill:#15803d,stroke:#14532d,stroke-width:3px,color:#ffffff
+    style S5 fill:#ea580c,stroke:#9a3412,stroke-width:3px,color:#ffffff
+    style S6 fill:#f97316,stroke:#9a3412,stroke-width:3px,color:#ffffff
 
-    %% Blue Line (BL)
-    S1 -.->|BL| S3
-    S3 -.->|BL| S5
-    S5 -.->|BL| S8
-
-    %% Green Line (GL)
-    S3 -.->|GL| S4
-    S4 -.->|GL| S5
-    S5 -.->|GL| S7
-
-    %% Yellow Line (YL)
-
-    %% Styling
-    S1 --> S1
-    style S1 fill:#FF000015,stroke:#FF0000,stroke-width:2px
-    S2 --> S2
-    style S2 fill:#FF000015,stroke:#FF0000,stroke-width:2px
-    S7 --> S7
-    style S7 fill:#FF000015,stroke:#FF0000,stroke-width:2px
-    S1 --> S1
-    style S1 fill:#0000FF15,stroke:#0000FF,stroke-width:2px
-    S3 --> S3
-    style S3 fill:#0000FF15,stroke:#0000FF,stroke-width:2px
-    S5 --> S5
-    style S5 fill:#0000FF15,stroke:#0000FF,stroke-width:2px
-    S8 --> S8
-    style S8 fill:#0000FF15,stroke:#0000FF,stroke-width:2px
-    S3 --> S3
-    style S3 fill:#00800015,stroke:#008000,stroke-width:2px
-    S4 --> S4
-    style S4 fill:#00800015,stroke:#008000,stroke-width:2px
-    S5 --> S5
-    style S5 fill:#00800015,stroke:#008000,stroke-width:2px
-    S7 --> S7
-    style S7 fill:#00800015,stroke:#008000,stroke-width:2px
-    S6 --> S6
-    style S6 fill:#FFFF0015,stroke:#FFFF00,stroke-width:2px
+    %% Link Colors
+    linkStyle 0 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 1 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 2 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 3 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 4 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 5 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 6 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 7 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 8 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 9 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 10 stroke:#e5e7eb,stroke-width:2px
+    linkStyle 11 stroke:#dc2626,stroke-width:8px
+    linkStyle 12 stroke:#dc2626,stroke-width:8px
+    linkStyle 13 stroke:#2563eb,stroke-width:8px
+    linkStyle 14 stroke:#2563eb,stroke-width:8px
+    linkStyle 15 stroke:#2563eb,stroke-width:8px
+    linkStyle 16 stroke:#16a34a,stroke-width:8px
+    linkStyle 17 stroke:#16a34a,stroke-width:8px
+    linkStyle 18 stroke:#16a34a,stroke-width:8px
 ```

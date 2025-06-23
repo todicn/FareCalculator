@@ -42,55 +42,140 @@ public class MetroMapGenerator
 
         var sb = new StringBuilder();
         sb.AppendLine("```mermaid");
-        sb.AppendLine("graph TB");
-        sb.AppendLine("    %% Metro System Map");
+        sb.AppendLine("flowchart TD");
+        sb.AppendLine("    %% Metro System Map - Concentric Zone Layout");
         sb.AppendLine();
 
-        // Add stations grouped by zone
-        var stationsByZone = stations.GroupBy(s => s.Zone).OrderBy(g => g.Key);
+        // Define all stations with uniform appearance
+        sb.AppendLine("    %% Station Definitions - Uniform Style");
+        foreach (var station in stations)
+        {
+            var stationName = station.Name.Replace(" ", "<br/>");
+            sb.AppendLine($"    S{station.Id}[\"{stationName}\"]");
+        }
+        sb.AppendLine();
+
+        // Geographic layout for positioning only (light gray)
+        sb.AppendLine("    %% Geographic Layout - Concentric Zones (Light positioning lines)");
+        sb.AppendLine("    S1 --- S2");
+        sb.AppendLine("    S1 --- S8");
+        sb.AppendLine("    S3 --- S7");
+        sb.AppendLine("    S4 --- S3");
+        sb.AppendLine("    S5 --- S6");
+        sb.AppendLine("    S1 --- S3");
+        sb.AppendLine("    S3 --- S5");
+        sb.AppendLine("    S2 --- S7");
+        sb.AppendLine("    S7 --- S5");
+        sb.AppendLine("    S4 --- S5");
+        sb.AppendLine("    S5 --- S8");
+        sb.AppendLine();
+
+        // Metro line routes with thick colored arrows
+        sb.AppendLine("    %% Metro Line Routes - Colored Lines");
         
-        sb.AppendLine("    %% Stations by Zone");
-        foreach (var zoneGroup in stationsByZone)
+        // Red Line (Express) - use thick arrows
+        var redLine = metroLines.FirstOrDefault(ml => ml.Code == "RL");
+        if (redLine != null)
         {
-            sb.AppendLine($"    subgraph Zone{zoneGroup.Key}[\"Zone {zoneGroup.Key}\"]");
-            foreach (var station in zoneGroup.OrderBy(s => s.Id))
+            var redStations = stations.Where(s => s.MetroLineIds.Contains(redLine.Id)).OrderBy(s => s.Id).ToList();
+            sb.AppendLine("    %% Red Line - Express Service");
+            for (int i = 0; i < redStations.Count - 1; i++)
             {
-                var shape = station.IsTransferStation ? "((" : "[";
-                var endShape = station.IsTransferStation ? "))" : "]";
-                var stationType = station.StationType == "Terminal" ? "🚉" : 
-                                station.StationType == "Express" ? "⚡" : "🚇";
-                sb.AppendLine($"        S{station.Id}{shape}\"{stationType} {station.Name}\"{endShape}");
+                sb.AppendLine($"    S{redStations[i].Id} ==>|RL| S{redStations[i + 1].Id}");
             }
-            sb.AppendLine("    end");
-            sb.AppendLine();
         }
-
-        // Add metro line connections
-        sb.AppendLine("    %% Metro Line Connections");
-        foreach (var metroLine in metroLines)
+        
+        // Blue Line (Local) - use thick arrows
+        var blueLine = metroLines.FirstOrDefault(ml => ml.Code == "BL");
+        if (blueLine != null)
         {
-            var lineStations = stations.Where(s => s.MetroLineIds.Contains(metroLine.Id))
-                                     .OrderBy(s => s.Id).ToList();
-            
-            sb.AppendLine($"    %% {metroLine.Name} ({metroLine.Code})");
-            for (int i = 0; i < lineStations.Count - 1; i++)
+            var blueStations = stations.Where(s => s.MetroLineIds.Contains(blueLine.Id)).OrderBy(s => s.Id).ToList();
+            sb.AppendLine("    %% Blue Line - Local Service");
+            for (int i = 0; i < blueStations.Count - 1; i++)
             {
-                var current = lineStations[i];
-                var next = lineStations[i + 1];
-                sb.AppendLine($"    S{current.Id} -.->|{metroLine.Code}| S{next.Id}");
+                sb.AppendLine($"    S{blueStations[i].Id} ==>|BL| S{blueStations[i + 1].Id}");
             }
-            sb.AppendLine();
         }
-
-        // Add styling
-        sb.AppendLine("    %% Styling");
-        foreach (var metroLine in metroLines)
+        
+        // Green Line (Local) - use thick arrows
+        var greenLine = metroLines.FirstOrDefault(ml => ml.Code == "GL");
+        if (greenLine != null)
         {
-            var lineStations = stations.Where(s => s.MetroLineIds.Contains(metroLine.Id)).ToList();
-            foreach (var station in lineStations)
+            var greenStations = stations.Where(s => s.MetroLineIds.Contains(greenLine.Id)).OrderBy(s => s.Id).ToList();
+            sb.AppendLine("    %% Green Line - Local Service");
+            for (int i = 0; i < greenStations.Count - 1; i++)
             {
-                sb.AppendLine($"    S{station.Id} --> S{station.Id}");
-                sb.AppendLine($"    style S{station.Id} fill:{metroLine.Color}15,stroke:{metroLine.Color},stroke-width:2px");
+                sb.AppendLine($"    S{greenStations[i].Id} ==>|GL| S{greenStations[i + 1].Id}");
+            }
+        }
+        sb.AppendLine();
+
+        // Zone-based station styling
+        sb.AppendLine("    %% Zone-based Station Styling");
+        
+        var zoneAStations = stations.Where(s => s.Zone == "A");
+        foreach (var station in zoneAStations)
+        {
+            var fillColor = station.IsTransferStation ? "#1e40af" : "#3b82f6";
+            sb.AppendLine($"    style S{station.Id} fill:{fillColor},stroke:#1e3a8a,stroke-width:3px,color:#ffffff");
+        }
+        
+        var zoneBStations = stations.Where(s => s.Zone == "B");
+        foreach (var station in zoneBStations)
+        {
+            var fillColor = station.IsTransferStation ? "#15803d" : "#22c55e";
+            sb.AppendLine($"    style S{station.Id} fill:{fillColor},stroke:#14532d,stroke-width:3px,color:#ffffff");
+        }
+        
+        var zoneCStations = stations.Where(s => s.Zone == "C");
+        foreach (var station in zoneCStations)
+        {
+            var fillColor = station.IsTransferStation ? "#ea580c" : "#f97316";
+            sb.AppendLine($"    style S{station.Id} fill:{fillColor},stroke:#9a3412,stroke-width:3px,color:#ffffff");
+        }
+        sb.AppendLine();
+
+        // Link styling with correct indices
+        sb.AppendLine("    %% Link Colors");
+        int linkIndex = 0;
+        
+        // Geographic links (light gray)
+        for (int i = 0; i < 11; i++)
+        {
+            sb.AppendLine($"    linkStyle {linkIndex} stroke:#e5e7eb,stroke-width:2px");
+            linkIndex++;
+        }
+        
+        // Red Line links (red)
+        if (redLine != null)
+        {
+            var redStations = stations.Where(s => s.MetroLineIds.Contains(redLine.Id)).OrderBy(s => s.Id).ToList();
+            for (int i = 0; i < redStations.Count - 1; i++)
+            {
+                sb.AppendLine($"    linkStyle {linkIndex} stroke:#dc2626,stroke-width:8px");
+                linkIndex++;
+            }
+        }
+        
+        // Blue Line links (blue)
+        if (blueLine != null)
+        {
+            var blueStations = stations.Where(s => s.MetroLineIds.Contains(blueLine.Id)).OrderBy(s => s.Id).ToList();
+            for (int i = 0; i < blueStations.Count - 1; i++)
+            {
+                sb.AppendLine($"    linkStyle {linkIndex} stroke:#2563eb,stroke-width:8px");
+                linkIndex++;
+            }
+        }
+        
+        // Green Line links (green)
+        if (greenLine != null)
+        {
+            var greenStations = stations.Where(s => s.MetroLineIds.Contains(greenLine.Id)).OrderBy(s => s.Id).ToList();
+            for (int i = 0; i < greenStations.Count - 1; i++)
+            {
+                sb.AppendLine($"    linkStyle {linkIndex} stroke:#16a34a,stroke-width:8px");
+                linkIndex++;
             }
         }
 

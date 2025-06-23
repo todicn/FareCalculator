@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nikolat\\src\\FareCalculator\\src\\FareCalculator\\FareCalculator.csproj": {}
+    "/workspace/src/FareCalculator/FareCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nikolat\\src\\FareCalculator\\src\\FareCalculator\\FareCalculator.csproj": {
+    "/workspace/src/FareCalculator/FareCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikolat\\src\\FareCalculator\\src\\FareCalculator\\FareCalculator.csproj",
+        "projectUniqueName": "/workspace/src/FareCalculator/FareCalculator.csproj",
         "projectName": "FareCalculator",
-        "projectPath": "C:\\Users\\nikolat\\src\\FareCalculator\\src\\FareCalculator\\FareCalculator.csproj",
-        "packagesPath": "C:\\Users\\nikolat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikolat\\src\\FareCalculator\\src\\FareCalculator\\obj\\",
+        "projectPath": "/workspace/src/FareCalculator/FareCalculator.csproj",
+        "packagesPath": "/home/ubuntu/.nuget/packages/",
+        "outputPath": "/workspace/src/FareCalculator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nikolat\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/ubuntu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -86,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/ubuntu/.dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,5 +1,5 @@
 {
-  "source_base_path": "C:/Users/nikolat/src/FareCalculator",
+  "source_base_path": "/workspace",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -16,6 +16,26 @@
       "output": {
         ".html": {
           "relative_path": "CONFIGURATION_MIGRATION.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "DOCS_MONITORING.md",
+      "output": {
+        ".html": {
+          "relative_path": "DOCS_MONITORING.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "MONITORING_STATUS.md",
+      "output": {
+        ".html": {
+          "relative_path": "MONITORING_STATUS.html"
         }
       },
       "version": ""

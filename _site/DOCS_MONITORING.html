@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>DocFX Documentation Monitoring System | Metro Fare Calculator API Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="DocFX Documentation Monitoring System | Metro Fare Calculator API Documentation ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/your-username/FareCalculator/blob/main/DOCS_MONITORING.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="FareCalculator">
+            FareCalculator
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="docfx-documentation-monitoring-system">DocFX Documentation Monitoring System</h1>
+
+<p>This system automatically monitors changes in your codebase and documentation files, then rebuilds your DocFX documentation whenever changes are detected.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>🔄 <strong>Automatic Monitoring</strong>: Watches source code, documentation files, and configuration changes</li>
+<li>⚡ <strong>Smart Debouncing</strong>: Prevents excessive rebuilds during rapid file changes</li>
+<li>🎛️ <strong>Multiple Run Modes</strong>: Foreground, daemon, or systemd service</li>
+<li>📊 <strong>Comprehensive Logging</strong>: Detailed logs of all monitoring and build activities</li>
+<li>🚀 <strong>Hot Reload Support</strong>: Automatically refreshes served documentation</li>
+<li>🔍 <strong>Dependency Checking</strong>: Validates all required tools are installed</li>
+<li>🎨 <strong>Colorized Output</strong>: Easy-to-read status messages and progress indicators</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="install-dependencies">1. Install Dependencies</h3>
+<pre><code class="lang-bash">./install-dependencies.sh
+</code></pre>
+<p>This will install:</p>
+<ul>
+<li><code>inotify-tools</code> (for file system monitoring)</li>
+<li><code>.NET SDK</code> (for building C# projects)</li>
+<li><code>DocFX</code> (for generating documentation)</li>
+</ul>
+<h3 id="test-the-setup">2. Test the Setup</h3>
+<pre><code class="lang-bash">./monitor-docs.sh --check
+</code></pre>
+<h3 id="build-documentation-once">3. Build Documentation Once</h3>
+<pre><code class="lang-bash">./monitor-docs.sh --build
+</code></pre>
+<h3 id="start-monitoring">4. Start Monitoring</h3>
+<pre><code class="lang-bash"># Run in foreground (see live updates)
+./monitor-docs.sh
+
+# Run as background daemon
+./monitor-docs.sh --daemon
+
+# Stop daemon
+./monitor-docs.sh --stop
+</code></pre>
+<h2 id="usage-options">Usage Options</h2>
+<h3 id="command-line-options">Command Line Options</h3>
+<pre><code class="lang-bash">./monitor-docs.sh [OPTIONS]
+
+OPTIONS:
+  -h, --help     Show help message
+  -d, --daemon   Run as daemon (background process)
+  -s, --stop     Stop any running monitor daemon
+  -c, --check    Check dependencies and configuration
+  -b, --build    Build documentation once and exit
+
+Examples:
+  ./monitor-docs.sh              # Start monitoring (foreground)
+  ./monitor-docs.sh --daemon     # Start monitoring as daemon
+  ./monitor-docs.sh --build      # Build documentation once
+  ./monitor-docs.sh --stop       # Stop daemon
+</code></pre>
+<h3 id="systemd-service-advanced">Systemd Service (Advanced)</h3>
+<p>For production environments, you can install as a systemd service:</p>
+<pre><code class="lang-bash"># Install service (replace 'username' with your username)
+sudo cp docs-monitor.service /etc/systemd/system/docs-monitor@.service
+sudo systemctl daemon-reload
+
+# Enable and start service
+sudo systemctl enable docs-monitor@username.service
+sudo systemctl start docs-monitor@username.service
+
+# Check status
+sudo systemctl status docs-monitor@username.service
+
+# View logs
+sudo journalctl -u docs-monitor@username.service -f
+</code></pre>
+<h2 id="monitored-files-and-directories">Monitored Files and Directories</h2>
+<p>The system monitors changes in:</p>
+<h3 id="directories">Directories</h3>
+<ul>
+<li><code>src/</code> - Source code files</li>
+<li><code>docs/</code> - Documentation files</li>
+<li><code>tests/</code> - Test files</li>
+<li><code>api/</code> - API documentation files</li>
+</ul>
+<h3 id="files">Files</h3>
+<ul>
+<li><code>docfx.json</code> - DocFX configuration</li>
+<li><code>README.md</code> - Main readme file</li>
+<li><code>index.md</code> - Index documentation</li>
+<li><code>toc.yml</code> - Table of contents</li>
+<li><code>*.md</code> - All markdown files</li>
+</ul>
+<h3 id="file-types-watched">File Types Watched</h3>
+<ul>
+<li><code>*.cs</code> - C# source files</li>
+<li><code>*.csproj</code> - C# project files</li>
+<li><code>*.md</code> - Markdown files</li>
+<li><code>*.yml</code>, <code>*.yaml</code> - YAML files</li>
+<li><code>*.json</code> - JSON configuration files</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<h3 id="debounce-settings">Debounce Settings</h3>
+<p>The monitor uses a 2-second debounce time to prevent excessive rebuilds. You can modify this in <code>monitor-docs.sh</code>:</p>
+<pre><code class="lang-bash">DEBOUNCE_TIME=2  # Wait 2 seconds after last change before rebuilding
+</code></pre>
+<h3 id="exclusions">Exclusions</h3>
+<p>The following paths are automatically excluded from monitoring:</p>
+<ul>
+<li><code>.git/</code>, <code>.vs/</code>, <code>.vscode/</code> - Version control and IDE directories</li>
+<li><code>bin/</code>, <code>obj/</code> - Build output directories</li>
+<li><code>_site/</code> - DocFX output directory</li>
+<li><code>TestResults/</code> - Test output directory</li>
+<li><code>*.tmp</code>, <code>*.temp</code>, <code>*.swp</code>, <code>*.swo</code>, <code>*.log</code> - Temporary files</li>
+</ul>
+<h2 id="log-files">Log Files</h2>
+<ul>
+<li><strong><code>docs-monitor.log</code></strong> - Detailed log of all monitoring activities and build results</li>
+<li><strong>Console Output</strong> - Real-time status updates with colorized messages</li>
+</ul>
+<h3 id="log-messages">Log Messages</h3>
+<ul>
+<li>🚀 Starting monitor</li>
+<li>📝 File change detected</li>
+<li>🔨 Building documentation</li>
+<li>✅ Build completed successfully</li>
+<li>❌ Build failed</li>
+<li>🔄 DocFx serve detected (auto-reload)</li>
+<li>⏳ Debouncing changes</li>
+</ul>
+<h2 id="serving-documentation">Serving Documentation</h2>
+<h3 id="local-development">Local Development</h3>
+<p>Start DocFX serve alongside the monitor:</p>
+<pre><code class="lang-bash"># Terminal 1: Start monitoring
+./monitor-docs.sh
+
+# Terminal 2: Serve documentation
+docfx serve _site
+</code></pre>
+<p>The documentation will be available at <code>http://localhost:8080</code></p>
+<h3 id="auto-reload">Auto-reload</h3>
+<p>When DocFX serve is running, the monitor detects it and your browser will automatically refresh when documentation is rebuilt.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li><p><strong>&quot;inotifywait: command not found&quot;</strong></p>
+<pre><code class="lang-bash">sudo apt-get install inotify-tools
+</code></pre>
+</li>
+<li><p><strong>&quot;docfx: command not found&quot;</strong></p>
+<pre><code class="lang-bash">dotnet tool install -g docfx
+export PATH=$PATH:$HOME/.dotnet/tools
+</code></pre>
+</li>
+<li><p><strong>&quot;dotnet: command not found&quot;</strong></p>
+<pre><code class="lang-bash">./install-dependencies.sh
+</code></pre>
+</li>
+<li><p><strong>Build failures</strong></p>
+<ul>
+<li>Check <code>docs-monitor.log</code> for detailed error messages</li>
+<li>Ensure all C# projects compile: <code>dotnet build</code></li>
+<li>Validate DocFX configuration: <code>docfx build docfx.json</code></li>
+</ul>
+</li>
+<li><p><strong>Permission issues</strong></p>
+<pre><code class="lang-bash">chmod +x *.sh
+</code></pre>
+</li>
+</ol>
+<h3 id="debugging">Debugging</h3>
+<ol>
+<li><p><strong>Check system status</strong>:</p>
+<pre><code class="lang-bash">./monitor-docs.sh --check
+</code></pre>
+</li>
+<li><p><strong>Test build manually</strong>:</p>
+<pre><code class="lang-bash">./monitor-docs.sh --build
+</code></pre>
+</li>
+<li><p><strong>View detailed logs</strong>:</p>
+<pre><code class="lang-bash">tail -f docs-monitor.log
+</code></pre>
+</li>
+<li><p><strong>Test file monitoring</strong>:</p>
+<pre><code class="lang-bash"># In another terminal, make a test change
+echo &quot;test&quot; &gt;&gt; docs/test.md
+# Watch for detection in monitor output
+</code></pre>
+</li>
+</ol>
+<h2 id="advanced-configuration">Advanced Configuration</h2>
+<h3 id="custom-build-script">Custom Build Script</h3>
+<p>You can modify <code>build-docs.sh</code> to customize the build process:</p>
+<pre><code class="lang-bash"># Add custom pre-build steps
+echo &quot;Running custom pre-build tasks...&quot;
+
+# Add custom post-build steps
+echo &quot;Running custom post-build tasks...&quot;
+# Example: Copy additional files, run validation, etc.
+</code></pre>
+<h3 id="custom-monitoring">Custom Monitoring</h3>
+<p>Modify the <code>WATCH_DIRS</code> and <code>WATCH_FILES</code> arrays in <code>monitor-docs.sh</code>:</p>
+<pre><code class="lang-bash">WATCH_DIRS=(
+    &quot;src/&quot;
+    &quot;docs/&quot;
+    &quot;tests/&quot;
+    &quot;api/&quot;
+    &quot;custom-dir/&quot;  # Add custom directory
+)
+
+WATCH_FILES=(
+    &quot;docfx.json&quot;
+    &quot;README.md&quot;
+    &quot;custom-config.yml&quot;  # Add custom file
+)
+</code></pre>
+<h2 id="performance-considerations">Performance Considerations</h2>
+<ul>
+<li><strong>Large Codebases</strong>: The monitor is efficient but may use more CPU/memory with very large repositories</li>
+<li><strong>Network Drives</strong>: Monitoring files on network drives may be slower</li>
+<li><strong>Docker</strong>: When running in Docker, ensure proper volume mounting for file change detection</li>
+</ul>
+<h2 id="security">Security</h2>
+<p>The systemd service runs with restricted permissions:</p>
+<ul>
+<li>No new privileges</li>
+<li>Private temporary directories</li>
+<li>Read-only home directory access</li>
+<li>Kernel protection enabled</li>
+</ul>
+<h2 id="integration">Integration</h2>
+<h3 id="cicd-integration">CI/CD Integration</h3>
+<p>Add to your CI/CD pipeline:</p>
+<pre><code class="lang-yaml"># Example GitHub Actions
+- name: Build Documentation
+  run: ./monitor-docs.sh --build
+
+- name: Deploy Documentation
+  run: |
+    # Deploy _site/ directory to your hosting platform
+</code></pre>
+<h3 id="ide-integration">IDE Integration</h3>
+<p>Most IDEs will work seamlessly with the monitor. File changes from:</p>
+<ul>
+<li>Visual Studio / VS Code</li>
+<li>JetBrains Rider</li>
+<li>vim/emacs</li>
+<li>Any text editor</li>
+</ul>
+<p>Will be automatically detected and trigger rebuilds.</p>
+<h2 id="support">Support</h2>
+<p>If you encounter issues:</p>
+<ol>
+<li>Check this documentation</li>
+<li>Review log files</li>
+<li>Test dependencies with <code>--check</code></li>
+<li>Try a manual build with <code>--build</code></li>
+<li>Check file permissions on scripts</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/your-username/FareCalculator/blob/main/DOCS_MONITORING.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Metro Fare Calculator - A comprehensive fare calculation system using Strategy and State patterns
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

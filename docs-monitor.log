@@ -1,0 +1,825 @@
+[2025-06-23 13:15:58] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+  Determining projects to restore...
+  Restored /workspace/src/FareCalculator/FareCalculator.csproj (in 1.2 sec).
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.85
+[33mBuilding test project...[0m
+  Determining projects to restore...
+  Restored /workspace/tests/FareCalculator.Tests/FareCalculator.Tests.csproj (in 2.58 sec).
+  1 of 2 projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.75
+[33mGenerating documentation with DocFX...[0m
+You must install .NET to run this application.
+
+App: /home/ubuntu/.dotnet/tools/docfx
+Architecture: x64
+App host version: 8.0.17
+.NET location: Not found
+
+Learn more:
+https://aka.ms/dotnet/app-launch-failed
+
+Download the .NET runtime:
+https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=linux-x64&os=ubuntu.25.04&apphost_version=8.0.17
+[31mFailed to generate documentation[0m
+[2025-06-23 13:16:06] Documentation build failed
+[2025-06-23 13:16:06] Documentation monitor started
+[2025-06-23 13:16:06] Monitoring paths:  src/ docs/ tests/ api/ docfx.json README.md index.md toc.yml .
+[2025-06-23 13:16:06] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.65
+[33mBuilding test project...[0m
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.82
+[33mGenerating documentation with DocFX...[0m
+You must install .NET to run this application.
+
+App: /home/ubuntu/.dotnet/tools/docfx
+Architecture: x64
+App host version: 8.0.17
+.NET location: Not found
+
+Learn more:
+https://aka.ms/dotnet/app-launch-failed
+
+Download the .NET runtime:
+https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=linux-x64&os=ubuntu.25.04&apphost_version=8.0.17
+[31mFailed to generate documentation[0m
+[2025-06-23 13:16:08] Documentation build failed
+[2025-06-23 13:16:46] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.65
+[33mBuilding test project...[0m
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.81
+[33mGenerating documentation with DocFX...[0m
+[38;5;15mSearching built-in plugins in directory /home/ubuntu/.dotnet/tools/.store/docfx/2.78.3/docfx/2.78.3/tools/net8.0/any/...[0m
+[38;5;15mPost processor ExtractSearchIndex loaded.[0m
+[38;5;15mNo files are found with glob pattern images/**,docs/images/**, excluding <none>, under directory "/workspace"[0m
+[38;5;15m7 plug-in(s) loaded.[0m
+[38;5;15mExtractSearchIndex: UseMetadata = False, UseMetadataTitle = True[0m
+[38;5;15mBuilding 10 file(s) in ConceptualDocumentProcessor(BuildConceptualDocument=>ValidateConceptualDocumentMetadata)...[0m
+[38;5;15mBuilding 3 file(s) in TocDocumentProcessor(BuildTocDocument)...[0m
+[38;5;11m/workspace/README.md(341,1): warning InvalidFileLink: Invalid file link:(~/LICENSE).[0m
+[38;5;11m/workspace/api/index.md(127,1): warning InvalidFileLink: Invalid file link:(~/articles/Configuration-Migration.md).[0m
+[38;5;11m/workspace/api/index.md(152,1): warning InvalidFileLink: Invalid file link:(~/articles/Test-Documentation.md).[0m
+[38;5;11m/workspace/index.md(54,1): warning InvalidFileLink: Invalid file link:(~/articles/API-Documentation.md).[0m
+[38;5;11m/workspace/index.md(47,1): warning InvalidFileLink: Invalid file link:(~/articles/Design-Patterns-Implementation.md).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Configuration.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Strategies.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.States.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Interfaces.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Models.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Services.yml).[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15mApplying templates to 13 model(s)...[0m
+[38;5;15mXRef map exported.[0m
+[38;5;15mExtracting index data from 10 html files[0m
+
+
+[38;5;11mBuild succeeded with warning.[0m
+
+[38;5;11m    11 warning(s)[0m
+[38;5;15m    0 error(s)[0m
+
+[32mDocumentation generated successfully![0m
+[36mFiles available in: _site/[0m
+
+[37mTo serve the documentation locally, run:[0m
+[90m  docfx serve _site[0m
+
+[37mOr to build and serve in one command:[0m
+[90m  docfx docfx.json --serve[0m
+[2025-06-23 13:16:49] Documentation build completed successfully
+[2025-06-23 13:16:56] Documentation monitor started
+[2025-06-23 13:16:56] Monitoring paths:  src/ docs/ tests/ api/ docfx.json README.md index.md toc.yml .
+[2025-06-23 13:16:56] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.69
+[33mBuilding test project...[0m
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.79
+[33mGenerating documentation with DocFX...[0m
+[2025-06-23 13:16:58] File changed: ./README.md
+[38;5;15mSearching built-in plugins in directory /home/ubuntu/.dotnet/tools/.store/docfx/2.78.3/docfx/2.78.3/tools/net8.0/any/...[0m
+[38;5;15mPost processor ExtractSearchIndex loaded.[0m
+[38;5;15mNo files are found with glob pattern images/**,docs/images/**, excluding <none>, under directory "/workspace"[0m
+[38;5;15m7 plug-in(s) loaded.[0m
+[38;5;15mExtractSearchIndex: UseMetadata = False, UseMetadataTitle = True[0m
+[38;5;15mBuilding 3 file(s) in TocDocumentProcessor(BuildTocDocument)...[0m
+[38;5;15mBuilding 10 file(s) in ConceptualDocumentProcessor(BuildConceptualDocument=>ValidateConceptualDocumentMetadata)...[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.States.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Services.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Configuration.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Models.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Strategies.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Interfaces.yml).[0m
+[38;5;11m/workspace/README.md(341,1): warning InvalidFileLink: Invalid file link:(~/LICENSE).[0m
+[38;5;11m/workspace/api/index.md(152,1): warning InvalidFileLink: Invalid file link:(~/articles/Test-Documentation.md).[0m
+[38;5;11m/workspace/api/index.md(127,1): warning InvalidFileLink: Invalid file link:(~/articles/Configuration-Migration.md).[0m
+[38;5;11m/workspace/index.md(54,1): warning InvalidFileLink: Invalid file link:(~/articles/API-Documentation.md).[0m
+[38;5;11m/workspace/index.md(47,1): warning InvalidFileLink: Invalid file link:(~/articles/Design-Patterns-Implementation.md).[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15mApplying templates to 13 model(s)...[0m
+[38;5;15mXRef map exported.[0m
+[38;5;15mExtracting index data from 10 html files[0m
+
+
+[38;5;11mBuild succeeded with warning.[0m
+
+[38;5;11m    11 warning(s)[0m
+[38;5;15m    0 error(s)[0m
+
+[32mDocumentation generated successfully![0m
+[36mFiles available in: _site/[0m
+
+[37mTo serve the documentation locally, run:[0m
+[90m  docfx serve _site[0m
+
+[37mOr to build and serve in one command:[0m
+[90m  docfx docfx.json --serve[0m
+[2025-06-23 13:16:59] Documentation build completed successfully
+[2025-06-23 13:16:59] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.66
+[33mBuilding test project...[0m
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.79
+[33mGenerating documentation with DocFX...[0m
+[38;5;15mSearching built-in plugins in directory /home/ubuntu/.dotnet/tools/.store/docfx/2.78.3/docfx/2.78.3/tools/net8.0/any/...[0m
+[38;5;15mPost processor ExtractSearchIndex loaded.[0m
+[38;5;15mNo files are found with glob pattern images/**,docs/images/**, excluding <none>, under directory "/workspace"[0m
+[38;5;15m7 plug-in(s) loaded.[0m
+[38;5;15mExtractSearchIndex: UseMetadata = False, UseMetadataTitle = True[0m
+[38;5;15mBuilding 10 file(s) in ConceptualDocumentProcessor(BuildConceptualDocument=>ValidateConceptualDocumentMetadata)...[0m
+[38;5;15mBuilding 3 file(s) in TocDocumentProcessor(BuildTocDocument)...[0m
+[38;5;11m/workspace/README.md(341,1): warning InvalidFileLink: Invalid file link:(~/LICENSE).[0m
+[38;5;11m/workspace/api/index.md(152,1): warning InvalidFileLink: Invalid file link:(~/articles/Test-Documentation.md).[0m
+[38;5;11m/workspace/api/index.md(127,1): warning InvalidFileLink: Invalid file link:(~/articles/Configuration-Migration.md).[0m
+[38;5;11m/workspace/index.md(47,1): warning InvalidFileLink: Invalid file link:(~/articles/Design-Patterns-Implementation.md).[0m
+[38;5;11m/workspace/index.md(54,1): warning InvalidFileLink: Invalid file link:(~/articles/API-Documentation.md).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Configuration.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Strategies.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Models.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.States.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Services.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Interfaces.yml).[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15mApplying templates to 13 model(s)...[0m
+[38;5;15mXRef map exported.[0m
+[38;5;15mExtracting index data from 10 html files[0m
+
+
+[38;5;11mBuild succeeded with warning.[0m
+
+[38;5;11m    11 warning(s)[0m
+[38;5;15m    0 error(s)[0m
+
+[32mDocumentation generated successfully![0m
+[36mFiles available in: _site/[0m
+
+[37mTo serve the documentation locally, run:[0m
+[90m  docfx serve _site[0m
+
+[37mOr to build and serve in one command:[0m
+[90m  docfx docfx.json --serve[0m
+[2025-06-23 13:17:02] Documentation build completed successfully
+[2025-06-23 13:17:02] File changed: ./README.md
+[2025-06-23 13:17:03] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.65
+[33mBuilding test project...[0m
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.83
+[33mGenerating documentation with DocFX...[0m
+[38;5;15mSearching built-in plugins in directory /home/ubuntu/.dotnet/tools/.store/docfx/2.78.3/docfx/2.78.3/tools/net8.0/any/...[0m
+[38;5;15mPost processor ExtractSearchIndex loaded.[0m
+[38;5;15mNo files are found with glob pattern images/**,docs/images/**, excluding <none>, under directory "/workspace"[0m
+[38;5;15m7 plug-in(s) loaded.[0m
+[38;5;15mExtractSearchIndex: UseMetadata = False, UseMetadataTitle = True[0m
+[38;5;15mBuilding 3 file(s) in TocDocumentProcessor(BuildTocDocument)...[0m
+[38;5;15mBuilding 10 file(s) in ConceptualDocumentProcessor(BuildConceptualDocument=>ValidateConceptualDocumentMetadata)...[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Configuration.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Models.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Services.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Interfaces.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Strategies.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.States.yml).[0m
+[38;5;11m/workspace/README.md(341,1): warning InvalidFileLink: Invalid file link:(~/LICENSE).[0m
+[38;5;11m/workspace/api/index.md(127,1): warning InvalidFileLink: Invalid file link:(~/articles/Configuration-Migration.md).[0m
+[38;5;11m/workspace/api/index.md(152,1): warning InvalidFileLink: Invalid file link:(~/articles/Test-Documentation.md).[0m
+[38;5;11m/workspace/index.md(54,1): warning InvalidFileLink: Invalid file link:(~/articles/API-Documentation.md).[0m
+[38;5;11m/workspace/index.md(47,1): warning InvalidFileLink: Invalid file link:(~/articles/Design-Patterns-Implementation.md).[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15mApplying templates to 13 model(s)...[0m
+[38;5;15mXRef map exported.[0m
+[38;5;15mExtracting index data from 10 html files[0m
+
+
+[38;5;11mBuild succeeded with warning.[0m
+
+[38;5;11m    11 warning(s)[0m
+[38;5;15m    0 error(s)[0m
+
+[32mDocumentation generated successfully![0m
+[36mFiles available in: _site/[0m
+
+[37mTo serve the documentation locally, run:[0m
+[90m  docfx serve _site[0m
+
+[37mOr to build and serve in one command:[0m
+[90m  docfx docfx.json --serve[0m
+[2025-06-23 13:17:06] Documentation build completed successfully
+[2025-06-23 13:17:34] File changed: ./MONITORING_STATUS.md
+[2025-06-23 13:17:34] File changed: ./MONITORING_STATUS.md
+[2025-06-23 13:17:35] Starting documentation build
+[2025-06-23 13:17:35] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+  Determining projects to restore...
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.67
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.68
+[33mBuilding test project...[0m
+[33mBuilding test project...[0m
+  Determining projects to restore...
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.82
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.83
+[33mGenerating documentation with DocFX...[0m
+[33mGenerating documentation with DocFX...[0m
+[38;5;15mSearching built-in plugins in directory /home/ubuntu/.dotnet/tools/.store/docfx/2.78.3/docfx/2.78.3/tools/net8.0/any/...[0m
+[38;5;15mSearching built-in plugins in directory /home/ubuntu/.dotnet/tools/.store/docfx/2.78.3/docfx/2.78.3/tools/net8.0/any/...[0m
+[38;5;15mPost processor ExtractSearchIndex loaded.[0m
+[38;5;15mPost processor ExtractSearchIndex loaded.[0m
+[38;5;15mNo files are found with glob pattern images/**,docs/images/**, excluding <none>, under directory "/workspace"[0m
+[38;5;15mNo files are found with glob pattern images/**,docs/images/**, excluding <none>, under directory "/workspace"[0m
+[38;5;15m7 plug-in(s) loaded.[0m
+[38;5;15m7 plug-in(s) loaded.[0m
+[38;5;15mExtractSearchIndex: UseMetadata = False, UseMetadataTitle = True[0m
+[38;5;15mExtractSearchIndex: UseMetadata = False, UseMetadataTitle = True[0m
+[38;5;15mBuilding 11 file(s) in ConceptualDocumentProcessor(BuildConceptualDocument=>ValidateConceptualDocumentMetadata)...[0m
+[38;5;15mBuilding 3 file(s) in TocDocumentProcessor(BuildTocDocument)...[0m
+[38;5;15mBuilding 11 file(s) in ConceptualDocumentProcessor(BuildConceptualDocument=>ValidateConceptualDocumentMetadata)...[0m
+[38;5;15mBuilding 3 file(s) in TocDocumentProcessor(BuildTocDocument)...[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.States.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Models.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Interfaces.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Configuration.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Strategies.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Services.yml).[0m
+[38;5;11m/workspace/README.md(341,1): warning InvalidFileLink: Invalid file link:(~/LICENSE).[0m
+[38;5;11m/workspace/api/index.md(152,1): warning InvalidFileLink: Invalid file link:(~/articles/Test-Documentation.md).[0m
+[38;5;11m/workspace/api/index.md(127,1): warning InvalidFileLink: Invalid file link:(~/articles/Configuration-Migration.md).[0m
+[38;5;11m/workspace/index.md(54,1): warning InvalidFileLink: Invalid file link:(~/articles/API-Documentation.md).[0m
+[38;5;11m/workspace/index.md(47,1): warning InvalidFileLink: Invalid file link:(~/articles/Design-Patterns-Implementation.md).[0m
+[38;5;11m/workspace/README.md(341,1): warning InvalidFileLink: Invalid file link:(~/LICENSE).[0m
+[38;5;11m/workspace/api/index.md(152,1): warning InvalidFileLink: Invalid file link:(~/articles/Test-Documentation.md).[0m
+[38;5;11m/workspace/api/index.md(127,1): warning InvalidFileLink: Invalid file link:(~/articles/Configuration-Migration.md).[0m
+[38;5;11m/workspace/index.md(54,1): warning InvalidFileLink: Invalid file link:(~/articles/API-Documentation.md).[0m
+[38;5;11m/workspace/index.md(47,1): warning InvalidFileLink: Invalid file link:(~/articles/Design-Patterns-Implementation.md).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.States.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Interfaces.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Models.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Configuration.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Strategies.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Services.yml).[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15mApplying templates to 14 model(s)...[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15mApplying templates to 14 model(s)...[0m
+[38;5;15mXRef map exported.[0m
+[38;5;15mExtracting index data from 11 html files[0m
+[38;5;11mwarning: Warning: Can't load content from /workspace/_site/api/index.html: The process cannot access the file '/workspace/_site/api/index.html' because it is being used by another process.[0m
+[38;5;11mwarning: Warning: Can't load content from /workspace/_site/docs/API-Documentation.html: The process cannot access the file '/workspace/_site/docs/API-Documentation.html' because it is being used by another process.[0m
+[38;5;15mXRef map exported.[0m
+
+
+[38;5;11mBuild succeeded with warning.[0m
+
+[38;5;11m    13 warning(s)[0m
+[38;5;15m    0 error(s)[0m
+
+[32mDocumentation generated successfully![0m
+[36mFiles available in: _site/[0m
+
+[37mTo serve the documentation locally, run:[0m
+[90m  docfx serve _site[0m
+
+[37mOr to build and serve in one command:[0m
+[90m  docfx docfx.json --serve[0m
+[2025-06-23 13:17:38] Documentation build completed successfully
+[2025-06-23 13:17:38] File changed: ./MONITORING_STATUS.md
+[38;5;15mExtracting index data from 11 html files[0m
+
+
+[38;5;11mBuild succeeded with warning.[0m
+
+[38;5;11m    11 warning(s)[0m
+[38;5;15m    0 error(s)[0m
+
+[32mDocumentation generated successfully![0m
+[36mFiles available in: _site/[0m
+
+[37mTo serve the documentation locally, run:[0m
+[90m  docfx serve _site[0m
+
+[37mOr to build and serve in one command:[0m
+[90m  docfx docfx.json --serve[0m
+[2025-06-23 13:17:38] Documentation build completed successfully
+[2025-06-23 13:17:38] File changed: ./MONITORING_STATUS.md
+[2025-06-23 13:17:39] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+[2025-06-23 13:17:39] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+  Determining projects to restore...
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.68
+[33mBuilding test project...[0m
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.67
+[33mBuilding test project...[0m
+  Determining projects to restore...
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.82
+[33mGenerating documentation with DocFX...[0m
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.81
+[33mGenerating documentation with DocFX...[0m
+[38;5;15mSearching built-in plugins in directory /home/ubuntu/.dotnet/tools/.store/docfx/2.78.3/docfx/2.78.3/tools/net8.0/any/...[0m
+[38;5;15mSearching built-in plugins in directory /home/ubuntu/.dotnet/tools/.store/docfx/2.78.3/docfx/2.78.3/tools/net8.0/any/...[0m
+[38;5;15mPost processor ExtractSearchIndex loaded.[0m
+[38;5;15mNo files are found with glob pattern images/**,docs/images/**, excluding <none>, under directory "/workspace"[0m
+[38;5;15m7 plug-in(s) loaded.[0m
+[38;5;15mExtractSearchIndex: UseMetadata = False, UseMetadataTitle = True[0m
+[38;5;15mPost processor ExtractSearchIndex loaded.[0m
+[38;5;15mNo files are found with glob pattern images/**,docs/images/**, excluding <none>, under directory "/workspace"[0m
+[38;5;15m7 plug-in(s) loaded.[0m
+[38;5;15mExtractSearchIndex: UseMetadata = False, UseMetadataTitle = True[0m
+[38;5;15mBuilding 3 file(s) in TocDocumentProcessor(BuildTocDocument)...[0m
+[38;5;15mBuilding 11 file(s) in ConceptualDocumentProcessor(BuildConceptualDocument=>ValidateConceptualDocumentMetadata)...[0m
+[38;5;15mBuilding 3 file(s) in TocDocumentProcessor(BuildTocDocument)...[0m
+[38;5;15mBuilding 11 file(s) in ConceptualDocumentProcessor(BuildConceptualDocument=>ValidateConceptualDocumentMetadata)...[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Interfaces.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Models.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.States.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Services.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Strategies.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Configuration.yml).[0m
+[38;5;11m/workspace/README.md(341,1): warning InvalidFileLink: Invalid file link:(~/LICENSE).[0m
+[38;5;11m/workspace/api/index.md(127,1): warning InvalidFileLink: Invalid file link:(~/articles/Configuration-Migration.md).[0m
+[38;5;11m/workspace/api/index.md(152,1): warning InvalidFileLink: Invalid file link:(~/articles/Test-Documentation.md).[0m
+[38;5;11m/workspace/index.md(54,1): warning InvalidFileLink: Invalid file link:(~/articles/API-Documentation.md).[0m
+[38;5;11m/workspace/index.md(47,1): warning InvalidFileLink: Invalid file link:(~/articles/Design-Patterns-Implementation.md).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Configuration.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Interfaces.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Models.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Services.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Strategies.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.States.yml).[0m
+[38;5;11m/workspace/README.md(341,1): warning InvalidFileLink: Invalid file link:(~/LICENSE).[0m
+[38;5;11m/workspace/api/index.md(127,1): warning InvalidFileLink: Invalid file link:(~/articles/Configuration-Migration.md).[0m
+[38;5;11m/workspace/api/index.md(152,1): warning InvalidFileLink: Invalid file link:(~/articles/Test-Documentation.md).[0m
+[38;5;11m/workspace/index.md(54,1): warning InvalidFileLink: Invalid file link:(~/articles/API-Documentation.md).[0m
+[38;5;11m/workspace/index.md(47,1): warning InvalidFileLink: Invalid file link:(~/articles/Design-Patterns-Implementation.md).[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15mApplying templates to 14 model(s)...[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15mApplying templates to 14 model(s)...[0m
+[38;5;15mXRef map exported.[0m
+[38;5;11mwarning: Warning: Can't load content from api/index.html: The process cannot access the file '/workspace/_site/api/index.html' because it is being used by another process.[0m
+[38;5;11mwarning: Warning: Can't load content from CONFIGURATION_MIGRATION.html: The process cannot access the file '/workspace/_site/CONFIGURATION_MIGRATION.html' because it is being used by another process.[0m
+[38;5;11mwarning: Warning: Can't load content from index.html: The process cannot access the file '/workspace/_site/index.html' because it is being used by another process.[0m
+[38;5;15mExtracting index data from 11 html files[0m
+[38;5;15mXRef map exported.[0m
+
+
+[38;5;11mBuild succeeded with warning.[0m
+
+[38;5;11m    14 warning(s)[0m
+[38;5;15m    0 error(s)[0m
+
+[38;5;15mExtracting index data from 11 html files[0m
+[32mDocumentation generated successfully![0m
+[36mFiles available in: _site/[0m
+
+[37mTo serve the documentation locally, run:[0m
+[90m  docfx serve _site[0m
+
+[37mOr to build and serve in one command:[0m
+[90m  docfx docfx.json --serve[0m
+[2025-06-23 13:17:42] Documentation build completed successfully
+[2025-06-23 13:17:42] File changed: ./MONITORING_STATUS.md
+
+
+[38;5;11mBuild succeeded with warning.[0m
+
+[38;5;11m    11 warning(s)[0m
+[38;5;15m    0 error(s)[0m
+
+[32mDocumentation generated successfully![0m
+[36mFiles available in: _site/[0m
+
+[37mTo serve the documentation locally, run:[0m
+[90m  docfx serve _site[0m
+
+[37mOr to build and serve in one command:[0m
+[90m  docfx docfx.json --serve[0m
+[2025-06-23 13:17:42] Documentation build completed successfully
+[2025-06-23 13:17:42] File changed: ./MONITORING_STATUS.md
+[2025-06-23 13:17:43] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+[2025-06-23 13:17:43] Starting documentation build
+[32mBuilding FareCalculator Documentation...[0m
+[33mBuilding main project...[0m
+  Determining projects to restore...
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.70
+[33mBuilding test project...[0m
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.70
+[33mBuilding test project...[0m
+  Determining projects to restore...
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  All projects are up-to-date for restore.
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator -> /workspace/src/FareCalculator/bin/Release/net8.0/FareCalculator.dll
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.86
+[33mGenerating documentation with DocFX...[0m
+  FareCalculator.Tests -> /workspace/tests/FareCalculator.Tests/bin/Release/net8.0/FareCalculator.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.85
+[33mGenerating documentation with DocFX...[0m
+[38;5;15mSearching built-in plugins in directory /home/ubuntu/.dotnet/tools/.store/docfx/2.78.3/docfx/2.78.3/tools/net8.0/any/...[0m
+[38;5;15mSearching built-in plugins in directory /home/ubuntu/.dotnet/tools/.store/docfx/2.78.3/docfx/2.78.3/tools/net8.0/any/...[0m
+[38;5;15mPost processor ExtractSearchIndex loaded.[0m
+[38;5;15mNo files are found with glob pattern images/**,docs/images/**, excluding <none>, under directory "/workspace"[0m
+[38;5;15m7 plug-in(s) loaded.[0m
+[38;5;15mExtractSearchIndex: UseMetadata = False, UseMetadataTitle = True[0m
+[38;5;15mPost processor ExtractSearchIndex loaded.[0m
+[38;5;15mNo files are found with glob pattern images/**,docs/images/**, excluding <none>, under directory "/workspace"[0m
+[38;5;15m7 plug-in(s) loaded.[0m
+[38;5;15mExtractSearchIndex: UseMetadata = False, UseMetadataTitle = True[0m
+[38;5;15mBuilding 3 file(s) in TocDocumentProcessor(BuildTocDocument)...[0m
+[38;5;15mBuilding 11 file(s) in ConceptualDocumentProcessor(BuildConceptualDocument=>ValidateConceptualDocumentMetadata)...[0m
+[38;5;15mBuilding 3 file(s) in TocDocumentProcessor(BuildTocDocument)...[0m
+[38;5;15mBuilding 11 file(s) in ConceptualDocumentProcessor(BuildConceptualDocument=>ValidateConceptualDocumentMetadata)...[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Services.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Interfaces.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.States.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Strategies.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Models.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Configuration.yml).[0m
+[38;5;11m/workspace/README.md(341,1): warning InvalidFileLink: Invalid file link:(~/LICENSE).[0m
+[38;5;11m/workspace/api/index.md(127,1): warning InvalidFileLink: Invalid file link:(~/articles/Configuration-Migration.md).[0m
+[38;5;11m/workspace/api/index.md(152,1): warning InvalidFileLink: Invalid file link:(~/articles/Test-Documentation.md).[0m
+[38;5;11m/workspace/index.md(54,1): warning InvalidFileLink: Invalid file link:(~/articles/API-Documentation.md).[0m
+[38;5;11m/workspace/index.md(47,1): warning InvalidFileLink: Invalid file link:(~/articles/Design-Patterns-Implementation.md).[0m
+[38;5;11m/workspace/README.md(341,1): warning InvalidFileLink: Invalid file link:(~/LICENSE).[0m
+[38;5;11m/workspace/api/index.md(152,1): warning InvalidFileLink: Invalid file link:(~/articles/Test-Documentation.md).[0m
+[38;5;11m/workspace/api/index.md(127,1): warning InvalidFileLink: Invalid file link:(~/articles/Configuration-Migration.md).[0m
+[38;5;11m/workspace/index.md(54,1): warning InvalidFileLink: Invalid file link:(~/articles/API-Documentation.md).[0m
+[38;5;11m/workspace/index.md(47,1): warning InvalidFileLink: Invalid file link:(~/articles/Design-Patterns-Implementation.md).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Configuration.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.States.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Interfaces.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Strategies.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Services.yml).[0m
+[38;5;11m/workspace/api/toc.yml(0,1): warning InvalidFileLink: Invalid file link:(~/api/FareCalculator.Models.yml).[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15mApplying templates to 14 model(s)...[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Configuration.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Interfaces.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Models.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Services.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.Strategies.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for Href referenced by TOC file "api/toc.yml"[0m
+[38;5;15m/workspace/api/toc.yml: Unable to find file "FareCalculator.States.yml" for TopicHref referenced by TOC file "api/toc.yml"[0m
+[38;5;15mApplying templates to 14 model(s)...[0m
+[38;5;15mXRef map exported.[0m
+[38;5;15mExtracting index data from 11 html files[0m
+[38;5;11mwarning: Warning: Can't load content from /workspace/_site/README.html: The process cannot access the file '/workspace/_site/README.html' because it is being used by another process.[0m
+
+
+[38;5;11mBuild succeeded with warning.[0m
+
+[38;5;11m    12 warning(s)[0m
+[38;5;15m    0 error(s)[0m
+
+[38;5;15mXRef map exported.[0m
+[32mDocumentation generated successfully![0m
+[36mFiles available in: _site/[0m
+
+[37mTo serve the documentation locally, run:[0m
+[90m  docfx serve _site[0m
+
+[37mOr to build and serve in one command:[0m
+[90m  docfx docfx.json --serve[0m
+[2025-06-23 13:17:46] Documentation build completed successfully
+[38;5;15mExtracting index data from 11 html files[0m
+
+
+[38;5;11mBuild succeeded with warning.[0m
+
+[38;5;11m    11 warning(s)[0m
+[38;5;15m    0 error(s)[0m
+
+[32mDocumentation generated successfully![0m
+[36mFiles available in: _site/[0m
+
+[37mTo serve the documentation locally, run:[0m
+[90m  docfx serve _site[0m
+
+[37mOr to build and serve in one command:[0m
+[90m  docfx docfx.json --serve[0m
+[2025-06-23 13:17:46] Documentation build completed successfully

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>DocFX Documentation Monitoring System - Status Report | Metro Fare Calculator API Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="DocFX Documentation Monitoring System - Status Report | Metro Fare Calculator API Documentation ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/your-username/FareCalculator/blob/main/MONITORING_STATUS.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="FareCalculator">
+            FareCalculator
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="docfx-documentation-monitoring-system-status-report">DocFX Documentation Monitoring System - Status Report</h1>
+
+<h2 id="system-successfully-deployed">✅ System Successfully Deployed</h2>
+<p><strong>Date</strong>: 2025-06-23 13:16 UTC<br>
+<strong>Status</strong>: 🟢 <strong>ACTIVE</strong> - Monitoring and auto-updating documentation</p>
+<hr>
+<h2 id="current-status">📊 Current Status</h2>
+<h3 id="components-installed">🔧 Components Installed</h3>
+<ul>
+<li>✅ <strong>inotify-tools</strong> - File system monitoring</li>
+<li>✅ <strong>.NET SDK 8.0.411</strong> - C# project compilation</li>
+<li>✅ <strong>DocFX 2.78.3</strong> - Documentation generation</li>
+</ul>
+<h3 id="services-running">🚀 Services Running</h3>
+<ul>
+<li>✅ <strong>Documentation Monitor Daemon</strong> (PID: 4326)
+<ul>
+<li>Status: Active and monitoring changes</li>
+<li>Log file: <code>docs-monitor.log</code></li>
+<li>Debounce time: 2 seconds</li>
+</ul>
+</li>
+</ul>
+<h3 id="monitored-locations">📁 Monitored Locations</h3>
+<ul>
+<li><code>src/</code> - Source code files (*.cs, *.csproj)</li>
+<li><code>docs/</code> - Documentation files (*.md, *.yml)</li>
+<li><code>tests/</code> - Test files</li>
+<li><code>api/</code> - API documentation</li>
+<li>Root files: <code>README.md</code>, <code>docfx.json</code>, <code>index.md</code>, <code>toc.yml</code></li>
+</ul>
+<h3 id="build-process">📋 Build Process</h3>
+<ul>
+<li>✅ C# project compilation working</li>
+<li>✅ DocFX documentation generation working</li>
+<li>✅ Output generated in <code>_site/</code> directory</li>
+</ul>
+<hr>
+<h2 id="automated-workflow">🎯 Automated Workflow</h2>
+<ol>
+<li><strong>File Change Detection</strong>: System monitors file changes using inotify</li>
+<li><strong>Smart Debouncing</strong>: Waits 2 seconds after last change to avoid excessive rebuilds</li>
+<li><strong>Automatic Build</strong>: Triggers <code>build-docs.sh</code> script</li>
+<li><strong>Documentation Generation</strong>:
+<ul>
+<li>Builds C# projects (Release configuration)</li>
+<li>Generates XML documentation</li>
+<li>Runs DocFX to create HTML documentation</li>
+</ul>
+</li>
+<li><strong>Logging</strong>: All activities logged to <code>docs-monitor.log</code></li>
+</ol>
+<hr>
+<h2 id="available-commands">🛠️ Available Commands</h2>
+<pre><code class="lang-bash"># Check system status
+./monitor-docs.sh --check
+
+# Build documentation once
+./monitor-docs.sh --build
+
+# Start monitoring (foreground)
+./monitor-docs.sh
+
+# Start as daemon (background)
+./monitor-docs.sh --daemon
+
+# Stop daemon
+./monitor-docs.sh --stop
+
+# View logs
+tail -f docs-monitor.log
+</code></pre>
+<hr>
+<h2 id="serving-documentation">🌐 Serving Documentation</h2>
+<p>To serve the documentation locally:</p>
+<pre><code class="lang-bash"># Install docfx serve (if needed)
+docfx serve _site
+
+# Or build and serve in one command
+docfx docfx.json --serve
+</code></pre>
+<p>Documentation will be available at: <code>http://localhost:8080</code></p>
+<hr>
+<h2 id="performance-features">📈 Performance &amp; Features</h2>
+<h3 id="smart-features">Smart Features</h3>
+<ul>
+<li>🔄 <strong>Auto-reload detection</strong>: Detects if docfx serve is running</li>
+<li>🎨 <strong>Colorized output</strong>: Easy-to-read status messages</li>
+<li>📊 <strong>Comprehensive logging</strong>: Detailed activity logs</li>
+<li>⚡ <strong>Debounced rebuilds</strong>: Prevents excessive builds during rapid changes</li>
+<li>🛡️ <strong>Error handling</strong>: Graceful failure handling with detailed error messages</li>
+</ul>
+<h3 id="exclusions">Exclusions</h3>
+<p>Automatically ignores changes in:</p>
+<ul>
+<li><code>.git/</code>, <code>.vs/</code>, <code>.vscode/</code> directories</li>
+<li><code>bin/</code>, <code>obj/</code> build output</li>
+<li><code>_site/</code> documentation output</li>
+<li><code>TestResults/</code> test results</li>
+<li>Temporary files (*.tmp, *.temp, *.swp, etc.)</li>
+</ul>
+<hr>
+<h2 id="configuration-files">🔧 Configuration Files</h2>
+<h3 id="created-files">Created Files</h3>
+<ul>
+<li><code>build-docs.sh</code> - Linux-compatible build script</li>
+<li><code>monitor-docs.sh</code> - Main monitoring script with full feature set</li>
+<li><code>install-dependencies.sh</code> - Dependency installation script</li>
+<li><code>docs-monitor.service</code> - Systemd service file</li>
+<li><code>DOCS_MONITORING.md</code> - Complete documentation</li>
+<li><code>docs-monitor.log</code> - Activity log file</li>
+</ul>
+<h3 id="environment-setup">Environment Setup</h3>
+<ul>
+<li>.NET SDK installed in <code>/home/ubuntu/.dotnet</code></li>
+<li>DocFX tool in <code>/home/ubuntu/.dotnet/tools</code></li>
+<li>PATH configured for both locations</li>
+<li>DOTNET_ROOT environment variable set</li>
+</ul>
+<hr>
+<h2 id="next-steps">🎯 Next Steps</h2>
+<p>The system is now fully operational and will:</p>
+<ol>
+<li><strong>Continuously monitor</strong> your codebase for changes</li>
+<li><strong>Automatically rebuild</strong> documentation when changes are detected</li>
+<li><strong>Log all activities</strong> for monitoring and debugging</li>
+<li><strong>Handle errors gracefully</strong> with detailed error messages</li>
+</ol>
+<h3 id="optional-enhancements">Optional Enhancements</h3>
+<p>For production use, consider:</p>
+<ul>
+<li>Installing as systemd service for system-wide monitoring</li>
+<li>Setting up web server integration for automatic deployment</li>
+<li>Configuring CI/CD pipeline integration</li>
+<li>Adding webhook notifications for build status</li>
+</ul>
+<hr>
+<h2 id="support-troubleshooting">🆘 Support &amp; Troubleshooting</h2>
+<p>If issues arise:</p>
+<ol>
+<li>Check status: <code>./monitor-docs.sh --check</code></li>
+<li>Review logs: <code>tail -f docs-monitor.log</code></li>
+<li>Test manual build: <code>./monitor-docs.sh --build</code></li>
+<li>Restart daemon: <code>./monitor-docs.sh --stop &amp;&amp; ./monitor-docs.sh --daemon</code></li>
+</ol>
+<p>The system is designed to be robust and self-healing, automatically recovering from most common issues.</p>
+<hr>
+<p><strong>Status</strong>: ✅ <strong>OPERATIONAL</strong> - Documentation monitoring active and ready!</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/your-username/FareCalculator/blob/main/MONITORING_STATUS.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Metro Fare Calculator - A comprehensive fare calculation system using Strategy and State patterns
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

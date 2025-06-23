@@ -1,0 +1,38 @@
+[Unit]
+Description=DocFX Documentation Monitor
+Documentation=man:docfx(1)
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=%i
+Group=%i
+WorkingDirectory=/workspace
+ExecStart=/workspace/monitor-docs.sh
+ExecStop=/bin/kill -TERM $MAINPID
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=30
+
+# Environment variables
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/%i/.dotnet:/home/%i/.dotnet/tools
+Environment=DOTNET_ROOT=/home/%i/.dotnet
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=docs-monitor
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/workspace
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>API Reference | Metro Fare Calculator API Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="API Reference | Metro Fare Calculator API Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FareCalculator">
+            FareCalculator
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="api-reference">API Reference</h1>
+
+<p>Welcome to the Metro Fare Calculator API documentation. This section contains the complete API reference for all public classes, interfaces, and methods.</p>
+<h2 id="core-namespaces">Core Namespaces</h2>
+<h3 id="farecalculator.configuration">FareCalculator.Configuration</h3>
+<p>Configuration classes for strongly-typed settings management.</p>
+<p><strong>Key Classes:</strong></p>
+<ul>
+<li><code>FareCalculationOptions</code> - Main fare calculation settings</li>
+<li><code>GeographyOptions</code> - Geographical calculation constants</li>
+<li><code>StationOptions</code> - Station data configuration</li>
+</ul>
+<h3 id="farecalculator.interfaces">FareCalculator.Interfaces</h3>
+<p>Service contracts and abstractions.</p>
+<p><strong>Key Interfaces:</strong></p>
+<ul>
+<li><code>IFareCalculationService</code> - Main fare calculation service</li>
+<li><code>IStationService</code> - Station management operations</li>
+<li><code>IFareRuleEngine</code> - Business rule processing</li>
+<li><code>IFareCalculationStrategy</code> - Strategy pattern for fare calculation</li>
+<li><code>IDiscountStrategy</code> - Strategy pattern for discount application</li>
+<li><code>IFareCalculationState</code> - State pattern for workflow management</li>
+</ul>
+<h3 id="farecalculator.models">FareCalculator.Models</h3>
+<p>Core data structures and entities.</p>
+<p><strong>Key Classes:</strong></p>
+<ul>
+<li><code>Station</code> - Metro station with location and zone information</li>
+<li><code>FareRequest</code> - Fare calculation input parameters</li>
+<li><code>FareResponse</code> - Fare calculation results</li>
+<li><code>PassengerType</code> - Passenger classification enumeration</li>
+</ul>
+<h3 id="farecalculator.services">FareCalculator.Services</h3>
+<p>Business logic implementations.</p>
+<p><strong>Key Classes:</strong></p>
+<ul>
+<li><code>FareCalculationService</code> - Main fare calculation implementation</li>
+<li><code>StationService</code> - Station management and distance calculations</li>
+<li><code>FareRuleEngine</code> - Business rules and fare adjustments</li>
+<li><code>FareCalculationStateMachine</code> - State machine orchestration</li>
+</ul>
+<h3 id="farecalculator.strategies">FareCalculator.Strategies</h3>
+<p>Strategy pattern implementations for fare calculation algorithms.</p>
+<p><strong>Key Classes:</strong></p>
+<ul>
+<li><code>ZoneBasedFareStrategy</code> - Zone-based fare calculation</li>
+<li><code>DistanceBasedFareStrategy</code> - Distance-based fare calculation</li>
+<li><code>PassengerDiscountStrategy</code> - Passenger type discounts</li>
+<li><code>TimeBasedDiscountStrategy</code> - Time-based fare adjustments</li>
+</ul>
+<h3 id="farecalculator.states">FareCalculator.States</h3>
+<p>State pattern implementations for fare calculation workflow.</p>
+<p><strong>Key Classes:</strong></p>
+<ul>
+<li><code>InitialCalculationState</code> - Request validation and setup</li>
+<li><code>BaseFareCalculationState</code> - Base fare calculation</li>
+<li><code>DiscountApplicationState</code> - Discount strategy application</li>
+<li><code>FinalCalculationState</code> - Final fare calculation and formatting</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="basic-fare-calculation">Basic Fare Calculation</h3>
+<pre><code class="lang-csharp">// Inject the service
+IFareCalculationService fareService;
+
+// Create a fare request
+var request = new FareRequest
+{
+    Origin = new Station { Id = 1, Name = &quot;Downtown Central&quot;, Zone = &quot;A&quot; },
+    Destination = new Station { Id = 6, Name = &quot;Airport Express&quot;, Zone = &quot;C&quot; },
+    PassengerType = PassengerType.Adult,
+    TravelDate = DateTime.Now
+};
+
+// Calculate fare
+var response = await fareService.CalculateFareAsync(request);
+Console.WriteLine($&quot;Fare: ${response.Amount:F2}&quot;);
+</code></pre>
+<h3 id="station-management">Station Management</h3>
+<pre><code class="lang-csharp">// Inject the service
+IStationService stationService;
+
+// Get station by ID
+var station = await stationService.GetStationByIdAsync(1);
+
+// Get all stations
+var allStations = await stationService.GetAllStationsAsync();
+
+// Calculate distance between stations
+var distance = await stationService.CalculateDistanceAsync(origin, destination);
+</code></pre>
+<h2 id="architecture-patterns">Architecture Patterns</h2>
+<p>The API implements several design patterns:</p>
+<ul>
+<li><strong>Strategy Pattern</strong>: Pluggable fare calculation algorithms</li>
+<li><strong>State Pattern</strong>: Workflow-based fare processing</li>
+<li><strong>Dependency Injection</strong>: Loose coupling and testability</li>
+<li><strong>Options Pattern</strong>: Strongly-typed configuration</li>
+<li><strong>Repository Pattern</strong>: Data access abstraction</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<p>All services use the .NET Options pattern for configuration:</p>
+<pre><code class="lang-csharp">// Register configuration
+services.Configure&lt;FareCalculationOptions&gt;(
+    configuration.GetSection(&quot;FareCalculation&quot;));
+
+// Inject into services
+public class FareCalculationService
+{
+    public FareCalculationService(IOptions&lt;FareCalculationOptions&gt; options)
+    {
+        _options = options.Value;
+    }
+}
+</code></pre>
+<p>See the <a href="../articles/Configuration-Migration.md">Configuration Documentation</a> for complete details.</p>
+<h2 id="error-handling">Error Handling</h2>
+<p>All services include comprehensive error handling:</p>
+<ul>
+<li><code>ArgumentNullException</code> - For null parameters</li>
+<li><code>ArgumentException</code> - For invalid parameter values</li>
+<li><code>InvalidOperationException</code> - For invalid state transitions</li>
+</ul>
+<h2 id="thread-safety">Thread Safety</h2>
+<p>All services are designed to be thread-safe and can be registered as singletons or scoped services in the DI container.</p>
+<h2 id="performance">Performance</h2>
+<p>The API is optimized for performance:</p>
+<ul>
+<li>Efficient distance calculations using Haversine formula</li>
+<li>Caching-friendly design</li>
+<li>Minimal memory allocations</li>
+<li>Fast lookup operations</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<p>The API is fully covered by unit and integration tests. See <a href="../articles/Test-Documentation.md">Test Documentation</a> for details.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Metro Fare Calculator - A comprehensive fare calculation system using Strategy and State patterns
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

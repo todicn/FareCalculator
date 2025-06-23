@@ -1,0 +1,98 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "src",
+          "files": [
+            "**/*.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "properties": {
+        "TargetFramework": "net8.0"
+      },
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**",
+          "**/bin/**",
+          "**/obj/**"
+        ]
+      },
+      {
+        "files": [
+          "docs/**/*.md"
+        ],
+        "dest": "articles"
+      },
+      {
+        "files": [
+          "README.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          "docs/images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "FareCalculator",
+      "_appTitle": "Metro Fare Calculator API Documentation",
+      "_appFooter": "Metro Fare Calculator - A comprehensive fare calculation system using Strategy and State patterns",
+      "_enableSearch": true,
+      "_enableNewTab": true,
+      "pdf": false,
+      "_gitContribute": {
+        "repo": "https://github.com/your-username/FareCalculator",
+        "branch": "main"
+      }
+    },
+    "fileMetadata": {
+      "_tocPath": {
+        "docs/**/*.md": "docs/toc.yml"
+      }
+    },
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "markdownEngineProperties": {
+      "markdigExtensions": [
+        "abbreviations",
+        "autoidentifiers", 
+        "citations",
+        "customcontainers",
+        "definitionlists",
+        "emphasisextras",
+        "figures",
+        "footers",
+        "footnotes",
+        "gridtables",
+        "mathematics",
+        "medialinks",
+        "pipetables",
+        "listextras",
+        "tasklists",
+        "diagrams"
+      ]
+    }
+  }
+}

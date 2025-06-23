@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Metro Fare Calculator | Metro Fare Calculator API Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Metro Fare Calculator | Metro Fare Calculator API Documentation ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="docs/toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="FareCalculator">
+            FareCalculator
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="metro-fare-calculator">Metro Fare Calculator</h1>
+
+<p>A C# console application for calculating metro/subway fare costs with support for different passenger types, time-based pricing, and zone-based fare calculation.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Zone-based Fare Calculation</strong>: Calculates fares based on the number of zones traveled</li>
+<li><strong>Passenger Type Discounts</strong>: Different pricing for adults, children, seniors, students, and disabled passengers</li>
+<li><strong>Time-based Pricing</strong>: Peak hour surcharges and off-peak discounts</li>
+<li><strong>Distance Calculation</strong>: Uses Haversine formula to calculate distances between stations</li>
+<li><strong>Configuration-based System</strong>: All constants (fares, discounts, stations) stored in <code>appsettings.json</code></li>
+<li><strong>Dependency Injection</strong>: Modern .NET architecture with proper DI container setup</li>
+<li><strong>Comprehensive Logging</strong>: Structured logging throughout the application</li>
+<li><strong>Unit &amp; Integration Tests</strong>: Full test coverage with mocking and real dependency testing</li>
+<li><strong>Complete Documentation</strong>: XML documentation and DocFX-generated API documentation</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<p>This project includes comprehensive documentation generated with DocFX:</p>
+<h3 id="api-documentation">📖 <strong>API Documentation</strong></h3>
+<ul>
+<li><strong>XML Documentation</strong>: All public APIs are documented with XML comments</li>
+<li><strong>Generated Documentation Site</strong>: Professional documentation website with DocFX</li>
+<li><strong>Design Patterns Guide</strong>: Detailed explanation of Strategy and State pattern implementations</li>
+<li><strong>API Reference</strong>: Complete interface and model documentation</li>
+</ul>
+<h3 id="building-documentation">🛠️ <strong>Building Documentation</strong></h3>
+<h4 id="prerequisites">Prerequisites</h4>
+<p>Install DocFX globally:</p>
+<pre><code class="lang-bash">dotnet tool install -g docfx
+</code></pre>
+<h4 id="generate-documentation">Generate Documentation</h4>
+<pre><code class="lang-bash"># Quick build and serve
+docfx docfx.json --serve
+
+# Or use the provided script
+powershell -ExecutionPolicy Bypass -File build-docs.ps1
+
+# Manual process
+dotnet build                    # Generate XML documentation
+docfx build docfx.json         # Build documentation site
+docfx serve _site              # Serve locally at http://localhost:8080
+</code></pre>
+<h4 id="documentation-structure">Documentation Structure</h4>
+<ul>
+<li><strong>Main Site</strong>: Generated in <code>_site/</code> directory</li>
+<li><strong>API Reference</strong>: Auto-generated from XML documentation</li>
+<li><strong>Articles</strong>: Markdown files in <code>docs/</code> directory</li>
+<li><strong>Configuration</strong>: <code>docfx.json</code> with proper paths configured</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<p>The application follows clean architecture principles with:</p>
+<ul>
+<li><strong>Models</strong>: Core data structures (<code>Station</code>, <code>FareRequest</code>, <code>FareResponse</code>, <code>PassengerType</code>)</li>
+<li><strong>Interfaces</strong>: Abstractions for all services (<code>IStationService</code>, <code>IFareCalculationService</code>, <code>IFareRuleEngine</code>)</li>
+<li><strong>Services</strong>: Concrete implementations with business logic</li>
+<li><strong>Configuration</strong>: Strongly-typed configuration classes for all settings</li>
+<li><strong>Dependency Injection</strong>: Proper service registration and lifetime management</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<p>All hardcoded constants have been moved to <code>appsettings.json</code> for easy customization:</p>
+<h3 id="fare-settings-farecalculation-section"><strong>Fare Settings</strong> (<code>FareCalculation</code> section)</h3>
+<pre><code class="lang-json">{
+  &quot;FareCalculation&quot;: {
+    &quot;Currency&quot;: &quot;USD&quot;,
+    &quot;ZoneBasedFares&quot;: {
+      &quot;1&quot;: 2.50,
+      &quot;2&quot;: 3.75,
+      &quot;3&quot;: 5.00
+    },
+    &quot;DistanceBasedFares&quot;: {
+      &quot;BaseFare&quot;: 1.50,
+      &quot;PerKilometerRate&quot;: 0.25
+    },
+    &quot;PassengerDiscounts&quot;: {
+      &quot;Adult&quot;: 0.00,
+      &quot;Child&quot;: 0.50,
+      &quot;Senior&quot;: 0.30,
+      &quot;Student&quot;: 0.20,
+      &quot;Disabled&quot;: 0.50
+    },
+    &quot;TimeBasedRules&quot;: {
+      &quot;PeakHours&quot;: {
+        &quot;Surcharge&quot;: 0.25,
+        &quot;WeekdayMorningStart&quot;: 7,
+        &quot;WeekdayMorningEnd&quot;: 9,
+        &quot;WeekdayEveningStart&quot;: 17,
+        &quot;WeekdayEveningEnd&quot;: 19
+      },
+      &quot;OffPeakHours&quot;: {
+        &quot;Discount&quot;: 0.10,
+        &quot;NightStart&quot;: 22,
+        &quot;NightEnd&quot;: 6
+      }
+    },
+    &quot;ZoneMapping&quot;: {
+      &quot;A&quot;: 1,
+      &quot;B&quot;: 2,
+      &quot;C&quot;: 3
+    },
+    &quot;Priorities&quot;: {
+      &quot;ZoneBasedFareStrategy&quot;: 100,
+      &quot;DistanceBasedFareStrategy&quot;: 50,
+      &quot;PassengerDiscountStrategy&quot;: 100,
+      &quot;TimeBasedDiscountStrategy&quot;: 90
+    }
+  }
+}
+</code></pre>
+<h3 id="station-data-stations-section"><strong>Station Data</strong> (<code>Stations</code> section)</h3>
+<p>Station coordinates, zones, and names are configurable:</p>
+<pre><code class="lang-json">{
+  &quot;Stations&quot;: [
+    {
+      &quot;Id&quot;: 1,
+      &quot;Name&quot;: &quot;Downtown Central&quot;,
+      &quot;Zone&quot;: &quot;A&quot;,
+      &quot;Latitude&quot;: 40.7128,
+      &quot;Longitude&quot;: -74.0060
+    }
+  ]
+}
+</code></pre>
+<h3 id="geography-settings-geography-section"><strong>Geography Settings</strong> (<code>Geography</code> section)</h3>
+<pre><code class="lang-json">{
+  &quot;Geography&quot;: {
+    &quot;EarthRadiusKilometers&quot;: 6371
+  }
+}
+</code></pre>
+<h3 id="configuration-benefits"><strong>Configuration Benefits</strong></h3>
+<ul>
+<li><strong>Easy Customization</strong>: Modify fares without recompiling</li>
+<li><strong>Environment-specific Settings</strong>: Different configs for dev/prod</li>
+<li><strong>Dynamic Pricing</strong>: Change time-based rules seasonally</li>
+<li><strong>Station Management</strong>: Add/modify stations via configuration</li>
+<li><strong>Strongly-typed</strong>: Compile-time safety with configuration classes</li>
+</ul>
+<h2 id="fare-rules">Fare Rules</h2>
+<h3 id="base-fares-by-zone">Base Fares by Zone</h3>
+<ul>
+<li>Same zone (1 zone): $2.50</li>
+<li>Cross one zone (2 zones): $3.75</li>
+<li>Cross two zones (3 zones): $5.00</li>
+</ul>
+<h3 id="passenger-discounts">Passenger Discounts</h3>
+<ul>
+<li><strong>Adult</strong>: No discount (0%)</li>
+<li><strong>Child</strong>: 50% discount</li>
+<li><strong>Senior</strong>: 30% discount</li>
+<li><strong>Student</strong>: 20% discount</li>
+<li><strong>Disabled</strong>: 50% discount</li>
+</ul>
+<h3 id="time-based-pricing">Time-based Pricing</h3>
+<ul>
+<li><strong>Peak Hours</strong> (weekdays 7-9 AM and 5-7 PM): 25% surcharge</li>
+<li><strong>Off-Peak Hours</strong> (10 PM - 6 AM): 10% discount</li>
+<li><strong>Regular Hours</strong>: No adjustment</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="prerequisites-1">Prerequisites</h3>
+<ul>
+<li>.NET 8.0 SDK or later</li>
+<li>IDE (Visual Studio, VS Code, or JetBrains Rider)</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>Clone the repository:</li>
+</ol>
+<pre><code class="lang-bash">git clone &lt;repository-url&gt;
+cd FareCalculator
+</code></pre>
+<ol start="2">
+<li>Restore dependencies:</li>
+</ol>
+<pre><code class="lang-bash">dotnet restore
+</code></pre>
+<ol start="3">
+<li>Build the solution:</li>
+</ol>
+<pre><code class="lang-bash">dotnet build
+</code></pre>
+<h3 id="running-the-application">Running the Application</h3>
+<pre><code class="lang-bash">dotnet run --project src/FareCalculator
+</code></pre>
+<p>Follow the interactive prompts to:</p>
+<ol>
+<li>Select origin and destination stations</li>
+<li>Choose passenger type</li>
+<li>Enter travel date/time (or use current time)</li>
+<li>View calculated fare</li>
+</ol>
+<h3 id="sample-stations">Sample Stations</h3>
+<p>The application includes 8 predefined stations:</p>
+<p><strong>Zone A:</strong></p>
+<ul>
+<li>Downtown Central</li>
+<li>Uptown North</li>
+<li>Harbor View</li>
+</ul>
+<p><strong>Zone B:</strong></p>
+<ul>
+<li>Eastside Plaza</li>
+<li>Westwood Terminal</li>
+<li>University Campus</li>
+</ul>
+<p><strong>Zone C:</strong></p>
+<ul>
+<li>Southgate Junction</li>
+<li>Airport Express</li>
+</ul>
+<h2 id="running-tests">Running Tests</h2>
+<h3 id="unit-tests">Unit Tests</h3>
+<pre><code class="lang-bash">dotnet test tests/FareCalculator.Tests --filter Category!=Integration
+</code></pre>
+<h3 id="integration-tests">Integration Tests</h3>
+<pre><code class="lang-bash">dotnet test tests/FareCalculator.Tests --filter Category=Integration
+</code></pre>
+<h3 id="all-tests">All Tests</h3>
+<pre><code class="lang-bash">dotnet test
+</code></pre>
+<h3 id="test-coverage">Test Coverage</h3>
+<p>The test suite includes:</p>
+<ul>
+<li><strong>Unit Tests</strong>: Mock-based testing of individual services</li>
+<li><strong>Integration Tests</strong>: End-to-end testing with real dependencies</li>
+<li><strong>Theory Tests</strong>: Parameterized tests for multiple scenarios</li>
+<li><strong>Exception Handling</strong>: Error condition testing</li>
+</ul>
+<h2 id="project-structure">Project Structure</h2>
+<pre><code>FareCalculator/
+├── src/
+│   └── FareCalculator/
+│       ├── Configuration/       # Strongly-typed configuration classes
+│       ├── Interfaces/          # Service abstractions
+│       ├── Models/              # Data models
+│       ├── Services/            # Business logic implementations
+│       ├── States/              # State pattern implementations
+│       ├── Strategies/          # Strategy pattern implementations
+│       ├── Program.cs           # Application entry point
+│       ├── appsettings.json     # Configuration file
+│       └── FareCalculator.csproj
+├── tests/
+│   └── FareCalculator.Tests/
+│       ├── Services/            # Unit tests
+│       ├── Strategies/          # Strategy tests
+│       ├── Integration/         # Integration tests
+│       └── FareCalculator.Tests.csproj
+├── docs/                        # Documentation files
+├── _site/                       # Generated documentation site
+├── docfx.json                   # DocFX configuration
+├── FareCalculator.sln
+└── README.md
+</code></pre>
+<h2 id="dependencies">Dependencies</h2>
+<h3 id="main-application">Main Application</h3>
+<ul>
+<li>Microsoft.Extensions.Hosting (8.0.0)</li>
+<li>Microsoft.Extensions.DependencyInjection (8.0.0)</li>
+<li>Microsoft.Extensions.Logging (8.0.0)</li>
+<li>Microsoft.Extensions.Logging.Console (8.0.0)</li>
+<li>Microsoft.Extensions.Configuration (8.0.0)</li>
+<li>Microsoft.Extensions.Options.ConfigurationExtensions (8.0.0)</li>
+</ul>
+<h3 id="testing">Testing</h3>
+<ul>
+<li>Microsoft.NET.Test.Sdk (17.8.0)</li>
+<li>xunit (2.6.1)</li>
+<li>xunit.runner.visualstudio (2.5.1)</li>
+<li>Moq (4.20.69)</li>
+</ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre><code>=== Metro Fare Calculator ===
+
+Available Stations:
+==================
+1. Downtown Central (Zone A)
+2. Uptown North (Zone A)
+3. Eastside Plaza (Zone B)
+4. Westwood Terminal (Zone B)
+5. Southgate Junction (Zone C)
+6. Airport Express (Zone C)
+7. University Campus (Zone B)
+8. Harbor View (Zone A)
+
+--- New Fare Calculation ---
+Enter origin station name or ID: 1
+Enter destination station name or ID: Airport Express
+
+Select passenger type:
+1. Adult
+2. Child
+3. Senior
+4. Student
+5. Disabled
+Enter choice (1-5): 2
+
+Enter travel date and time (YYYY-MM-DD HH:MM) or press Enter for now: 2024-01-15 08:30
+
+=== Fare Calculation Result ===
+Fare Amount: $3.13 USD
+Fare Type: Child - Peak Hours
+Number of Zones: 3
+Distance: 32.18 km
+Description: Journey from Downtown Central to Airport Express covers 3 zone(s). Base fare: $5.00, Final fare after adjustments: $3.13
+===============================
+</code></pre>
+<h2 id="contributing">Contributing</h2>
+<ol>
+<li>Fork the repository</li>
+<li>Create a feature branch</li>
+<li>Add tests for new functionality</li>
+<li>Ensure all tests pass</li>
+<li>Submit a pull request</li>
+</ol>
+<h2 id="license">License</h2>
+<p>This project is open source and available under the <a href="LICENSE">MIT License</a>.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Metro Fare Calculator - A comprehensive fare calculation system using Strategy and State patterns
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

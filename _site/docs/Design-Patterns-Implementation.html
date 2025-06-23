@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Design Patterns Implementation Guide | Metro Fare Calculator API Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Design Patterns Implementation Guide | Metro Fare Calculator API Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FareCalculator">
+            FareCalculator
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="design-patterns-implementation-guide">Design Patterns Implementation Guide</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The Metro Fare Calculator has been enhanced with two powerful design patterns:</p>
+<ul>
+<li><strong>Strategy Pattern</strong>: For flexible fare calculation and discount algorithms</li>
+<li><strong>State Pattern</strong>: For managing the fare calculation workflow</li>
+</ul>
+<h2 id="xml-documentation-generation">XML Documentation Generation</h2>
+<p>The project is configured to automatically generate comprehensive XML documentation files during build:</p>
+<h3 id="configuration">📋 <strong>Configuration</strong></h3>
+<ul>
+<li><strong>Main Project</strong>: <code>FareCalculator.xml</code> generated in <code>bin/Debug/net8.0/</code></li>
+<li><strong>Test Project</strong>: <code>FareCalculator.Tests.xml</code> generated in test output directory</li>
+<li><strong>Complete API Documentation</strong>: All public classes, methods, and properties documented with XML comments</li>
+</ul>
+<h3 id="build-settings">🛠 <strong>Build Settings</strong></h3>
+<pre><code class="lang-xml">&lt;PropertyGroup&gt;
+  &lt;GenerateDocumentationFile&gt;true&lt;/GenerateDocumentationFile&gt;
+  &lt;DocumentationFile&gt;bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml&lt;/DocumentationFile&gt;
+  &lt;NoWarn&gt;$(NoWarn);1591&lt;/NoWarn&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<h3 id="documentation-features">📖 <strong>Documentation Features</strong></h3>
+<ul>
+<li><strong>Comprehensive Coverage</strong>: All interfaces, models, services, and states documented</li>
+<li><strong>Parameter Descriptions</strong>: Detailed explanations of method parameters and return values</li>
+<li><strong>Exception Documentation</strong>: All thrown exceptions documented with conditions</li>
+<li><strong>Design Pattern Explanations</strong>: XML comments explain Strategy and State pattern implementations</li>
+<li><strong>Usage Examples</strong>: Code examples and value descriptions for properties</li>
+</ul>
+<h2 id="strategy-pattern-implementation">Strategy Pattern Implementation</h2>
+<h3 id="purpose">🎯 <strong>Purpose</strong></h3>
+<p>The Strategy pattern allows the system to dynamically choose different algorithms for fare calculation and discount application based on runtime conditions.</p>
+<h3 id="key-components">📋 <strong>Key Components</strong></h3>
+<h4 id="fare-calculation-strategies-ifarecalculationstrategy">1. Fare Calculation Strategies (<code>IFareCalculationStrategy</code>)</h4>
+<pre><code class="lang-csharp">public interface IFareCalculationStrategy
+{
+    string StrategyName { get; }
+    Task&lt;decimal&gt; CalculateBaseFareAsync(FareRequest request);
+    bool CanHandle(FareRequest request);
+    int Priority { get; }
+}
+</code></pre>
+<p><strong>Implementations:</strong></p>
+<ul>
+<li><code>ZoneBasedFareStrategy</code> (Priority: 100) - Primary strategy for zone-based calculation</li>
+<li><code>DistanceBasedFareStrategy</code> (Priority: 50) - Fallback strategy using GPS coordinates</li>
+</ul>
+<h4 id="discount-strategies-idiscountstrategy">2. Discount Strategies (<code>IDiscountStrategy</code>)</h4>
+<pre><code class="lang-csharp">public interface IDiscountStrategy
+{
+    string StrategyName { get; }
+    decimal ApplyDiscount(decimal baseFare, FareRequest request);
+    bool AppliesTo(PassengerType passengerType);
+    int Priority { get; }
+}
+</code></pre>
+<p><strong>Implementations:</strong></p>
+<ul>
+<li><code>PassengerDiscountStrategy</code> (Priority: 100) - Applies passenger type discounts</li>
+<li><code>TimeBasedDiscountStrategy</code> (Priority: 90) - Applies peak/off-peak pricing</li>
+</ul>
+<h3 id="strategy-selection-process">🔄 <strong>Strategy Selection Process</strong></h3>
+<ol>
+<li><strong>Fare Calculation</strong>: System selects the highest priority strategy that can handle the request</li>
+<li><strong>Discount Application</strong>: System applies all applicable discount strategies in priority order</li>
+</ol>
+<h3 id="benefits">✅ <strong>Benefits</strong></h3>
+<ul>
+<li><strong>Extensibility</strong>: Easy to add new calculation methods (flat rate, premium zones, etc.)</li>
+<li><strong>Maintainability</strong>: Each strategy is isolated and testable</li>
+<li><strong>Flexibility</strong>: Runtime strategy selection based on request characteristics</li>
+</ul>
+<h2 id="state-pattern-implementation">State Pattern Implementation</h2>
+<h3 id="purpose-1">🎯 <strong>Purpose</strong></h3>
+<p>The State pattern manages the fare calculation workflow as a series of well-defined states, each handling specific responsibilities.</p>
+<h3 id="state-workflow-diagram">📊 <strong>State Workflow Diagram</strong></h3>
+<pre><code class="lang-mermaid">stateDiagram-v2
+    [*] --&gt; Initial : Start Calculation
+    
+    Initial --&gt; BaseFareCalculation : Validate Request&lt;br/&gt;Initialize Context
+    
+    BaseFareCalculation --&gt; DiscountApplication : Calculate Base Fare&lt;br/&gt;Select Strategy&lt;br/&gt;Get Distance/Zones
+    
+    DiscountApplication --&gt; FinalCalculation : Apply Discounts&lt;br/&gt;Track Adjustments
+    
+    FinalCalculation --&gt; [*] : Finalize Amount&lt;br/&gt;Generate Description&lt;br/&gt;Complete Response
+    
+    note right of Initial
+        • Validate request data
+        • Initialize context
+        • Set up logging
+        • Prepare response object
+    end note
+    
+    note right of BaseFareCalculation
+        • Select fare strategy by priority
+        • Calculate base fare amount
+        • Calculate distance between stations
+        • Determine zone information
+    end note
+    
+    note right of DiscountApplication
+        • Find applicable discount strategies
+        • Apply discounts in priority order
+        • Track total discount amount
+        • Maintain audit trail
+    end note
+    
+    note right of FinalCalculation
+        • Round final fare amount
+        • Calculate zone count
+        • Generate fare description
+        • Complete response object
+    end note
+</code></pre>
+<h3 id="state-workflow">📋 <strong>State Workflow</strong></h3>
+<h4 id="initial-state-initialcalculationstate">1. <strong>Initial State</strong> (<code>InitialCalculationState</code>)</h4>
+<ul>
+<li>Validates the request</li>
+<li>Initializes the calculation context</li>
+<li>Sets up logging and metadata</li>
+</ul>
+<h4 id="base-fare-calculation-state-basefarecalculationstate">2. <strong>Base Fare Calculation State</strong> (<code>BaseFareCalculationState</code>)</h4>
+<ul>
+<li>Selects appropriate fare calculation strategy</li>
+<li>Calculates base fare amount</li>
+<li>Collects distance and zone information</li>
+</ul>
+<h4 id="discount-application-state-discountapplicationstate">3. <strong>Discount Application State</strong> (<code>DiscountApplicationState</code>)</h4>
+<ul>
+<li>Applies all relevant discount strategies</li>
+<li>Tracks discount amounts and reasons</li>
+<li>Maintains audit trail of adjustments</li>
+</ul>
+<h4 id="final-calculation-state-finalcalculationstate">4. <strong>Final Calculation State</strong> (<code>FinalCalculationState</code>)</h4>
+<ul>
+<li>Rounds final amount</li>
+<li>Generates fare description</li>
+<li>Prepares final response object</li>
+</ul>
+<h3 id="state-transition-rules">🔄 <strong>State Transition Rules</strong></h3>
+<pre><code>Initial → BaseFareCalculation → DiscountApplication → FinalCalculation
+</code></pre>
+<p>Each state validates transitions and maintains context integrity.</p>
+<h3 id="context-object">📊 <strong>Context Object</strong></h3>
+<pre><code class="lang-csharp">public class FareCalculationContext
+{
+    public FareRequest Request { get; set; }
+    public FareResponse Response { get; set; }
+    public decimal CurrentFare { get; set; }
+    public IFareCalculationState CurrentState { get; set; }
+    public Dictionary&lt;string, object&gt; Data { get; set; }
+    public List&lt;string&gt; ProcessingLog { get; set; }
+}
+</code></pre>
+<h3 id="benefits-1">✅ <strong>Benefits</strong></h3>
+<ul>
+<li><strong>Clarity</strong>: Each state has a single responsibility</li>
+<li><strong>Maintainability</strong>: Easy to modify individual steps</li>
+<li><strong>Debuggability</strong>: Complete audit trail of processing steps</li>
+<li><strong>Extensibility</strong>: Easy to add new states or modify workflow</li>
+</ul>
+<h2 id="dependency-injection-configuration">Dependency Injection Configuration</h2>
+<h3 id="service-registration">Service Registration</h3>
+<pre><code class="lang-csharp">// Register strategy pattern implementations
+services.AddScoped&lt;IFareCalculationStrategy, ZoneBasedFareStrategy&gt;();
+services.AddScoped&lt;IFareCalculationStrategy, DistanceBasedFareStrategy&gt;();
+services.AddScoped&lt;IDiscountStrategy, PassengerDiscountStrategy&gt;();
+services.AddScoped&lt;IDiscountStrategy, TimeBasedDiscountStrategy&gt;();
+
+// Register state pattern implementations
+services.AddScoped&lt;InitialCalculationState&gt;();
+services.AddScoped&lt;BaseFareCalculationState&gt;();
+services.AddScoped&lt;DiscountApplicationState&gt;();
+services.AddScoped&lt;FinalCalculationState&gt;();
+
+// Register state machine
+services.AddScoped&lt;IFareCalculationStateMachine, FareCalculationStateMachine&gt;();
+</code></pre>
+<h2 id="example-execution-flow">Example Execution Flow</h2>
+<h3 id="input">Input</h3>
+<pre><code>Origin: Airport Express (Zone C)
+Destination: Harbor View (Zone A)
+Passenger: Adult
+Time: 3:38 AM (Off-peak)
+</code></pre>
+<h3 id="processing-log">Processing Log</h3>
+<pre><code>1. Entering state: Initial
+   - Initialized calculation at 2025-06-23 03:38:39
+   - Route: Airport Express → Harbor View
+   - Passenger: Adult
+   - Travel Date: 2025-06-23 03:38
+
+2. Entering state: BaseFareCalculation
+   - Selected strategy: Zone-Based Calculation
+   - Zone calculation: 3 zones = $5.00
+   - Distance: 20.74 km
+
+3. Entering state: DiscountApplication
+   - Found 2 applicable discount strategies
+   - Applied Passenger Type Discount: $5.00 → $5.00 (Adult: 0%)
+   - Applied Time-Based Discount: $5.00 → $4.50 (Off-peak: -10%)
+
+4. Entering state: FinalCalculation
+   - Final fare: $4.50
+   - Calculation completed at 2025-06-23 03:38:39
+</code></pre>
+<h3 id="output">Output</h3>
+<pre><code>Fare Amount: $4.50 USD
+Fare Type: Adult - Off-Peak Hours
+Description: Journey from Airport Express to Harbor View. 
+Calculated using Zone-Based Calculation strategy, covering 3 zone(s). 
+Base fare: $5.00, Final fare after adjustments: $4.50
+</code></pre>
+<h2 id="testing-strategy">Testing Strategy</h2>
+<h3 id="unit-tests">Unit Tests</h3>
+<ul>
+<li><strong>Strategy Tests</strong>: Test each strategy implementation independently</li>
+<li><strong>State Tests</strong>: Test individual state processing logic</li>
+<li><strong>Integration Tests</strong>: Test complete workflow scenarios</li>
+</ul>
+<h3 id="test-coverage">Test Coverage</h3>
+<ul>
+<li>69 total tests (up from 45)</li>
+<li>Full coverage of both original and pattern-based implementations</li>
+<li>Backward compatibility maintained</li>
+</ul>
+<h2 id="extending-the-system">Extending the System</h2>
+<h3 id="adding-new-fare-calculation-strategy">Adding New Fare Calculation Strategy</h3>
+<pre><code class="lang-csharp">public class FlatRateFareStrategy : IFareCalculationStrategy
+{
+    public string StrategyName =&gt; &quot;Flat Rate&quot;;
+    public int Priority =&gt; 75;
+    
+    public bool CanHandle(FareRequest request) 
+        =&gt; request.Origin.Zone == &quot;EXPRESS&quot;;
+    
+    public Task&lt;decimal&gt; CalculateBaseFareAsync(FareRequest request)
+        =&gt; Task.FromResult(3.00m);
+}
+</code></pre>
+<h3 id="adding-new-discount-strategy">Adding New Discount Strategy</h3>
+<pre><code class="lang-csharp">public class GroupDiscountStrategy : IDiscountStrategy
+{
+    public string StrategyName =&gt; &quot;Group Discount&quot;;
+    public int Priority =&gt; 80;
+    
+    public bool AppliesTo(PassengerType passengerType) =&gt; true;
+    
+    public decimal ApplyDiscount(decimal baseFare, FareRequest request)
+    {
+        // Apply 15% discount for group bookings
+        return request.Data.ContainsKey(&quot;GroupSize&quot;) &amp;&amp; 
+               (int)request.Data[&quot;GroupSize&quot;] &gt;= 5 
+            ? baseFare * 0.85m 
+            : baseFare;
+    }
+}
+</code></pre>
+<h3 id="adding-new-processing-state">Adding New Processing State</h3>
+<pre><code class="lang-csharp">public class ValidationState : IFareCalculationState
+{
+    public string StateName =&gt; &quot;Validation&quot;;
+    
+    public Task&lt;FareCalculationContext&gt; ProcessAsync(FareCalculationContext context)
+    {
+        // Validate business rules before calculation
+        ValidateStations(context.Request.Origin, context.Request.Destination);
+        ValidateDateTime(context.Request.TravelDate);
+        return Task.FromResult(context);
+    }
+    
+    public bool CanTransitionTo(IFareCalculationState nextState)
+        =&gt; nextState.StateName == &quot;Initial&quot;;
+}
+</code></pre>
+<h2 id="architecture-benefits">Architecture Benefits</h2>
+<h3 id="single-responsibility-principle">🎯 <strong>Single Responsibility Principle</strong></h3>
+<p>Each strategy and state has one clear purpose</p>
+<h3 id="openclosed-principle">🔓 <strong>Open/Closed Principle</strong></h3>
+<p>Open for extension (new strategies/states) but closed for modification</p>
+<h3 id="dependency-inversion">🔄 <strong>Dependency Inversion</strong></h3>
+<p>High-level modules depend on abstractions, not concretions</p>
+<h3 id="testability">🧪 <strong>Testability</strong></h3>
+<p>Each component can be tested independently with mock dependencies</p>
+<h3 id="scalability">📈 <strong>Scalability</strong></h3>
+<p>Easy to add new fare rules, calculation methods, or processing steps</p>
+<p>This pattern-based architecture makes the fare calculation system highly maintainable, extensible, and testable while preserving all existing functionality.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Metro Fare Calculator - A comprehensive fare calculation system using Strategy and State patterns
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

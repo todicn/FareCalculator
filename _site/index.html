@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>This is the HOMEPAGE. | Metro Fare Calculator API Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="This is the HOMEPAGE. | Metro Fare Calculator API Documentation ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="FareCalculator">
+            FareCalculator
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
+
+<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
+<h2 id="quick-start-notes">Quick Start Notes:</h2>
+<ol>
+<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
+</ol>
+<h1 id="metro-fare-calculator-documentation">Metro Fare Calculator Documentation</h1>
+<p>Welcome to the comprehensive documentation for the Metro Fare Calculator project - a sophisticated fare calculation system built with modern design patterns and best practices.</p>
+<h2 id="project-overview">🚇 Project Overview</h2>
+<p>The Metro Fare Calculator is a .NET 8 console application that demonstrates the implementation of:</p>
+<ul>
+<li><strong>Strategy Pattern</strong> for flexible fare calculation algorithms</li>
+<li><strong>State Pattern</strong> for managing calculation workflows</li>
+<li><strong>Dependency Injection</strong> for loose coupling and testability</li>
+<li><strong>Comprehensive Testing</strong> with 54 unit and integration tests</li>
+<li><strong>XML Documentation</strong> for complete API coverage</li>
+</ul>
+<h2 id="key-features">🎯 Key Features</h2>
+<h3 id="fare-calculation-strategies">Fare Calculation Strategies</h3>
+<ul>
+<li><strong>Zone-Based Calculation</strong>: Primary strategy using metro zone system</li>
+<li><strong>Distance-Based Calculation</strong>: Fallback strategy using GPS coordinates</li>
+<li><strong>Priority-Based Selection</strong>: Automatic strategy selection based on request characteristics</li>
+</ul>
+<h3 id="discount-strategies">Discount Strategies</h3>
+<ul>
+<li><strong>Passenger Type Discounts</strong>: Child (50%), Senior (30%), Student (20%), Disabled (50%)</li>
+<li><strong>Time-Based Pricing</strong>: Peak hour surcharges (+25%) and off-peak discounts (-10%)</li>
+<li><strong>Configurable Rules</strong>: Easy to modify or extend discount policies</li>
+</ul>
+<h3 id="state-machine-workflow">State Machine Workflow</h3>
+<ul>
+<li><strong>Initial State</strong>: Request validation and context initialization</li>
+<li><strong>Base Fare Calculation</strong>: Strategy selection and fare computation</li>
+<li><strong>Discount Application</strong>: Multi-strategy discount processing</li>
+<li><strong>Final Calculation</strong>: Amount rounding and response generation</li>
+</ul>
+<h2 id="documentation-sections">📖 Documentation Sections</h2>
+<h3 id="design-patterns-implementation"><a href="articles/Design-Patterns-Implementation.md">Design Patterns Implementation</a></h3>
+<p>Detailed explanation of how Strategy and State patterns are implemented, including:</p>
+<ul>
+<li>Pattern structure and benefits</li>
+<li>Implementation examples</li>
+<li>Workflow diagrams</li>
+<li>Extension points</li>
+</ul>
+<h3 id="api-documentation-guide"><a href="articles/API-Documentation.md">API Documentation Guide</a></h3>
+<p>Comprehensive API reference covering:</p>
+<ul>
+<li>Core interfaces and implementations</li>
+<li>Data models and enums</li>
+<li>Usage examples and scenarios</li>
+<li>XML documentation features</li>
+</ul>
+<h2 id="architecture">🏗️ Architecture</h2>
+<pre><code class="lang-mermaid">graph TD
+    A[FareRequest] --&gt; B[FareCalculationService]
+    B --&gt; C[FareCalculationStateMachine]
+    C --&gt; D[InitialCalculationState]
+    D --&gt; E[BaseFareCalculationState]
+    E --&gt; F[DiscountApplicationState]
+    F --&gt; G[FinalCalculationState]
+    G --&gt; H[FareResponse]
+    
+    E --&gt; I[IFareCalculationStrategy]
+    I --&gt; J[ZoneBasedFareStrategy]
+    I --&gt; K[DistanceBasedFareStrategy]
+    
+    F --&gt; L[IDiscountStrategy]
+    L --&gt; M[PassengerDiscountStrategy]
+    L --&gt; N[TimeBasedDiscountStrategy]
+</code></pre>
+<h2 id="quick-start">🚀 Quick Start</h2>
+<pre><code class="lang-csharp">// Create a fare request
+var request = new FareRequest
+{
+    Origin = new Station { Id = 1, Name = &quot;Downtown Central&quot;, Zone = &quot;A&quot; },
+    Destination = new Station { Id = 6, Name = &quot;Airport Express&quot;, Zone = &quot;C&quot; },
+    PassengerType = PassengerType.Adult,
+    TravelDate = DateTime.Now
+};
+
+// Calculate the fare
+var response = await fareCalculationService.CalculateFareAsync(request);
+
+// Result: $5.00 for 3-zone adult journey
+Console.WriteLine($&quot;Fare: {response.Amount:C} {response.Currency}&quot;);
+</code></pre>
+<h2 id="testing">🧪 Testing</h2>
+<p>The project includes comprehensive testing with:</p>
+<ul>
+<li><strong>54 Total Tests</strong> covering all functionality</li>
+<li><strong>Unit Tests</strong> for individual components</li>
+<li><strong>Integration Tests</strong> for end-to-end workflows</li>
+<li><strong>Pattern Tests</strong> for Strategy and State implementations</li>
+<li><strong>Error Handling Tests</strong> for edge cases and exceptions</li>
+</ul>
+<h2 id="build-and-documentation">🛠️ Build and Documentation</h2>
+<h3 id="building-the-project">Building the Project</h3>
+<pre><code class="lang-bash">dotnet build
+dotnet test
+</code></pre>
+<h3 id="generating-documentation">Generating Documentation</h3>
+<pre><code class="lang-bash"># Install DocFX (if not already installed)
+dotnet tool install -g docfx
+
+# Generate documentation site
+docfx docfx.json --serve
+</code></pre>
+<p>The documentation will be available at <code>http://localhost:8080</code></p>
+<h2 id="api-reference">📋 API Reference</h2>
+<p>Browse the complete <a href="api/index.html">API Reference</a> for detailed information about:</p>
+<ul>
+<li>Public interfaces and their implementations</li>
+<li>Data models and their properties</li>
+<li>Service classes and their methods</li>
+<li>Exception types and conditions</li>
+</ul>
+<h2 id="contributing">🤝 Contributing</h2>
+<p>When extending the system:</p>
+<ol>
+<li><strong>Add New Strategies</strong>: Implement <code>IFareCalculationStrategy</code> or <code>IDiscountStrategy</code></li>
+<li><strong>Extend Workflow</strong>: Add new states implementing <code>IFareCalculationState</code></li>
+<li><strong>Update Tests</strong>: Ensure comprehensive test coverage for new features</li>
+<li><strong>Document Changes</strong>: Update XML comments and markdown documentation</li>
+</ol>
+<hr>
+<p><em>This documentation is automatically generated from XML documentation comments and Markdown files. For the latest information, please refer to the source code and inline documentation.</em></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Metro Fare Calculator - A comprehensive fare calculation system using Strategy and State patterns
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

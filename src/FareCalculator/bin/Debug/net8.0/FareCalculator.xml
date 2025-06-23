@@ -1,0 +1,961 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FareCalculator</name>
+    </assembly>
+    <members>
+        <member name="T:FareCalculator.Configuration.FareCalculationOptions">
+            <summary>
+            Configuration options for fare calculation settings.
+            </summary>
+        </member>
+        <member name="F:FareCalculator.Configuration.FareCalculationOptions.SectionName">
+            <summary>
+            Configuration section name in appsettings.json.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.FareCalculationOptions.Currency">
+            <summary>
+            Gets or sets the default currency for fare amounts.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.FareCalculationOptions.ZoneBasedFares">
+            <summary>
+            Gets or sets zone-based fare amounts.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.FareCalculationOptions.DistanceBasedFares">
+            <summary>
+            Gets or sets distance-based fare configuration.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.FareCalculationOptions.PassengerDiscounts">
+            <summary>
+            Gets or sets passenger discount percentages by type.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.FareCalculationOptions.TimeBasedRules">
+            <summary>
+            Gets or sets time-based fare adjustment rules.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.FareCalculationOptions.ZoneMapping">
+            <summary>
+            Gets or sets zone to numeric mapping.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.FareCalculationOptions.Priorities">
+            <summary>
+            Gets or sets strategy priority values.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Configuration.FareCalculationOptions.GetPassengerDiscount(FareCalculator.Models.PassengerType)">
+            <summary>
+            Gets the discount percentage for a passenger type.
+            </summary>
+            <param name="passengerType">The passenger type.</param>
+            <returns>The discount percentage (0.0 to 1.0).</returns>
+        </member>
+        <member name="M:FareCalculator.Configuration.FareCalculationOptions.GetZoneBasedFare(System.Int32)">
+            <summary>
+            Gets the zone-based fare for a number of zones.
+            </summary>
+            <param name="numberOfZones">The number of zones traveled.</param>
+            <returns>The base fare amount.</returns>
+        </member>
+        <member name="M:FareCalculator.Configuration.FareCalculationOptions.GetZoneValue(System.String)">
+            <summary>
+            Gets the numeric zone value for a zone letter.
+            </summary>
+            <param name="zone">The zone letter (e.g., "A", "B", "C").</param>
+            <returns>The numeric zone value.</returns>
+        </member>
+        <member name="T:FareCalculator.Configuration.DistanceBasedFareOptions">
+            <summary>
+            Configuration options for distance-based fare calculation.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.DistanceBasedFareOptions.BaseFare">
+            <summary>
+            Gets or sets the base fare amount before distance calculation.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.DistanceBasedFareOptions.PerKilometerRate">
+            <summary>
+            Gets or sets the rate per kilometer.
+            </summary>
+        </member>
+        <member name="T:FareCalculator.Configuration.TimeBasedRulesOptions">
+            <summary>
+            Configuration options for time-based fare rules.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.TimeBasedRulesOptions.PeakHours">
+            <summary>
+            Gets or sets peak hour configuration.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.TimeBasedRulesOptions.OffPeakHours">
+            <summary>
+            Gets or sets off-peak hour configuration.
+            </summary>
+        </member>
+        <member name="T:FareCalculator.Configuration.PeakHourOptions">
+            <summary>
+            Configuration options for peak hour rules.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.PeakHourOptions.Surcharge">
+            <summary>
+            Gets or sets the surcharge percentage for peak hours.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.PeakHourOptions.WeekdayMorningStart">
+            <summary>
+            Gets or sets the weekday morning peak start hour.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.PeakHourOptions.WeekdayMorningEnd">
+            <summary>
+            Gets or sets the weekday morning peak end hour.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.PeakHourOptions.WeekdayEveningStart">
+            <summary>
+            Gets or sets the weekday evening peak start hour.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.PeakHourOptions.WeekdayEveningEnd">
+            <summary>
+            Gets or sets the weekday evening peak end hour.
+            </summary>
+        </member>
+        <member name="T:FareCalculator.Configuration.OffPeakHourOptions">
+            <summary>
+            Configuration options for off-peak hour rules.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.OffPeakHourOptions.Discount">
+            <summary>
+            Gets or sets the discount percentage for off-peak hours.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.OffPeakHourOptions.NightStart">
+            <summary>
+            Gets or sets the night hours start time.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.OffPeakHourOptions.NightEnd">
+            <summary>
+            Gets or sets the night hours end time.
+            </summary>
+        </member>
+        <member name="T:FareCalculator.Configuration.StrategyPriorityOptions">
+            <summary>
+            Configuration options for strategy priorities.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.StrategyPriorityOptions.ZoneBasedFareStrategy">
+            <summary>
+            Gets or sets the zone-based fare strategy priority.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.StrategyPriorityOptions.DistanceBasedFareStrategy">
+            <summary>
+            Gets or sets the distance-based fare strategy priority.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.StrategyPriorityOptions.PassengerDiscountStrategy">
+            <summary>
+            Gets or sets the passenger discount strategy priority.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.StrategyPriorityOptions.TimeBasedDiscountStrategy">
+            <summary>
+            Gets or sets the time-based discount strategy priority.
+            </summary>
+        </member>
+        <member name="T:FareCalculator.Configuration.GeographyOptions">
+            <summary>
+            Configuration options for geographical calculations.
+            </summary>
+        </member>
+        <member name="F:FareCalculator.Configuration.GeographyOptions.SectionName">
+            <summary>
+            Configuration section name in appsettings.json.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.GeographyOptions.EarthRadiusKilometers">
+            <summary>
+            Gets or sets the Earth's radius in kilometers for distance calculations.
+            </summary>
+        </member>
+        <member name="T:FareCalculator.Configuration.StationOptions">
+            <summary>
+            Configuration options for station data.
+            </summary>
+        </member>
+        <member name="F:FareCalculator.Configuration.StationOptions.SectionName">
+            <summary>
+            Configuration section name in appsettings.json.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Configuration.StationOptions.Stations">
+            <summary>
+            Gets or sets the list of configured stations.
+            </summary>
+        </member>
+        <member name="T:FareCalculator.Interfaces.IDiscountStrategy">
+            <summary>
+            Defines the contract for discount strategies that can apply various types of discounts to base fares.
+            Implements the Strategy pattern to allow flexible discount application based on passenger type and other criteria.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Interfaces.IDiscountStrategy.StrategyName">
+            <summary>
+            Gets the unique name of this discount strategy.
+            </summary>
+            <value>A descriptive name identifying the strategy (e.g., "PassengerDiscount", "TimeBasedDiscount").</value>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IDiscountStrategy.ApplyDiscount(System.Decimal,FareCalculator.Models.FareRequest)">
+            <summary>
+            Applies this discount strategy to the specified base fare for the given request.
+            </summary>
+            <param name="baseFare">The original base fare amount before discount application.</param>
+            <param name="request">The fare calculation request containing passenger type and travel details.</param>
+            <returns>The fare amount after applying the discount. Returns the original amount if no discount applies.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when baseFare is negative.</exception>
+            <exception cref="T:System.ArgumentNullException">Thrown when the request parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IDiscountStrategy.AppliesTo(FareCalculator.Models.PassengerType)">
+            <summary>
+            Determines whether this discount strategy applies to the specified passenger type.
+            </summary>
+            <param name="passengerType">The type of passenger to evaluate for discount eligibility.</param>
+            <returns>True if this discount strategy applies to the passenger type; otherwise, false.</returns>
+        </member>
+        <member name="P:FareCalculator.Interfaces.IDiscountStrategy.Priority">
+            <summary>
+            Gets the priority of this discount strategy for application when multiple strategies apply.
+            Higher values indicate higher priority and are applied first.
+            </summary>
+            <value>An integer representing the strategy's priority. Higher numbers are applied first.</value>
+        </member>
+        <member name="T:FareCalculator.Interfaces.IFareCalculationService">
+            <summary>
+            Provides services for calculating metro transit fares based on various parameters including 
+            origin, destination, passenger type, and travel time.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IFareCalculationService.CalculateFareAsync(FareCalculator.Models.FareRequest)">
+            <summary>
+            Calculates the fare for a metro transit journey asynchronously.
+            </summary>
+            <param name="request">The fare calculation request containing origin, destination, passenger type, and travel date.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the calculated fare response with amount, currency, and additional details.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the request parameter is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when no suitable calculation strategy can be found for the request.</exception>
+        </member>
+        <member name="T:FareCalculator.Interfaces.IFareCalculationState">
+            <summary>
+            Defines the contract for states in the fare calculation state machine.
+            Implements the State pattern to manage the fare calculation workflow through distinct processing phases.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Interfaces.IFareCalculationState.StateName">
+            <summary>
+            Gets the unique name of this fare calculation state.
+            </summary>
+            <value>A descriptive name identifying the state (e.g., "InitialCalculation", "DiscountApplication").</value>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IFareCalculationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)">
+            <summary>
+            Processes the fare calculation context according to this state's specific logic and responsibilities.
+            </summary>
+            <param name="context">The fare calculation context containing request data, current state, and processing results.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the updated context after processing.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the context parameter is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the state cannot process the current context.</exception>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IFareCalculationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)">
+            <summary>
+            Determines whether this state can transition to the specified next state according to the state machine rules.
+            </summary>
+            <param name="nextState">The proposed next state in the workflow.</param>
+            <returns>True if the transition is valid; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the nextState parameter is null.</exception>
+        </member>
+        <member name="T:FareCalculator.Interfaces.FareCalculationContext">
+            <summary>
+            Represents the context object that carries data and state information throughout the fare calculation workflow.
+            This class maintains the complete state of a fare calculation process as it moves through different processing stages.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Interfaces.FareCalculationContext.Request">
+            <summary>
+            Gets or sets the original fare calculation request containing journey details.
+            </summary>
+            <value>The fare request with origin, destination, passenger type, and travel date information.</value>
+        </member>
+        <member name="P:FareCalculator.Interfaces.FareCalculationContext.Response">
+            <summary>
+            Gets or sets the fare response that will be populated during the calculation process.
+            </summary>
+            <value>The fare response containing the final calculated amount and related information.</value>
+        </member>
+        <member name="P:FareCalculator.Interfaces.FareCalculationContext.CurrentFare">
+            <summary>
+            Gets or sets the current calculated fare amount during processing.
+            </summary>
+            <value>The fare amount as it progresses through different calculation stages.</value>
+        </member>
+        <member name="P:FareCalculator.Interfaces.FareCalculationContext.CurrentState">
+            <summary>
+            Gets or sets the current state in the fare calculation state machine.
+            </summary>
+            <value>The currently active state responsible for processing the context.</value>
+        </member>
+        <member name="P:FareCalculator.Interfaces.FareCalculationContext.Data">
+            <summary>
+            Gets or sets additional data storage for passing information between states.
+            </summary>
+            <value>A dictionary for storing intermediate calculation results, metadata, and state-specific data.</value>
+        </member>
+        <member name="P:FareCalculator.Interfaces.FareCalculationContext.ProcessingLog">
+            <summary>
+            Gets or sets a log of processing steps for audit trail and debugging purposes.
+            </summary>
+            <value>A list of log messages describing each step in the fare calculation process.</value>
+        </member>
+        <member name="T:FareCalculator.Interfaces.IFareCalculationStrategy">
+            <summary>
+            Defines the contract for fare calculation strategies that can compute base fares using different algorithms.
+            Implements the Strategy pattern to allow runtime selection of fare calculation methods.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Interfaces.IFareCalculationStrategy.StrategyName">
+            <summary>
+            Gets the unique name of this fare calculation strategy.
+            </summary>
+            <value>A descriptive name identifying the strategy (e.g., "ZoneBased", "DistanceBased").</value>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IFareCalculationStrategy.CalculateBaseFareAsync(FareCalculator.Models.FareRequest)">
+            <summary>
+            Calculates the base fare for a transit journey asynchronously using this strategy's specific algorithm.
+            </summary>
+            <param name="request">The fare calculation request containing journey details.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the calculated base fare amount.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the request parameter is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the strategy cannot handle the given request.</exception>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IFareCalculationStrategy.CanHandle(FareCalculator.Models.FareRequest)">
+            <summary>
+            Determines whether this strategy can handle the specified fare calculation request.
+            </summary>
+            <param name="request">The fare calculation request to evaluate.</param>
+            <returns>True if this strategy can process the request; otherwise, false.</returns>
+        </member>
+        <member name="P:FareCalculator.Interfaces.IFareCalculationStrategy.Priority">
+            <summary>
+            Gets the priority of this strategy for selection when multiple strategies can handle a request.
+            Higher values indicate higher priority.
+            </summary>
+            <value>An integer representing the strategy's priority. Higher numbers are selected first.</value>
+        </member>
+        <member name="T:FareCalculator.Interfaces.IFareRuleEngine">
+            <summary>
+            Provides rule-based fare processing services including discount application and time-based fare adjustments.
+            Implements business rules for fare calculations in the metro transit system.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IFareRuleEngine.ApplyDiscounts(System.Decimal,FareCalculator.Models.PassengerType)">
+            <summary>
+            Applies passenger-type-based discounts to the base fare according to business rules.
+            </summary>
+            <param name="baseFare">The original base fare amount before discount application.</param>
+            <param name="passengerType">The type of passenger for which to calculate discounts.</param>
+            <returns>The fare amount after applying applicable passenger discounts.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when baseFare is negative.</exception>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IFareRuleEngine.ApplyTimeBasedRules(System.Decimal,System.DateTime)">
+            <summary>
+            Applies time-based fare adjustments such as peak hour surcharges or off-peak discounts.
+            </summary>
+            <param name="baseFare">The original base fare amount before time-based adjustments.</param>
+            <param name="travelTime">The date and time of the planned travel.</param>
+            <returns>The fare amount after applying time-based rules (surcharges or discounts).</returns>
+            <exception cref="T:System.ArgumentException">Thrown when baseFare is negative.</exception>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IFareRuleEngine.CalculateNumberOfZones(FareCalculator.Models.Station,FareCalculator.Models.Station)">
+            <summary>
+            Calculates the number of fare zones that will be traversed between the origin and destination stations.
+            </summary>
+            <param name="origin">The starting station of the journey.</param>
+            <param name="destination">The ending station of the journey.</param>
+            <returns>The number of zones that will be crossed during the journey, used for fare calculation.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when either origin or destination parameter is null.</exception>
+        </member>
+        <member name="T:FareCalculator.Interfaces.IStationService">
+            <summary>
+            Provides services for managing and retrieving station information and calculating distances between stations.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IStationService.GetStationByIdAsync(System.Int32)">
+            <summary>
+            Retrieves a station by its unique identifier asynchronously.
+            </summary>
+            <param name="id">The unique identifier of the station.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the station if found, otherwise null.</returns>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IStationService.GetStationByNameAsync(System.String)">
+            <summary>
+            Retrieves a station by its name asynchronously (case-insensitive search).
+            </summary>
+            <param name="name">The name of the station to search for.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the station if found, otherwise null.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the name parameter is null or empty.</exception>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IStationService.GetAllStationsAsync">
+            <summary>
+            Retrieves all available stations in the metro system asynchronously.
+            </summary>
+            <returns>A task that represents the asynchronous operation. The task result contains a collection of all stations.</returns>
+        </member>
+        <member name="M:FareCalculator.Interfaces.IStationService.CalculateDistanceAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)">
+            <summary>
+            Calculates the distance between two stations in kilometers using their geographical coordinates.
+            </summary>
+            <param name="origin">The origin station.</param>
+            <param name="destination">The destination station.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the distance in kilometers.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when either origin or destination parameter is null.</exception>
+        </member>
+        <member name="T:FareCalculator.Models.FareRequest">
+            <summary>
+            Represents a request for fare calculation containing all necessary information for determining transit costs.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.FareRequest.Origin">
+            <summary>
+            Gets or sets the origin station where the journey begins.
+            </summary>
+            <value>The starting station for the transit journey.</value>
+        </member>
+        <member name="P:FareCalculator.Models.FareRequest.Destination">
+            <summary>
+            Gets or sets the destination station where the journey ends.
+            </summary>
+            <value>The ending station for the transit journey.</value>
+        </member>
+        <member name="P:FareCalculator.Models.FareRequest.PassengerType">
+            <summary>
+            Gets or sets the type of passenger making the journey.
+            </summary>
+            <value>The passenger classification used to determine applicable discounts and fare rules.</value>
+        </member>
+        <member name="P:FareCalculator.Models.FareRequest.TravelDate">
+            <summary>
+            Gets or sets the planned date and time of travel.
+            </summary>
+            <value>The travel date and time used for applying time-based fare rules such as peak hour surcharges.</value>
+        </member>
+        <member name="T:FareCalculator.Models.FareResponse">
+            <summary>
+            Represents the result of a fare calculation containing the final fare amount and related journey information.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.FareResponse.Amount">
+            <summary>
+            Gets or sets the calculated fare amount for the journey.
+            </summary>
+            <value>The final fare amount after applying all applicable discounts and surcharges.</value>
+        </member>
+        <member name="P:FareCalculator.Models.FareResponse.Currency">
+            <summary>
+            Gets or sets the currency code for the fare amount.
+            </summary>
+            <value>The three-letter currency code (e.g., "USD", "EUR") indicating the currency of the fare amount.</value>
+        </member>
+        <member name="P:FareCalculator.Models.FareResponse.NumberOfZones">
+            <summary>
+            Gets or sets the number of fare zones traversed during the journey.
+            </summary>
+            <value>The count of fare zones crossed, which is used in zone-based fare calculation strategies.</value>
+        </member>
+        <member name="P:FareCalculator.Models.FareResponse.Distance">
+            <summary>
+            Gets or sets the total distance of the journey in kilometers.
+            </summary>
+            <value>The geographical distance between origin and destination stations, used for distance-based calculations.</value>
+        </member>
+        <member name="P:FareCalculator.Models.FareResponse.FareType">
+            <summary>
+            Gets or sets the type of fare calculation used.
+            </summary>
+            <value>A descriptive string indicating which fare calculation method was applied (e.g., "Zone-based", "Distance-based").</value>
+        </member>
+        <member name="P:FareCalculator.Models.FareResponse.Description">
+            <summary>
+            Gets or sets additional description or breakdown of the fare calculation.
+            </summary>
+            <value>Human-readable text providing details about how the fare was calculated, including any discounts or surcharges applied.</value>
+        </member>
+        <member name="T:FareCalculator.Models.PassengerType">
+            <summary>
+            Defines the types of passengers for fare calculation purposes, each with different discount eligibility.
+            </summary>
+        </member>
+        <member name="F:FareCalculator.Models.PassengerType.Adult">
+            <summary>
+            Adult passenger (18+ years) with no discount eligibility.
+            </summary>
+        </member>
+        <member name="F:FareCalculator.Models.PassengerType.Child">
+            <summary>
+            Child passenger (typically under 12 years) eligible for significant discounts.
+            </summary>
+        </member>
+        <member name="F:FareCalculator.Models.PassengerType.Senior">
+            <summary>
+            Senior citizen passenger (typically 65+ years) eligible for age-based discounts.
+            </summary>
+        </member>
+        <member name="F:FareCalculator.Models.PassengerType.Student">
+            <summary>
+            Student passenger with valid student identification, eligible for educational discounts.
+            </summary>
+        </member>
+        <member name="F:FareCalculator.Models.PassengerType.Disabled">
+            <summary>
+            Passenger with disabilities, eligible for accessibility-based discounts.
+            </summary>
+        </member>
+        <member name="T:FareCalculator.Models.Station">
+            <summary>
+            Represents a metro station with its location, zone information, and geographical coordinates.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.Models.Station.Id">
+            <summary>
+            Gets or sets the unique identifier for the station.
+            </summary>
+            <value>A positive integer that uniquely identifies the station within the metro system.</value>
+        </member>
+        <member name="P:FareCalculator.Models.Station.Name">
+            <summary>
+            Gets or sets the name of the station.
+            </summary>
+            <value>The human-readable name of the station as displayed to passengers.</value>
+        </member>
+        <member name="P:FareCalculator.Models.Station.Zone">
+            <summary>
+            Gets or sets the fare zone designation for the station.
+            </summary>
+            <value>A string identifier (e.g., "A", "B", "C") indicating which fare zone the station belongs to.</value>
+        </member>
+        <member name="P:FareCalculator.Models.Station.Latitude">
+            <summary>
+            Gets or sets the latitude coordinate of the station's geographical location.
+            </summary>
+            <value>The latitude in decimal degrees, used for distance calculations between stations.</value>
+        </member>
+        <member name="P:FareCalculator.Models.Station.Longitude">
+            <summary>
+            Gets or sets the longitude coordinate of the station's geographical location.
+            </summary>
+            <value>The longitude in decimal degrees, used for distance calculations between stations.</value>
+        </member>
+        <member name="T:FareCalculator.Services.FareCalculationService">
+            <summary>
+            Provides fare calculation services using a state machine approach to process fare requests.
+            This service orchestrates the complete fare calculation workflow from initial request to final response.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Services.FareCalculationService.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.Services.FareCalculationService},FareCalculator.Services.IFareCalculationStateMachine)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FareCalculator.Services.FareCalculationService"/> class.
+            </summary>
+            <param name="logger">The logger for capturing service execution information.</param>
+            <param name="stateMachine">The state machine responsible for orchestrating the fare calculation workflow.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when logger or stateMachine is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.FareCalculationService.CalculateFareAsync(FareCalculator.Models.FareRequest)">
+            <summary>
+            Calculates the fare for a metro transit journey asynchronously using the state machine workflow.
+            </summary>
+            <param name="request">The fare calculation request containing journey details.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the calculated fare response.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the request parameter is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the state machine cannot process the request.</exception>
+        </member>
+        <member name="T:FareCalculator.Services.IFareCalculationStateMachine">
+            <summary>
+            Defines the contract for a state machine that orchestrates the fare calculation workflow through multiple processing states.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Services.IFareCalculationStateMachine.ProcessAsync(FareCalculator.Models.FareRequest)">
+            <summary>
+            Processes a fare calculation request through all states and returns the final fare response.
+            </summary>
+            <param name="request">The fare calculation request to process.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the final fare response.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the request parameter is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the state machine cannot process the request.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.IFareCalculationStateMachine.ProcessWithContextAsync(FareCalculator.Models.FareRequest)">
+            <summary>
+            Processes a fare calculation request through all states and returns the complete context with processing details.
+            </summary>
+            <param name="request">The fare calculation request to process.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the complete processing context.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the request parameter is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the state machine cannot process the request.</exception>
+        </member>
+        <member name="T:FareCalculator.Services.FareCalculationStateMachine">
+            <summary>
+            Implements a state machine that orchestrates fare calculation through a series of processing states.
+            Each state handles a specific aspect of the fare calculation workflow, ensuring proper separation of concerns.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Services.FareCalculationStateMachine.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.Services.FareCalculationStateMachine},System.IServiceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FareCalculator.Services.FareCalculationStateMachine"/> class.
+            </summary>
+            <param name="logger">The logger for capturing state machine execution information.</param>
+            <param name="serviceProvider">The service provider for resolving state dependencies.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when logger or serviceProvider is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.FareCalculationStateMachine.ProcessAsync(FareCalculator.Models.FareRequest)">
+            <summary>
+            Processes a fare calculation request through all states and returns the final fare response.
+            </summary>
+            <param name="request">The fare calculation request to process.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the final fare response.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the request parameter is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when any state in the workflow fails to process the request.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.FareCalculationStateMachine.ProcessWithContextAsync(FareCalculator.Models.FareRequest)">
+            <summary>
+            Processes a fare calculation request through all states and returns the complete context with processing details.
+            This method provides full visibility into the state machine's execution process.
+            </summary>
+            <param name="request">The fare calculation request to process.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the complete processing context.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the request parameter is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when any state in the workflow fails to process the request.</exception>
+        </member>
+        <member name="T:FareCalculator.Services.FareRuleEngine">
+            <summary>
+            Implements business rules for fare processing including passenger discounts, time-based adjustments, and zone calculations.
+            Contains the core logic for applying various fare rules and policies in the metro transit system.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Services.FareRuleEngine.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.Services.FareRuleEngine},Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.FareCalculationOptions})">
+            <summary>
+            Initializes a new instance of the <see cref="T:FareCalculator.Services.FareRuleEngine"/> class with configuration-based settings.
+            </summary>
+            <param name="logger">The logger for capturing rule engine execution information.</param>
+            <param name="options">Configuration options for fare calculation settings.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when logger or options is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.FareRuleEngine.ApplyDiscounts(System.Decimal,FareCalculator.Models.PassengerType)">
+            <summary>
+            Applies passenger-type-based discounts to the base fare according to business rules.
+            </summary>
+            <param name="baseFare">The original base fare amount before discount application.</param>
+            <param name="passengerType">The type of passenger for which to calculate discounts.</param>
+            <returns>The fare amount after applying applicable passenger discounts.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when baseFare is negative.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.FareRuleEngine.ApplyTimeBasedRules(System.Decimal,System.DateTime)">
+            <summary>
+            Applies time-based fare adjustments such as peak hour surcharges or off-peak discounts.
+            Peak hours are 7-9 AM and 5-7 PM on weekdays with 25% surcharge.
+            Off-peak hours are 10 PM - 6 AM with 10% discount.
+            </summary>
+            <param name="baseFare">The original base fare amount before time-based adjustments.</param>
+            <param name="travelTime">The date and time of the planned travel.</param>
+            <returns>The fare amount after applying time-based rules (surcharges or discounts).</returns>
+            <exception cref="T:System.ArgumentException">Thrown when baseFare is negative.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.FareRuleEngine.CalculateNumberOfZones(FareCalculator.Models.Station,FareCalculator.Models.Station)">
+            <summary>
+            Calculates the number of fare zones that will be traversed between the origin and destination stations.
+            Zone A = 1, Zone B = 2, Zone C = 3. The calculation includes both origin and destination zones.
+            </summary>
+            <param name="origin">The starting station of the journey.</param>
+            <param name="destination">The ending station of the journey.</param>
+            <returns>The number of zones that will be crossed during the journey, used for fare calculation.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when either origin or destination parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.FareRuleEngine.IsWeekday(System.DateTime)">
+            <summary>
+            Determines whether the specified date is a weekday (Monday through Friday).
+            </summary>
+            <param name="dateTime">The date to check.</param>
+            <returns>True if the date is a weekday; otherwise, false.</returns>
+        </member>
+        <member name="M:FareCalculator.Services.FareRuleEngine.IsBetweenHours(System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            Determines whether the specified time falls within the given hour range.
+            Handles both same-day ranges (e.g., 9-17) and overnight ranges (e.g., 22-6).
+            </summary>
+            <param name="dateTime">The date and time to check.</param>
+            <param name="startHour">The starting hour of the range (0-23).</param>
+            <param name="endHour">The ending hour of the range (0-24).</param>
+            <returns>True if the time falls within the specified range; otherwise, false.</returns>
+        </member>
+        <member name="T:FareCalculator.Services.StationService">
+            <summary>
+            Provides station management services including station lookup, retrieval, and distance calculations.
+            Uses configuration-based station data and geographical constants for calculations.
+            </summary>
+        </member>
+        <member name="M:FareCalculator.Services.StationService.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.Services.StationService},Microsoft.Extensions.Options.IOptions{System.Collections.Generic.List{FareCalculator.Models.Station}},Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.GeographyOptions})">
+            <summary>
+            Initializes a new instance of the <see cref="T:FareCalculator.Services.StationService"/> class with configuration-based settings.
+            </summary>
+            <param name="logger">The logger for capturing service execution information.</param>
+            <param name="stationOptions">Configuration options for station data.</param>
+            <param name="geographyOptions">Configuration options for geographical calculations.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when any parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.StationService.GetStationByIdAsync(System.Int32)">
+            <summary>
+            Retrieves a station by its unique identifier asynchronously.
+            </summary>
+            <param name="id">The unique identifier of the station.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the station if found, otherwise null.</returns>
+        </member>
+        <member name="M:FareCalculator.Services.StationService.GetStationByNameAsync(System.String)">
+            <summary>
+            Retrieves a station by its name asynchronously using case-insensitive search.
+            </summary>
+            <param name="name">The name of the station to search for.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the station if found, otherwise null.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the name parameter is null or empty.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.StationService.GetAllStationsAsync">
+            <summary>
+            Retrieves all available stations in the metro system asynchronously.
+            </summary>
+            <returns>A task that represents the asynchronous operation. The task result contains a collection of all stations.</returns>
+        </member>
+        <member name="M:FareCalculator.Services.StationService.CalculateDistanceAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)">
+            <summary>
+            Calculates the distance between two stations in kilometers using the Haversine formula.
+            </summary>
+            <param name="origin">The origin station.</param>
+            <param name="destination">The destination station.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the distance in kilometers.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when either origin or destination parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.Services.StationService.CalculateHaversineDistance(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Calculates the great-circle distance between two points on Earth using the Haversine formula.
+            </summary>
+            <param name="lat1">Latitude of the first point in decimal degrees.</param>
+            <param name="lon1">Longitude of the first point in decimal degrees.</param>
+            <param name="lat2">Latitude of the second point in decimal degrees.</param>
+            <param name="lon2">Longitude of the second point in decimal degrees.</param>
+            <returns>The distance between the two points in kilometers.</returns>
+        </member>
+        <member name="M:FareCalculator.Services.StationService.ToRadians(System.Double)">
+            <summary>
+            Converts degrees to radians.
+            </summary>
+            <param name="degrees">The angle in degrees.</param>
+            <returns>The angle in radians.</returns>
+        </member>
+        <member name="T:FareCalculator.States.BaseFareCalculationState">
+            <summary>
+            Represents the base fare calculation state that determines the initial fare using available calculation strategies.
+            This state selects the most appropriate strategy based on priority and capability to handle the request.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.States.BaseFareCalculationState.StateName">
+            <summary>
+            Gets the name of this state in the fare calculation workflow.
+            </summary>
+            <value>Returns "BaseFareCalculation" to identify this as the base fare calculation state.</value>
+        </member>
+        <member name="M:FareCalculator.States.BaseFareCalculationState.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.States.BaseFareCalculationState},System.Collections.Generic.IEnumerable{FareCalculator.Interfaces.IFareCalculationStrategy},FareCalculator.Interfaces.IStationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FareCalculator.States.BaseFareCalculationState"/> class.
+            </summary>
+            <param name="logger">The logger for capturing state execution information.</param>
+            <param name="strategies">The collection of available fare calculation strategies.</param>
+            <param name="stationService">The station service for retrieving station information and calculating distances.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when any parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.States.BaseFareCalculationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)">
+            <summary>
+            Processes the fare calculation context by selecting an appropriate strategy and calculating the base fare.
+            Also calculates and stores additional journey information such as distance between stations.
+            </summary>
+            <param name="context">The fare calculation context containing the request and current state.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the updated context with base fare.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the context parameter is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when no suitable fare calculation strategy is found.</exception>
+        </member>
+        <member name="M:FareCalculator.States.BaseFareCalculationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)">
+            <summary>
+            Determines whether this state can transition to the specified next state.
+            The base fare calculation state can only transition to the discount application state.
+            </summary>
+            <param name="nextState">The proposed next state in the workflow.</param>
+            <returns>True if the next state is the discount application state; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the nextState parameter is null.</exception>
+        </member>
+        <member name="T:FareCalculator.States.DiscountApplicationState">
+            <summary>
+            Represents the discount application state that applies all applicable discount strategies to the base fare.
+            This state processes discounts in priority order and tracks the total discount amount applied.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.States.DiscountApplicationState.StateName">
+            <summary>
+            Gets the name of this state in the fare calculation workflow.
+            </summary>
+            <value>Returns "DiscountApplication" to identify this as the discount application state.</value>
+        </member>
+        <member name="M:FareCalculator.States.DiscountApplicationState.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.States.DiscountApplicationState},System.Collections.Generic.IEnumerable{FareCalculator.Interfaces.IDiscountStrategy})">
+            <summary>
+            Initializes a new instance of the <see cref="T:FareCalculator.States.DiscountApplicationState"/> class.
+            </summary>
+            <param name="logger">The logger for capturing state execution information.</param>
+            <param name="discountStrategies">The collection of available discount strategies.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when any parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.States.DiscountApplicationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)">
+            <summary>
+            Processes the fare calculation context by applying all applicable discount strategies.
+            Strategies are applied in priority order (highest priority first) and the total discount is tracked.
+            </summary>
+            <param name="context">The fare calculation context containing the base fare and passenger details.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the updated context with discounted fare.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the context parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.States.DiscountApplicationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)">
+            <summary>
+            Determines whether this state can transition to the specified next state.
+            The discount application state can only transition to the final calculation state.
+            </summary>
+            <param name="nextState">The proposed next state in the workflow.</param>
+            <returns>True if the next state is the final calculation state; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the nextState parameter is null.</exception>
+        </member>
+        <member name="T:FareCalculator.States.FinalCalculationState">
+            <summary>
+            Represents the final calculation state that completes the fare calculation process.
+            This state finalizes the fare amount, calculates zone information, and generates descriptive information.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.States.FinalCalculationState.StateName">
+            <summary>
+            Gets the name of this state in the fare calculation workflow.
+            </summary>
+            <value>Returns "FinalCalculation" to identify this as the final calculation state.</value>
+        </member>
+        <member name="M:FareCalculator.States.FinalCalculationState.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.States.FinalCalculationState},FareCalculator.Interfaces.IFareRuleEngine)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FareCalculator.States.FinalCalculationState"/> class.
+            </summary>
+            <param name="logger">The logger for capturing state execution information.</param>
+            <param name="fareRuleEngine">The fare rule engine for calculating zones and applying final adjustments.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when any parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.States.FinalCalculationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)">
+            <summary>
+            Processes the fare calculation context by finalizing the fare amount and generating complete response information.
+            Rounds the final fare, calculates zone information, and creates descriptive text for the journey.
+            </summary>
+            <param name="context">The fare calculation context containing the processed fare information.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the completed context with final response.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the context parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.States.FinalCalculationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)">
+            <summary>
+            Determines whether this state can transition to the specified next state.
+            The final calculation state cannot transition to any other state as it represents the end of the workflow.
+            </summary>
+            <param name="nextState">The proposed next state in the workflow.</param>
+            <returns>Always returns false as this is the terminal state in the workflow.</returns>
+        </member>
+        <member name="M:FareCalculator.States.FinalCalculationState.GetFareTypeDescription(FareCalculator.Models.FareRequest)">
+            <summary>
+            Generates a descriptive fare type string based on passenger type and travel time.
+            </summary>
+            <param name="request">The fare request containing passenger and travel information.</param>
+            <returns>A string describing the fare type (e.g., "Adult - Peak Hours", "Child - Off-Peak Hours").</returns>
+        </member>
+        <member name="M:FareCalculator.States.FinalCalculationState.GetTimeDescription(System.DateTime)">
+            <summary>
+            Determines the time-based description for the travel period.
+            </summary>
+            <param name="travelDate">The date and time of travel.</param>
+            <returns>A string describing the time period ("Peak Hours", "Off-Peak Hours", or "Regular Hours").</returns>
+        </member>
+        <member name="M:FareCalculator.States.FinalCalculationState.GenerateDescription(FareCalculator.Interfaces.FareCalculationContext)">
+            <summary>
+            Generates a comprehensive description of the fare calculation including route, strategy, and adjustments.
+            </summary>
+            <param name="context">The fare calculation context containing all processing information.</param>
+            <returns>A detailed description of how the fare was calculated.</returns>
+        </member>
+        <member name="M:FareCalculator.States.FinalCalculationState.IsWeekday(System.DateTime)">
+            <summary>
+            Determines whether the specified date is a weekday (Monday through Friday).
+            </summary>
+            <param name="dateTime">The date to check.</param>
+            <returns>True if the date is a weekday; otherwise, false.</returns>
+        </member>
+        <member name="M:FareCalculator.States.FinalCalculationState.IsBetweenHours(System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            Determines whether the specified time falls within the given hour range.
+            Handles both same-day ranges (e.g., 9-17) and overnight ranges (e.g., 22-6).
+            </summary>
+            <param name="dateTime">The date and time to check.</param>
+            <param name="startHour">The starting hour of the range (0-23).</param>
+            <param name="endHour">The ending hour of the range (0-24).</param>
+            <returns>True if the time falls within the specified range; otherwise, false.</returns>
+        </member>
+        <member name="T:FareCalculator.States.InitialCalculationState">
+            <summary>
+            Represents the initial state in the fare calculation workflow that initializes the calculation context.
+            This state sets up the basic information and prepares the context for subsequent processing states.
+            </summary>
+        </member>
+        <member name="P:FareCalculator.States.InitialCalculationState.StateName">
+            <summary>
+            Gets the name of this state in the fare calculation workflow.
+            </summary>
+            <value>Returns "Initial" to identify this as the initial calculation state.</value>
+        </member>
+        <member name="M:FareCalculator.States.InitialCalculationState.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.States.InitialCalculationState})">
+            <summary>
+            Initializes a new instance of the <see cref="T:FareCalculator.States.InitialCalculationState"/> class.
+            </summary>
+            <param name="logger">The logger for capturing state execution information.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when logger is null.</exception>
+        </member>
+        <member name="M:FareCalculator.States.InitialCalculationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)">
+            <summary>
+            Processes the fare calculation context by initializing basic information and logging the journey details.
+            Sets up the response currency and records the calculation start time and journey parameters.
+            </summary>
+            <param name="context">The fare calculation context to initialize.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains the initialized context.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the context parameter is null.</exception>
+        </member>
+        <member name="M:FareCalculator.States.InitialCalculationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)">
+            <summary>
+            Determines whether this state can transition to the specified next state.
+            The initial state can only transition to the base fare calculation state.
+            </summary>
+            <param name="nextState">The proposed next state in the workflow.</param>
+            <returns>True if the next state is the base fare calculation state; otherwise, false.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the nextState parameter is null.</exception>
+        </member>
+    </members>
+</doc>

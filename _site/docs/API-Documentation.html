@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>API Documentation Guide | Metro Fare Calculator API Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="API Documentation Guide | Metro Fare Calculator API Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FareCalculator">
+            FareCalculator
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="api-documentation-guide">API Documentation Guide</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The FareCalculator project generates comprehensive XML documentation that can be used by IDEs, documentation generators, and API tools to provide IntelliSense, parameter hints, and detailed API documentation.</p>
+<h2 id="xml-documentation-files">XML Documentation Files</h2>
+<h3 id="generated-files">📁 <strong>Generated Files</strong></h3>
+<ul>
+<li><strong>Main Project</strong>: <code>src/FareCalculator/bin/Debug/net8.0/FareCalculator.xml</code> (52KB)</li>
+<li><strong>Test Project</strong>: <code>tests/FareCalculator.Tests/bin/Debug/net8.0/FareCalculator.Tests.xml</code></li>
+</ul>
+<h3 id="usage-in-ides">🔧 <strong>Usage in IDEs</strong></h3>
+<p>The XML documentation files are automatically used by:</p>
+<ul>
+<li><strong>Visual Studio</strong>: Provides IntelliSense with parameter descriptions and method summaries</li>
+<li><strong>VS Code</strong>: Shows hover information and parameter hints</li>
+<li><strong>JetBrains Rider</strong>: Enhanced code completion and documentation tooltips</li>
+</ul>
+<h2 id="api-reference">API Reference</h2>
+<h3 id="core-interfaces">🏛️ <strong>Core Interfaces</strong></h3>
+<h4 id="ifarecalculationservice"><code>IFareCalculationService</code></h4>
+<p>Main service interface for fare calculations.</p>
+<pre><code class="lang-csharp">Task&lt;FareResponse&gt; CalculateFareAsync(FareRequest request);
+</code></pre>
+<h4 id="istationservice"><code>IStationService</code></h4>
+<p>Station management and distance calculation services.</p>
+<pre><code class="lang-csharp">Task&lt;Station?&gt; GetStationByIdAsync(int id);
+Task&lt;Station?&gt; GetStationByNameAsync(string name);
+Task&lt;IEnumerable&lt;Station&gt;&gt; GetAllStationsAsync();
+Task&lt;double&gt; CalculateDistanceAsync(Station origin, Station destination);
+</code></pre>
+<h4 id="ifarecalculationstrategy"><code>IFareCalculationStrategy</code></h4>
+<p>Strategy pattern interface for fare calculation algorithms.</p>
+<pre><code class="lang-csharp">string StrategyName { get; }
+Task&lt;decimal&gt; CalculateBaseFareAsync(FareRequest request);
+bool CanHandle(FareRequest request);
+int Priority { get; }
+</code></pre>
+<h4 id="idiscountstrategy"><code>IDiscountStrategy</code></h4>
+<p>Strategy pattern interface for discount applications.</p>
+<pre><code class="lang-csharp">string StrategyName { get; }
+decimal ApplyDiscount(decimal baseFare, FareRequest request);
+bool AppliesTo(PassengerType passengerType);
+int Priority { get; }
+</code></pre>
+<h4 id="ifarecalculationstate"><code>IFareCalculationState</code></h4>
+<p>State pattern interface for workflow management.</p>
+<pre><code class="lang-csharp">string StateName { get; }
+Task&lt;FareCalculationContext&gt; ProcessAsync(FareCalculationContext context);
+bool CanTransitionTo(IFareCalculationState nextState);
+</code></pre>
+<h3 id="data-models">📊 <strong>Data Models</strong></h3>
+<h4 id="station"><code>Station</code></h4>
+<p>Represents a metro station with location and zone information.</p>
+<pre><code class="lang-csharp">public class Station
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Zone { get; set; }
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+}
+</code></pre>
+<h4 id="farerequest"><code>FareRequest</code></h4>
+<p>Input data for fare calculation requests.</p>
+<pre><code class="lang-csharp">public class FareRequest
+{
+    public Station Origin { get; set; }
+    public Station Destination { get; set; }
+    public PassengerType PassengerType { get; set; }
+    public DateTime TravelDate { get; set; }
+}
+</code></pre>
+<h4 id="fareresponse"><code>FareResponse</code></h4>
+<p>Output data containing calculated fare information.</p>
+<pre><code class="lang-csharp">public class FareResponse
+{
+    public decimal Amount { get; set; }
+    public string Currency { get; set; }
+    public int NumberOfZones { get; set; }
+    public double Distance { get; set; }
+    public string FareType { get; set; }
+    public string Description { get; set; }
+}
+</code></pre>
+<h4 id="passengertype"><code>PassengerType</code></h4>
+<p>Enum defining passenger classifications for discount eligibility.</p>
+<pre><code class="lang-csharp">public enum PassengerType
+{
+    Adult,      // No discount
+    Child,      // 50% discount
+    Senior,     // 30% discount
+    Student,    // 20% discount
+    Disabled    // 50% discount
+}
+</code></pre>
+<h3 id="workflow-states">🔄 <strong>Workflow States</strong></h3>
+<h4 id="initialcalculationstate"><code>InitialCalculationState</code></h4>
+<ul>
+<li>Validates request data</li>
+<li>Initializes calculation context</li>
+<li>Sets up logging and response object</li>
+</ul>
+<h4 id="basefarecalculationstate"><code>BaseFareCalculationState</code></h4>
+<ul>
+<li>Selects appropriate fare calculation strategy</li>
+<li>Calculates base fare amount</li>
+<li>Determines distance and zone information</li>
+</ul>
+<h4 id="discountapplicationstate"><code>DiscountApplicationState</code></h4>
+<ul>
+<li>Applies all applicable discount strategies</li>
+<li>Tracks discount amounts and audit trail</li>
+<li>Processes discounts in priority order</li>
+</ul>
+<h4 id="finalcalculationstate"><code>FinalCalculationState</code></h4>
+<ul>
+<li>Rounds final fare amount</li>
+<li>Calculates zone count</li>
+<li>Generates comprehensive fare description</li>
+</ul>
+<h3 id="strategy-implementations">🎯 <strong>Strategy Implementations</strong></h3>
+<h4 id="fare-calculation-strategies">Fare Calculation Strategies</h4>
+<ol>
+<li><p><strong>ZoneBasedFareStrategy</strong> (Priority: 100)</p>
+<ul>
+<li>Primary strategy for zone-based calculations</li>
+<li>Uses zone mapping: 1 zone = $2.50, 2 zones = $3.75, 3+ zones = $5.00</li>
+</ul>
+</li>
+<li><p><strong>DistanceBasedFareStrategy</strong> (Priority: 50)</p>
+<ul>
+<li>Fallback strategy using GPS coordinates</li>
+<li>Rate: $0.25 per kilometer</li>
+</ul>
+</li>
+</ol>
+<h4 id="discount-strategies">Discount Strategies</h4>
+<ol>
+<li><p><strong>PassengerDiscountStrategy</strong> (Priority: 100)</p>
+<ul>
+<li>Applies passenger type discounts</li>
+<li>Child/Disabled: 50%, Senior: 30%, Student: 20%, Adult: 0%</li>
+</ul>
+</li>
+<li><p><strong>TimeBasedDiscountStrategy</strong> (Priority: 90)</p>
+<ul>
+<li>Peak hours (7-9 AM, 5-7 PM weekdays): +25% surcharge</li>
+<li>Off-peak hours (10 PM - 6 AM): -10% discount</li>
+</ul>
+</li>
+</ol>
+<h2 id="documentation-generation-commands">Documentation Generation Commands</h2>
+<h3 id="build-commands">🔨 <strong>Build Commands</strong></h3>
+<pre><code class="lang-bash"># Build with XML documentation
+dotnet build
+
+# Build specific configuration
+dotnet build --configuration Release
+
+# Verbose build output
+dotnet build --verbosity detailed
+</code></pre>
+<h3 id="documentation-tools">📖 <strong>Documentation Tools</strong></h3>
+<p>The generated XML files can be used with:</p>
+<ul>
+<li><strong>DocFX</strong>: Microsoft's documentation generation tool</li>
+<li><strong>Sandcastle</strong>: Windows-based documentation generator</li>
+<li><strong>Swagger/OpenAPI</strong>: For API documentation if exposing as web API</li>
+<li><strong>NDoc</strong>: Legacy documentation generator</li>
+</ul>
+<h2 id="example-usage">Example Usage</h2>
+<h3 id="basic-fare-calculation">Basic Fare Calculation</h3>
+<pre><code class="lang-csharp">// Create request
+var request = new FareRequest
+{
+    Origin = new Station { Id = 1, Name = &quot;Downtown Central&quot;, Zone = &quot;A&quot; },
+    Destination = new Station { Id = 6, Name = &quot;Airport Express&quot;, Zone = &quot;C&quot; },
+    PassengerType = PassengerType.Adult,
+    TravelDate = DateTime.Now
+};
+
+// Calculate fare
+var response = await fareCalculationService.CalculateFareAsync(request);
+
+// Result: $5.00 for 3-zone journey
+</code></pre>
+<h3 id="with-discounts">With Discounts</h3>
+<pre><code class="lang-csharp">var request = new FareRequest
+{
+    Origin = new Station { Id = 1, Name = &quot;Downtown Central&quot;, Zone = &quot;A&quot; },
+    Destination = new Station { Id = 6, Name = &quot;Airport Express&quot;, Zone = &quot;C&quot; },
+    PassengerType = PassengerType.Child,  // 50% discount
+    TravelDate = new DateTime(2024, 1, 1, 3, 0, 0)  // Off-peak: -10%
+};
+
+var response = await fareCalculationService.CalculateFareAsync(request);
+
+// Result: $2.25 (Base: $5.00 → Child discount: $2.50 → Off-peak: $2.25)
+</code></pre>
+<h2 id="testing-documentation">Testing Documentation</h2>
+<p>The test project also generates XML documentation covering:</p>
+<ul>
+<li><strong>Unit Tests</strong>: Individual component testing</li>
+<li><strong>Integration Tests</strong>: End-to-end workflow testing</li>
+<li><strong>Strategy Tests</strong>: Pattern implementation testing</li>
+<li><strong>State Tests</strong>: Workflow state testing</li>
+</ul>
+<h3 id="test-coverage">Test Coverage</h3>
+<ul>
+<li><strong>54 Total Tests</strong>: Comprehensive coverage of all functionality</li>
+<li><strong>Pattern Testing</strong>: Both Strategy and State patterns fully tested</li>
+<li><strong>Error Handling</strong>: Exception scenarios and edge cases covered</li>
+<li><strong>Business Logic</strong>: All fare rules and discount calculations verified</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Metro Fare Calculator - A comprehensive fare calculation system using Strategy and State patterns
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

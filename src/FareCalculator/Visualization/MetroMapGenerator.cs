@@ -46,28 +46,41 @@ public class MetroMapGenerator
         sb.AppendLine("    %% Metro System Map - Concentric Zone Layout");
         sb.AppendLine();
 
-        // Define all stations with uniform appearance
-        sb.AppendLine("    %% Station Definitions - Uniform Style");
-        foreach (var station in stations)
+        // Create concentric zone subgraphs
+        sb.AppendLine("    %% Concentric Zone Layout");
+        sb.AppendLine("    subgraph ZoneC [\"🟠 Zone C - Outer Ring\"]");
+        sb.AppendLine("        subgraph ZoneB [\"🟢 Zone B - Middle Ring\"]");
+        sb.AppendLine("            subgraph ZoneA [\"🔵 Zone A - Central\"]");
+        
+        // Zone A stations
+        var zoneAStations = stations.Where(s => s.Zone == "A").ToList();
+        foreach (var station in zoneAStations)
         {
             var stationName = station.Name.Replace(" ", "<br/>");
-            sb.AppendLine($"    S{station.Id}[\"{stationName}\"]");
+            sb.AppendLine($"                S{station.Id}[\"{stationName}\"]");
         }
-        sb.AppendLine();
-
-        // Geographic layout for positioning only (light gray)
-        sb.AppendLine("    %% Geographic Layout - Concentric Zones (Light positioning lines)");
-        sb.AppendLine("    S1 --- S2");
-        sb.AppendLine("    S1 --- S8");
-        sb.AppendLine("    S3 --- S7");
-        sb.AppendLine("    S4 --- S3");
-        sb.AppendLine("    S5 --- S6");
-        sb.AppendLine("    S1 --- S3");
-        sb.AppendLine("    S3 --- S5");
-        sb.AppendLine("    S2 --- S7");
-        sb.AppendLine("    S7 --- S5");
-        sb.AppendLine("    S4 --- S5");
-        sb.AppendLine("    S5 --- S8");
+        
+        sb.AppendLine("            end");
+        
+        // Zone B stations
+        var zoneBStations = stations.Where(s => s.Zone == "B").ToList();
+        foreach (var station in zoneBStations)
+        {
+            var stationName = station.Name.Replace(" ", "<br/>");
+            sb.AppendLine($"            S{station.Id}[\"{stationName}\"]");
+        }
+        
+        sb.AppendLine("        end");
+        
+        // Zone C stations
+        var zoneCStations = stations.Where(s => s.Zone == "C").ToList();
+        foreach (var station in zoneCStations)
+        {
+            var stationName = station.Name.Replace(" ", "<br/>");
+            sb.AppendLine($"        S{station.Id}[\"{stationName}\"]");
+        }
+        
+        sb.AppendLine("    end");
         sb.AppendLine();
 
         // Metro line routes with thick colored arrows
@@ -110,24 +123,31 @@ public class MetroMapGenerator
         }
         sb.AppendLine();
 
-        // Zone-based station styling
-        sb.AppendLine("    %% Zone-based Station Styling");
+        // Zone styling for concentric appearance
+        sb.AppendLine("    %% Zone Styling");
+        sb.AppendLine("    style ZoneA fill:#e3f2fd,stroke:#1976d2,stroke-width:3px");
+        sb.AppendLine("    style ZoneB fill:#e8f5e8,stroke:#388e3c,stroke-width:3px");
+        sb.AppendLine("    style ZoneC fill:#fff3e0,stroke:#f57c00,stroke-width:3px");
+        sb.AppendLine();
+
+        // Station styling based on zone and transfer status
+        sb.AppendLine("    %% Station Styling");
         
-        var zoneAStations = stations.Where(s => s.Zone == "A");
+        // Zone A stations
         foreach (var station in zoneAStations)
         {
             var fillColor = station.IsTransferStation ? "#1e40af" : "#3b82f6";
             sb.AppendLine($"    style S{station.Id} fill:{fillColor},stroke:#1e3a8a,stroke-width:3px,color:#ffffff");
         }
         
-        var zoneBStations = stations.Where(s => s.Zone == "B");
+        // Zone B stations
         foreach (var station in zoneBStations)
         {
             var fillColor = station.IsTransferStation ? "#15803d" : "#22c55e";
             sb.AppendLine($"    style S{station.Id} fill:{fillColor},stroke:#14532d,stroke-width:3px,color:#ffffff");
         }
         
-        var zoneCStations = stations.Where(s => s.Zone == "C");
+        // Zone C stations
         foreach (var station in zoneCStations)
         {
             var fillColor = station.IsTransferStation ? "#ea580c" : "#f97316";
@@ -135,16 +155,9 @@ public class MetroMapGenerator
         }
         sb.AppendLine();
 
-        // Link styling with correct indices
-        sb.AppendLine("    %% Link Colors");
+        // Link styling for metro lines only (no geographic links to count)
+        sb.AppendLine("    %% Metro Line Colors");
         int linkIndex = 0;
-        
-        // Geographic links (light gray)
-        for (int i = 0; i < 11; i++)
-        {
-            sb.AppendLine($"    linkStyle {linkIndex} stroke:#e5e7eb,stroke-width:2px");
-            linkIndex++;
-        }
         
         // Red Line links (red)
         if (redLine != null)

@@ -46,3 +46,4 @@ C:\Users\nikolat\src\FareCalculator\src\FareCalculator\obj\Debug\net8.0\FareCalc
 C:\Users\nikolat\src\FareCalculator\src\FareCalculator\obj\Debug\net8.0\ref\FareCalculator.dll
 C:\Users\nikolat\src\FareCalculator\src\FareCalculator\bin\Debug\net8.0\FareCalculator.xml
 C:\Users\nikolat\src\FareCalculator\src\FareCalculator\bin\Debug\net8.0\appsettings.json
+C:\Users\nikolat\src\FareCalculator\src\FareCalculator\obj\Debug\net8.0\FareCalculator.sourcelink.json

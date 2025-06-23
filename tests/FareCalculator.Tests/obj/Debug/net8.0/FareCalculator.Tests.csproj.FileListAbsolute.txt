@@ -135,3 +135,6 @@ C:\Users\nikolat\src\FareCalculator\tests\FareCalculator.Tests\obj\Debug\net8.0\
 C:\Users\nikolat\src\FareCalculator\tests\FareCalculator.Tests\bin\Debug\net8.0\FareCalculator.Tests.xml
 C:\Users\nikolat\src\FareCalculator\tests\FareCalculator.Tests\bin\Debug\net8.0\FareCalculator.xml
 C:\Users\nikolat\src\FareCalculator\tests\FareCalculator.Tests\bin\Debug\net8.0\appsettings.json
+C:\Users\nikolat\src\FareCalculator\tests\FareCalculator.Tests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_FareCalculator.Tests
+C:\Users\nikolat\src\FareCalculator\tests\FareCalculator.Tests\obj\Debug\net8.0\FareCalculator.Tests.sourcelink.json
+C:\Users\nikolat\src\FareCalculator\tests\FareCalculator.Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_FareCalculator.Tests

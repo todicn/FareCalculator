@@ -9,9 +9,11 @@
       "FareCalculator.Tests/1.0.0": {
         "dependencies": {
           "FareCalculator": "1.0.0",
+          "Microsoft.CodeCoverage": "17.14.1",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.NET.Test.Sdk": "17.8.0",
           "Moq": "4.20.69",
+          "coverlet.collector": "6.0.4",
           "xunit": "2.6.1",
           "xunit.runner.visualstudio": "2.5.1"
         },
@@ -30,11 +32,12 @@
           }
         }
       },
-      "Microsoft.CodeCoverage/17.8.0": {
+      "coverlet.collector/6.0.4": {},
+      "Microsoft.CodeCoverage/17.14.1": {
         "runtime": {
-          "lib/netcoreapp3.1/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
+          "lib/net8.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "17.800.623.45702"
+            "fileVersion": "17.1400.225.12603"
           }
         }
       },
@@ -403,7 +406,7 @@
       },
       "Microsoft.NET.Test.Sdk/17.8.0": {
         "dependencies": {
-          "Microsoft.CodeCoverage": "17.8.0",
+          "Microsoft.CodeCoverage": "17.14.1",
           "Microsoft.TestPlatform.TestHost": "17.8.0"
         }
       },
@@ -1454,12 +1457,19 @@
       "path": "castle.core/5.1.1",
       "hashPath": "castle.core.5.1.1.nupkg.sha512"
     },
-    "Microsoft.CodeCoverage/17.8.0": {
+    "coverlet.collector/6.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KC8SXWbGIdoFVdlxKk9WHccm0llm9HypcHMLUUFabRiTS3SO2fQXNZfdiF3qkEdTJhbRrxhdRxjL4jbtwPq4Ew==",
-      "path": "microsoft.codecoverage/17.8.0",
-      "hashPath": "microsoft.codecoverage.17.8.0.nupkg.sha512"
+      "sha512": "sha512-lkhqpF8Pu2Y7IiN7OntbsTtdbpR1syMsm2F3IgX6ootA4ffRqWL5jF7XipHuZQTdVuWG/gVAAcf8mjk8Tz0xPg==",
+      "path": "coverlet.collector/6.0.4",
+      "hashPath": "coverlet.collector.6.0.4.nupkg.sha512"
+    },
+    "Microsoft.CodeCoverage/17.14.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pmTrhfFIoplzFVbhVwUquT+77CbGH+h4/3mBpdmIlYtBi9nAB+kKI6dN3A/nV4DFi3wLLx/BlHIPK+MkbQ6Tpg==",
+      "path": "microsoft.codecoverage/17.14.1",
+      "hashPath": "microsoft.codecoverage.17.14.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/8.0.0": {
       "type": "package",

@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Models.PassengerType
+  commentId: T:FareCalculator.Models.PassengerType
+  id: PassengerType
+  parent: FareCalculator.Models
+  children:
+  - FareCalculator.Models.PassengerType.Adult
+  - FareCalculator.Models.PassengerType.Child
+  - FareCalculator.Models.PassengerType.Disabled
+  - FareCalculator.Models.PassengerType.Senior
+  - FareCalculator.Models.PassengerType.Student
+  langs:
+  - csharp
+  - vb
+  name: PassengerType
+  nameWithType: PassengerType
+  fullName: FareCalculator.Models.PassengerType
+  type: Enum
+  source:
+    remote:
+      path: src/FareCalculator/Models/PassengerType.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: PassengerType
+    path: src/FareCalculator/Models/PassengerType.cs
+    startLine: 5
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Defines the types of passengers for fare calculation purposes, each with different discount eligibility.
+  example: []
+  syntax:
+    content: public enum PassengerType
+    content.vb: Public Enum PassengerType
+- uid: FareCalculator.Models.PassengerType.Adult
+  commentId: F:FareCalculator.Models.PassengerType.Adult
+  id: Adult
+  parent: FareCalculator.Models.PassengerType
+  langs:
+  - csharp
+  - vb
+  name: Adult
+  nameWithType: PassengerType.Adult
+  fullName: FareCalculator.Models.PassengerType.Adult
+  type: Field
+  source:
+    remote:
+      path: src/FareCalculator/Models/PassengerType.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Adult
+    path: src/FareCalculator/Models/PassengerType.cs
+    startLine: 10
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Adult passenger (18+ years) with no discount eligibility.
+  example: []
+  syntax:
+    content: Adult = 0
+    return:
+      type: FareCalculator.Models.PassengerType
+- uid: FareCalculator.Models.PassengerType.Child
+  commentId: F:FareCalculator.Models.PassengerType.Child
+  id: Child
+  parent: FareCalculator.Models.PassengerType
+  langs:
+  - csharp
+  - vb
+  name: Child
+  nameWithType: PassengerType.Child
+  fullName: FareCalculator.Models.PassengerType.Child
+  type: Field
+  source:
+    remote:
+      path: src/FareCalculator/Models/PassengerType.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Child
+    path: src/FareCalculator/Models/PassengerType.cs
+    startLine: 15
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Child passenger (typically under 12 years) eligible for significant discounts.
+  example: []
+  syntax:
+    content: Child = 1
+    return:
+      type: FareCalculator.Models.PassengerType
+- uid: FareCalculator.Models.PassengerType.Senior
+  commentId: F:FareCalculator.Models.PassengerType.Senior
+  id: Senior
+  parent: FareCalculator.Models.PassengerType
+  langs:
+  - csharp
+  - vb
+  name: Senior
+  nameWithType: PassengerType.Senior
+  fullName: FareCalculator.Models.PassengerType.Senior
+  type: Field
+  source:
+    remote:
+      path: src/FareCalculator/Models/PassengerType.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Senior
+    path: src/FareCalculator/Models/PassengerType.cs
+    startLine: 20
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Senior citizen passenger (typically 65+ years) eligible for age-based discounts.
+  example: []
+  syntax:
+    content: Senior = 2
+    return:
+      type: FareCalculator.Models.PassengerType
+- uid: FareCalculator.Models.PassengerType.Student
+  commentId: F:FareCalculator.Models.PassengerType.Student
+  id: Student
+  parent: FareCalculator.Models.PassengerType
+  langs:
+  - csharp
+  - vb
+  name: Student
+  nameWithType: PassengerType.Student
+  fullName: FareCalculator.Models.PassengerType.Student
+  type: Field
+  source:
+    remote:
+      path: src/FareCalculator/Models/PassengerType.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Student
+    path: src/FareCalculator/Models/PassengerType.cs
+    startLine: 25
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Student passenger with valid student identification, eligible for educational discounts.
+  example: []
+  syntax:
+    content: Student = 3
+    return:
+      type: FareCalculator.Models.PassengerType
+- uid: FareCalculator.Models.PassengerType.Disabled
+  commentId: F:FareCalculator.Models.PassengerType.Disabled
+  id: Disabled
+  parent: FareCalculator.Models.PassengerType
+  langs:
+  - csharp
+  - vb
+  name: Disabled
+  nameWithType: PassengerType.Disabled
+  fullName: FareCalculator.Models.PassengerType.Disabled
+  type: Field
+  source:
+    remote:
+      path: src/FareCalculator/Models/PassengerType.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Disabled
+    path: src/FareCalculator/Models/PassengerType.cs
+    startLine: 30
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Passenger with disabilities, eligible for accessibility-based discounts.
+  example: []
+  syntax:
+    content: Disabled = 4
+    return:
+      type: FareCalculator.Models.PassengerType
+references:
+- uid: FareCalculator.Models
+  commentId: N:FareCalculator.Models
+  href: FareCalculator.html
+  name: FareCalculator.Models
+  nameWithType: FareCalculator.Models
+  fullName: FareCalculator.Models
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+- uid: FareCalculator.Models.PassengerType
+  commentId: T:FareCalculator.Models.PassengerType
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.PassengerType.html
+  name: PassengerType
+  nameWithType: PassengerType
+  fullName: FareCalculator.Models.PassengerType

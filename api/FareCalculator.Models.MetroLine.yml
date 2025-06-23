@@ -1,0 +1,695 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Models.MetroLine
+  commentId: T:FareCalculator.Models.MetroLine
+  id: MetroLine
+  parent: FareCalculator.Models
+  children:
+  - FareCalculator.Models.MetroLine.Code
+  - FareCalculator.Models.MetroLine.Color
+  - FareCalculator.Models.MetroLine.FareMultiplier
+  - FareCalculator.Models.MetroLine.Id
+  - FareCalculator.Models.MetroLine.IsOperational
+  - FareCalculator.Models.MetroLine.LineType
+  - FareCalculator.Models.MetroLine.Name
+  - FareCalculator.Models.MetroLine.Notes
+  - FareCalculator.Models.MetroLine.OperatingHours
+  langs:
+  - csharp
+  - vb
+  name: MetroLine
+  nameWithType: MetroLine
+  fullName: FareCalculator.Models.MetroLine
+  type: Class
+  source:
+    remote:
+      path: src/FareCalculator/Models/MetroLine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: MetroLine
+    path: src/FareCalculator/Models/MetroLine.cs
+    startLine: 5
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Represents a metro line with its characteristics and operational information.
+  example: []
+  syntax:
+    content: public class MetroLine
+    content.vb: Public Class MetroLine
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: FareCalculator.Models.MetroLine.Id
+  commentId: P:FareCalculator.Models.MetroLine.Id
+  id: Id
+  parent: FareCalculator.Models.MetroLine
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: MetroLine.Id
+  fullName: FareCalculator.Models.MetroLine.Id
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/MetroLine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Id
+    path: src/FareCalculator/Models/MetroLine.cs
+    startLine: 11
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the unique identifier for the metro line.
+  example: []
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: A positive integer that uniquely identifies the metro line within the system.
+    content.vb: Public Property Id As Integer
+  overload: FareCalculator.Models.MetroLine.Id*
+- uid: FareCalculator.Models.MetroLine.Name
+  commentId: P:FareCalculator.Models.MetroLine.Name
+  id: Name
+  parent: FareCalculator.Models.MetroLine
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: MetroLine.Name
+  fullName: FareCalculator.Models.MetroLine.Name
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/MetroLine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Name
+    path: src/FareCalculator/Models/MetroLine.cs
+    startLine: 17
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the name of the metro line.
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The human-readable name of the metro line (e.g., "Red Line", "Blue Line").
+    content.vb: Public Property Name As String
+  overload: FareCalculator.Models.MetroLine.Name*
+- uid: FareCalculator.Models.MetroLine.Code
+  commentId: P:FareCalculator.Models.MetroLine.Code
+  id: Code
+  parent: FareCalculator.Models.MetroLine
+  langs:
+  - csharp
+  - vb
+  name: Code
+  nameWithType: MetroLine.Code
+  fullName: FareCalculator.Models.MetroLine.Code
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/MetroLine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Code
+    path: src/FareCalculator/Models/MetroLine.cs
+    startLine: 23
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the short code or abbreviation for the metro line.
+  example: []
+  syntax:
+    content: public string Code { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: A short identifier for the metro line (e.g., "RL", "BL", "GL").
+    content.vb: Public Property Code As String
+  overload: FareCalculator.Models.MetroLine.Code*
+- uid: FareCalculator.Models.MetroLine.Color
+  commentId: P:FareCalculator.Models.MetroLine.Color
+  id: Color
+  parent: FareCalculator.Models.MetroLine
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: MetroLine.Color
+  fullName: FareCalculator.Models.MetroLine.Color
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/MetroLine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Color
+    path: src/FareCalculator/Models/MetroLine.cs
+    startLine: 29
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the color associated with the metro line for visual identification.
+  example: []
+  syntax:
+    content: public string Color { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The hex color code or color name used to represent the line on maps and signage.
+    content.vb: Public Property Color As String
+  overload: FareCalculator.Models.MetroLine.Color*
+- uid: FareCalculator.Models.MetroLine.IsOperational
+  commentId: P:FareCalculator.Models.MetroLine.IsOperational
+  id: IsOperational
+  parent: FareCalculator.Models.MetroLine
+  langs:
+  - csharp
+  - vb
+  name: IsOperational
+  nameWithType: MetroLine.IsOperational
+  fullName: FareCalculator.Models.MetroLine.IsOperational
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/MetroLine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: IsOperational
+    path: src/FareCalculator/Models/MetroLine.cs
+    startLine: 35
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets a value indicating whether the metro line is currently operational.
+  example: []
+  syntax:
+    content: public bool IsOperational { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: True if the line is operational; otherwise, false.
+    content.vb: Public Property IsOperational As Boolean
+  overload: FareCalculator.Models.MetroLine.IsOperational*
+- uid: FareCalculator.Models.MetroLine.LineType
+  commentId: P:FareCalculator.Models.MetroLine.LineType
+  id: LineType
+  parent: FareCalculator.Models.MetroLine
+  langs:
+  - csharp
+  - vb
+  name: LineType
+  nameWithType: MetroLine.LineType
+  fullName: FareCalculator.Models.MetroLine.LineType
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/MetroLine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: LineType
+    path: src/FareCalculator/Models/MetroLine.cs
+    startLine: 41
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the type of the metro line (e.g., "Express", "Local", "Shuttle").
+  example: []
+  syntax:
+    content: public string LineType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: A string describing the service type of the metro line.
+    content.vb: Public Property LineType As String
+  overload: FareCalculator.Models.MetroLine.LineType*
+- uid: FareCalculator.Models.MetroLine.FareMultiplier
+  commentId: P:FareCalculator.Models.MetroLine.FareMultiplier
+  id: FareMultiplier
+  parent: FareCalculator.Models.MetroLine
+  langs:
+  - csharp
+  - vb
+  name: FareMultiplier
+  nameWithType: MetroLine.FareMultiplier
+  fullName: FareCalculator.Models.MetroLine.FareMultiplier
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/MetroLine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: FareMultiplier
+    path: src/FareCalculator/Models/MetroLine.cs
+    startLine: 47
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the fare multiplier for this metro line.
+  example: []
+  syntax:
+    content: public decimal FareMultiplier { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+      description: A decimal multiplier applied to base fares for trips on this line (1.0 = normal fare, 1.5 = 50% premium).
+    content.vb: Public Property FareMultiplier As Decimal
+  overload: FareCalculator.Models.MetroLine.FareMultiplier*
+- uid: FareCalculator.Models.MetroLine.OperatingHours
+  commentId: P:FareCalculator.Models.MetroLine.OperatingHours
+  id: OperatingHours
+  parent: FareCalculator.Models.MetroLine
+  langs:
+  - csharp
+  - vb
+  name: OperatingHours
+  nameWithType: MetroLine.OperatingHours
+  fullName: FareCalculator.Models.MetroLine.OperatingHours
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/MetroLine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: OperatingHours
+    path: src/FareCalculator/Models/MetroLine.cs
+    startLine: 53
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the operating hours for the metro line.
+  example: []
+  syntax:
+    content: public string OperatingHours { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: A string describing the operating hours (e.g., "5:00 AM - 12:00 AM").
+    content.vb: Public Property OperatingHours As String
+  overload: FareCalculator.Models.MetroLine.OperatingHours*
+- uid: FareCalculator.Models.MetroLine.Notes
+  commentId: P:FareCalculator.Models.MetroLine.Notes
+  id: Notes
+  parent: FareCalculator.Models.MetroLine
+  langs:
+  - csharp
+  - vb
+  name: Notes
+  nameWithType: MetroLine.Notes
+  fullName: FareCalculator.Models.MetroLine.Notes
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/MetroLine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Notes
+    path: src/FareCalculator/Models/MetroLine.cs
+    startLine: 59
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets additional notes or information about the metro line.
+  example: []
+  syntax:
+    content: public string? Notes { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: Optional additional information about the line's characteristics or special services.
+    content.vb: Public Property Notes As String
+  overload: FareCalculator.Models.MetroLine.Notes*
+references:
+- uid: FareCalculator.Models
+  commentId: N:FareCalculator.Models
+  href: FareCalculator.html
+  name: FareCalculator.Models
+  nameWithType: FareCalculator.Models
+  fullName: FareCalculator.Models
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FareCalculator.Models.MetroLine.Id*
+  commentId: Overload:FareCalculator.Models.MetroLine.Id
+  href: FareCalculator.Models.MetroLine.html#FareCalculator_Models_MetroLine_Id
+  name: Id
+  nameWithType: MetroLine.Id
+  fullName: FareCalculator.Models.MetroLine.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: FareCalculator.Models.MetroLine.Name*
+  commentId: Overload:FareCalculator.Models.MetroLine.Name
+  href: FareCalculator.Models.MetroLine.html#FareCalculator_Models_MetroLine_Name
+  name: Name
+  nameWithType: MetroLine.Name
+  fullName: FareCalculator.Models.MetroLine.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: FareCalculator.Models.MetroLine.Code*
+  commentId: Overload:FareCalculator.Models.MetroLine.Code
+  href: FareCalculator.Models.MetroLine.html#FareCalculator_Models_MetroLine_Code
+  name: Code
+  nameWithType: MetroLine.Code
+  fullName: FareCalculator.Models.MetroLine.Code
+- uid: FareCalculator.Models.MetroLine.Color*
+  commentId: Overload:FareCalculator.Models.MetroLine.Color
+  href: FareCalculator.Models.MetroLine.html#FareCalculator_Models_MetroLine_Color
+  name: Color
+  nameWithType: MetroLine.Color
+  fullName: FareCalculator.Models.MetroLine.Color
+- uid: FareCalculator.Models.MetroLine.IsOperational*
+  commentId: Overload:FareCalculator.Models.MetroLine.IsOperational
+  href: FareCalculator.Models.MetroLine.html#FareCalculator_Models_MetroLine_IsOperational
+  name: IsOperational
+  nameWithType: MetroLine.IsOperational
+  fullName: FareCalculator.Models.MetroLine.IsOperational
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: FareCalculator.Models.MetroLine.LineType*
+  commentId: Overload:FareCalculator.Models.MetroLine.LineType
+  href: FareCalculator.Models.MetroLine.html#FareCalculator_Models_MetroLine_LineType
+  name: LineType
+  nameWithType: MetroLine.LineType
+  fullName: FareCalculator.Models.MetroLine.LineType
+- uid: FareCalculator.Models.MetroLine.FareMultiplier*
+  commentId: Overload:FareCalculator.Models.MetroLine.FareMultiplier
+  href: FareCalculator.Models.MetroLine.html#FareCalculator_Models_MetroLine_FareMultiplier
+  name: FareMultiplier
+  nameWithType: MetroLine.FareMultiplier
+  fullName: FareCalculator.Models.MetroLine.FareMultiplier
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: FareCalculator.Models.MetroLine.OperatingHours*
+  commentId: Overload:FareCalculator.Models.MetroLine.OperatingHours
+  href: FareCalculator.Models.MetroLine.html#FareCalculator_Models_MetroLine_OperatingHours
+  name: OperatingHours
+  nameWithType: MetroLine.OperatingHours
+  fullName: FareCalculator.Models.MetroLine.OperatingHours
+- uid: FareCalculator.Models.MetroLine.Notes*
+  commentId: Overload:FareCalculator.Models.MetroLine.Notes
+  href: FareCalculator.Models.MetroLine.html#FareCalculator_Models_MetroLine_Notes
+  name: Notes
+  nameWithType: MetroLine.Notes
+  fullName: FareCalculator.Models.MetroLine.Notes

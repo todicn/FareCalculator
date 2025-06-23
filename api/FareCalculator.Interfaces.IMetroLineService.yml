@@ -1,0 +1,714 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Interfaces.IMetroLineService
+  commentId: T:FareCalculator.Interfaces.IMetroLineService
+  id: IMetroLineService
+  parent: FareCalculator.Interfaces
+  children:
+  - FareCalculator.Interfaces.IMetroLineService.CalculateOptimalRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  - FareCalculator.Interfaces.IMetroLineService.GetAllMetroLinesAsync
+  - FareCalculator.Interfaces.IMetroLineService.GetMetroLineByCodeAsync(System.String)
+  - FareCalculator.Interfaces.IMetroLineService.GetMetroLineByIdAsync(System.Int32)
+  - FareCalculator.Interfaces.IMetroLineService.GetMetroLinesByStationAsync(FareCalculator.Models.Station)
+  - FareCalculator.Interfaces.IMetroLineService.GetStationsByMetroLineAsync(FareCalculator.Models.MetroLine)
+  - FareCalculator.Interfaces.IMetroLineService.HasDirectRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  langs:
+  - csharp
+  - vb
+  name: IMetroLineService
+  nameWithType: IMetroLineService
+  fullName: FareCalculator.Interfaces.IMetroLineService
+  type: Interface
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IMetroLineService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: IMetroLineService
+    path: src/FareCalculator/Interfaces/IMetroLineService.cs
+    startLine: 7
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Provides services for managing and retrieving metro line information and operations.
+  example: []
+  syntax:
+    content: public interface IMetroLineService
+    content.vb: Public Interface IMetroLineService
+- uid: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByIdAsync(System.Int32)
+  commentId: M:FareCalculator.Interfaces.IMetroLineService.GetMetroLineByIdAsync(System.Int32)
+  id: GetMetroLineByIdAsync(System.Int32)
+  parent: FareCalculator.Interfaces.IMetroLineService
+  langs:
+  - csharp
+  - vb
+  name: GetMetroLineByIdAsync(int)
+  nameWithType: IMetroLineService.GetMetroLineByIdAsync(int)
+  fullName: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IMetroLineService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GetMetroLineByIdAsync
+    path: src/FareCalculator/Interfaces/IMetroLineService.cs
+    startLine: 14
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Retrieves a metro line by its unique identifier asynchronously.
+  example: []
+  syntax:
+    content: Task<MetroLine?> GetMetroLineByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The unique identifier of the metro line.
+    return:
+      type: System.Threading.Tasks.Task{FareCalculator.Models.MetroLine}
+      description: A task that represents the asynchronous operation. The task result contains the metro line if found, otherwise null.
+    content.vb: Function GetMetroLineByIdAsync(id As Integer) As Task(Of MetroLine)
+  overload: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByIdAsync*
+  nameWithType.vb: IMetroLineService.GetMetroLineByIdAsync(Integer)
+  fullName.vb: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByIdAsync(Integer)
+  name.vb: GetMetroLineByIdAsync(Integer)
+- uid: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByCodeAsync(System.String)
+  commentId: M:FareCalculator.Interfaces.IMetroLineService.GetMetroLineByCodeAsync(System.String)
+  id: GetMetroLineByCodeAsync(System.String)
+  parent: FareCalculator.Interfaces.IMetroLineService
+  langs:
+  - csharp
+  - vb
+  name: GetMetroLineByCodeAsync(string)
+  nameWithType: IMetroLineService.GetMetroLineByCodeAsync(string)
+  fullName: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByCodeAsync(string)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IMetroLineService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GetMetroLineByCodeAsync
+    path: src/FareCalculator/Interfaces/IMetroLineService.cs
+    startLine: 22
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Retrieves a metro line by its code asynchronously (case-insensitive search).
+  example: []
+  syntax:
+    content: Task<MetroLine?> GetMetroLineByCodeAsync(string code)
+    parameters:
+    - id: code
+      type: System.String
+      description: The code of the metro line to search for.
+    return:
+      type: System.Threading.Tasks.Task{FareCalculator.Models.MetroLine}
+      description: A task that represents the asynchronous operation. The task result contains the metro line if found, otherwise null.
+    content.vb: Function GetMetroLineByCodeAsync(code As String) As Task(Of MetroLine)
+  overload: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByCodeAsync*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the code parameter is null or empty.
+  nameWithType.vb: IMetroLineService.GetMetroLineByCodeAsync(String)
+  fullName.vb: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByCodeAsync(String)
+  name.vb: GetMetroLineByCodeAsync(String)
+- uid: FareCalculator.Interfaces.IMetroLineService.GetAllMetroLinesAsync
+  commentId: M:FareCalculator.Interfaces.IMetroLineService.GetAllMetroLinesAsync
+  id: GetAllMetroLinesAsync
+  parent: FareCalculator.Interfaces.IMetroLineService
+  langs:
+  - csharp
+  - vb
+  name: GetAllMetroLinesAsync()
+  nameWithType: IMetroLineService.GetAllMetroLinesAsync()
+  fullName: FareCalculator.Interfaces.IMetroLineService.GetAllMetroLinesAsync()
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IMetroLineService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GetAllMetroLinesAsync
+    path: src/FareCalculator/Interfaces/IMetroLineService.cs
+    startLine: 28
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Retrieves all available metro lines in the system asynchronously.
+  example: []
+  syntax:
+    content: Task<IEnumerable<MetroLine>> GetAllMetroLinesAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{FareCalculator.Models.MetroLine}}
+      description: A task that represents the asynchronous operation. The task result contains a collection of all metro lines.
+    content.vb: Function GetAllMetroLinesAsync() As Task(Of IEnumerable(Of MetroLine))
+  overload: FareCalculator.Interfaces.IMetroLineService.GetAllMetroLinesAsync*
+- uid: FareCalculator.Interfaces.IMetroLineService.GetMetroLinesByStationAsync(FareCalculator.Models.Station)
+  commentId: M:FareCalculator.Interfaces.IMetroLineService.GetMetroLinesByStationAsync(FareCalculator.Models.Station)
+  id: GetMetroLinesByStationAsync(FareCalculator.Models.Station)
+  parent: FareCalculator.Interfaces.IMetroLineService
+  langs:
+  - csharp
+  - vb
+  name: GetMetroLinesByStationAsync(Station)
+  nameWithType: IMetroLineService.GetMetroLinesByStationAsync(Station)
+  fullName: FareCalculator.Interfaces.IMetroLineService.GetMetroLinesByStationAsync(FareCalculator.Models.Station)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IMetroLineService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GetMetroLinesByStationAsync
+    path: src/FareCalculator/Interfaces/IMetroLineService.cs
+    startLine: 36
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Gets all metro lines that serve a specific station asynchronously.
+  example: []
+  syntax:
+    content: Task<IEnumerable<MetroLine>> GetMetroLinesByStationAsync(Station station)
+    parameters:
+    - id: station
+      type: FareCalculator.Models.Station
+      description: The station to check for metro lines.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{FareCalculator.Models.MetroLine}}
+      description: A task that represents the asynchronous operation. The task result contains metro lines serving the station.
+    content.vb: Function GetMetroLinesByStationAsync(station As Station) As Task(Of IEnumerable(Of MetroLine))
+  overload: FareCalculator.Interfaces.IMetroLineService.GetMetroLinesByStationAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the station parameter is null.
+- uid: FareCalculator.Interfaces.IMetroLineService.GetStationsByMetroLineAsync(FareCalculator.Models.MetroLine)
+  commentId: M:FareCalculator.Interfaces.IMetroLineService.GetStationsByMetroLineAsync(FareCalculator.Models.MetroLine)
+  id: GetStationsByMetroLineAsync(FareCalculator.Models.MetroLine)
+  parent: FareCalculator.Interfaces.IMetroLineService
+  langs:
+  - csharp
+  - vb
+  name: GetStationsByMetroLineAsync(MetroLine)
+  nameWithType: IMetroLineService.GetStationsByMetroLineAsync(MetroLine)
+  fullName: FareCalculator.Interfaces.IMetroLineService.GetStationsByMetroLineAsync(FareCalculator.Models.MetroLine)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IMetroLineService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GetStationsByMetroLineAsync
+    path: src/FareCalculator/Interfaces/IMetroLineService.cs
+    startLine: 44
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Gets all stations served by a specific metro line asynchronously.
+  example: []
+  syntax:
+    content: Task<IEnumerable<Station>> GetStationsByMetroLineAsync(MetroLine metroLine)
+    parameters:
+    - id: metroLine
+      type: FareCalculator.Models.MetroLine
+      description: The metro line to get stations for.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{FareCalculator.Models.Station}}
+      description: A task that represents the asynchronous operation. The task result contains stations served by the metro line.
+    content.vb: Function GetStationsByMetroLineAsync(metroLine As MetroLine) As Task(Of IEnumerable(Of Station))
+  overload: FareCalculator.Interfaces.IMetroLineService.GetStationsByMetroLineAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the metroLine parameter is null.
+- uid: FareCalculator.Interfaces.IMetroLineService.HasDirectRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  commentId: M:FareCalculator.Interfaces.IMetroLineService.HasDirectRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  id: HasDirectRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  parent: FareCalculator.Interfaces.IMetroLineService
+  langs:
+  - csharp
+  - vb
+  name: HasDirectRouteAsync(Station, Station)
+  nameWithType: IMetroLineService.HasDirectRouteAsync(Station, Station)
+  fullName: FareCalculator.Interfaces.IMetroLineService.HasDirectRouteAsync(FareCalculator.Models.Station, FareCalculator.Models.Station)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IMetroLineService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: HasDirectRouteAsync
+    path: src/FareCalculator/Interfaces/IMetroLineService.cs
+    startLine: 53
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Determines if a direct route exists between two stations on the same metro line.
+  example: []
+  syntax:
+    content: Task<bool> HasDirectRouteAsync(Station origin, Station destination)
+    parameters:
+    - id: origin
+      type: FareCalculator.Models.Station
+      description: The origin station.
+    - id: destination
+      type: FareCalculator.Models.Station
+      description: The destination station.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: A task that represents the asynchronous operation. The task result indicates if a direct route exists.
+    content.vb: Function HasDirectRouteAsync(origin As Station, destination As Station) As Task(Of Boolean)
+  overload: FareCalculator.Interfaces.IMetroLineService.HasDirectRouteAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when either origin or destination parameter is null.
+- uid: FareCalculator.Interfaces.IMetroLineService.CalculateOptimalRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  commentId: M:FareCalculator.Interfaces.IMetroLineService.CalculateOptimalRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  id: CalculateOptimalRouteAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  parent: FareCalculator.Interfaces.IMetroLineService
+  langs:
+  - csharp
+  - vb
+  name: CalculateOptimalRouteAsync(Station, Station)
+  nameWithType: IMetroLineService.CalculateOptimalRouteAsync(Station, Station)
+  fullName: FareCalculator.Interfaces.IMetroLineService.CalculateOptimalRouteAsync(FareCalculator.Models.Station, FareCalculator.Models.Station)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IMetroLineService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: CalculateOptimalRouteAsync
+    path: src/FareCalculator/Interfaces/IMetroLineService.cs
+    startLine: 62
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Calculates the required transfers between two stations and returns the optimal route.
+  example: []
+  syntax:
+    content: Task<MetroRoute> CalculateOptimalRouteAsync(Station origin, Station destination)
+    parameters:
+    - id: origin
+      type: FareCalculator.Models.Station
+      description: The origin station.
+    - id: destination
+      type: FareCalculator.Models.Station
+      description: The destination station.
+    return:
+      type: System.Threading.Tasks.Task{FareCalculator.Models.MetroRoute}
+      description: A task that represents the asynchronous operation. The task result contains the optimal route with transfer information.
+    content.vb: Function CalculateOptimalRouteAsync(origin As Station, destination As Station) As Task(Of MetroRoute)
+  overload: FareCalculator.Interfaces.IMetroLineService.CalculateOptimalRouteAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when either origin or destination parameter is null.
+references:
+- uid: FareCalculator.Interfaces
+  commentId: N:FareCalculator.Interfaces
+  href: FareCalculator.html
+  name: FareCalculator.Interfaces
+  nameWithType: FareCalculator.Interfaces
+  fullName: FareCalculator.Interfaces
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+- uid: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByIdAsync*
+  commentId: Overload:FareCalculator.Interfaces.IMetroLineService.GetMetroLineByIdAsync
+  href: FareCalculator.Interfaces.IMetroLineService.html#FareCalculator_Interfaces_IMetroLineService_GetMetroLineByIdAsync_System_Int32_
+  name: GetMetroLineByIdAsync
+  nameWithType: IMetroLineService.GetMetroLineByIdAsync
+  fullName: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{FareCalculator.Models.MetroLine}
+  commentId: T:System.Threading.Tasks.Task{FareCalculator.Models.MetroLine}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<MetroLine>
+  nameWithType: Task<MetroLine>
+  fullName: System.Threading.Tasks.Task<FareCalculator.Models.MetroLine>
+  nameWithType.vb: Task(Of MetroLine)
+  fullName.vb: System.Threading.Tasks.Task(Of FareCalculator.Models.MetroLine)
+  name.vb: Task(Of MetroLine)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: FareCalculator.Models.MetroLine
+    name: MetroLine
+    href: FareCalculator.Models.MetroLine.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Models.MetroLine
+    name: MetroLine
+    href: FareCalculator.Models.MetroLine.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByCodeAsync*
+  commentId: Overload:FareCalculator.Interfaces.IMetroLineService.GetMetroLineByCodeAsync
+  href: FareCalculator.Interfaces.IMetroLineService.html#FareCalculator_Interfaces_IMetroLineService_GetMetroLineByCodeAsync_System_String_
+  name: GetMetroLineByCodeAsync
+  nameWithType: IMetroLineService.GetMetroLineByCodeAsync
+  fullName: FareCalculator.Interfaces.IMetroLineService.GetMetroLineByCodeAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: FareCalculator.Interfaces.IMetroLineService.GetAllMetroLinesAsync*
+  commentId: Overload:FareCalculator.Interfaces.IMetroLineService.GetAllMetroLinesAsync
+  href: FareCalculator.Interfaces.IMetroLineService.html#FareCalculator_Interfaces_IMetroLineService_GetAllMetroLinesAsync
+  name: GetAllMetroLinesAsync
+  nameWithType: IMetroLineService.GetAllMetroLinesAsync
+  fullName: FareCalculator.Interfaces.IMetroLineService.GetAllMetroLinesAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{FareCalculator.Models.MetroLine}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{FareCalculator.Models.MetroLine}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<MetroLine>>
+  nameWithType: Task<IEnumerable<MetroLine>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<FareCalculator.Models.MetroLine>>
+  nameWithType.vb: Task(Of IEnumerable(Of MetroLine))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of FareCalculator.Models.MetroLine))
+  name.vb: Task(Of IEnumerable(Of MetroLine))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: FareCalculator.Models.MetroLine
+    name: MetroLine
+    href: FareCalculator.Models.MetroLine.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Models.MetroLine
+    name: MetroLine
+    href: FareCalculator.Models.MetroLine.html
+  - name: )
+  - name: )
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: FareCalculator.Interfaces.IMetroLineService.GetMetroLinesByStationAsync*
+  commentId: Overload:FareCalculator.Interfaces.IMetroLineService.GetMetroLinesByStationAsync
+  href: FareCalculator.Interfaces.IMetroLineService.html#FareCalculator_Interfaces_IMetroLineService_GetMetroLinesByStationAsync_FareCalculator_Models_Station_
+  name: GetMetroLinesByStationAsync
+  nameWithType: IMetroLineService.GetMetroLinesByStationAsync
+  fullName: FareCalculator.Interfaces.IMetroLineService.GetMetroLinesByStationAsync
+- uid: FareCalculator.Models.Station
+  commentId: T:FareCalculator.Models.Station
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.Station.html
+  name: Station
+  nameWithType: Station
+  fullName: FareCalculator.Models.Station
+- uid: FareCalculator.Models
+  commentId: N:FareCalculator.Models
+  href: FareCalculator.html
+  name: FareCalculator.Models
+  nameWithType: FareCalculator.Models
+  fullName: FareCalculator.Models
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+- uid: FareCalculator.Interfaces.IMetroLineService.GetStationsByMetroLineAsync*
+  commentId: Overload:FareCalculator.Interfaces.IMetroLineService.GetStationsByMetroLineAsync
+  href: FareCalculator.Interfaces.IMetroLineService.html#FareCalculator_Interfaces_IMetroLineService_GetStationsByMetroLineAsync_FareCalculator_Models_MetroLine_
+  name: GetStationsByMetroLineAsync
+  nameWithType: IMetroLineService.GetStationsByMetroLineAsync
+  fullName: FareCalculator.Interfaces.IMetroLineService.GetStationsByMetroLineAsync
+- uid: FareCalculator.Models.MetroLine
+  commentId: T:FareCalculator.Models.MetroLine
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.MetroLine.html
+  name: MetroLine
+  nameWithType: MetroLine
+  fullName: FareCalculator.Models.MetroLine
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{FareCalculator.Models.Station}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{FareCalculator.Models.Station}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Station>>
+  nameWithType: Task<IEnumerable<Station>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<FareCalculator.Models.Station>>
+  nameWithType.vb: Task(Of IEnumerable(Of Station))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of FareCalculator.Models.Station))
+  name.vb: Task(Of IEnumerable(Of Station))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: FareCalculator.Models.Station
+    name: Station
+    href: FareCalculator.Models.Station.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Models.Station
+    name: Station
+    href: FareCalculator.Models.Station.html
+  - name: )
+  - name: )
+- uid: FareCalculator.Interfaces.IMetroLineService.HasDirectRouteAsync*
+  commentId: Overload:FareCalculator.Interfaces.IMetroLineService.HasDirectRouteAsync
+  href: FareCalculator.Interfaces.IMetroLineService.html#FareCalculator_Interfaces_IMetroLineService_HasDirectRouteAsync_FareCalculator_Models_Station_FareCalculator_Models_Station_
+  name: HasDirectRouteAsync
+  nameWithType: IMetroLineService.HasDirectRouteAsync
+  fullName: FareCalculator.Interfaces.IMetroLineService.HasDirectRouteAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: FareCalculator.Interfaces.IMetroLineService.CalculateOptimalRouteAsync*
+  commentId: Overload:FareCalculator.Interfaces.IMetroLineService.CalculateOptimalRouteAsync
+  href: FareCalculator.Interfaces.IMetroLineService.html#FareCalculator_Interfaces_IMetroLineService_CalculateOptimalRouteAsync_FareCalculator_Models_Station_FareCalculator_Models_Station_
+  name: CalculateOptimalRouteAsync
+  nameWithType: IMetroLineService.CalculateOptimalRouteAsync
+  fullName: FareCalculator.Interfaces.IMetroLineService.CalculateOptimalRouteAsync
+- uid: System.Threading.Tasks.Task{FareCalculator.Models.MetroRoute}
+  commentId: T:System.Threading.Tasks.Task{FareCalculator.Models.MetroRoute}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<MetroRoute>
+  nameWithType: Task<MetroRoute>
+  fullName: System.Threading.Tasks.Task<FareCalculator.Models.MetroRoute>
+  nameWithType.vb: Task(Of MetroRoute)
+  fullName.vb: System.Threading.Tasks.Task(Of FareCalculator.Models.MetroRoute)
+  name.vb: Task(Of MetroRoute)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: FareCalculator.Models.MetroRoute
+    name: MetroRoute
+    href: FareCalculator.Models.MetroRoute.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Models.MetroRoute
+    name: MetroRoute
+    href: FareCalculator.Models.MetroRoute.html
+  - name: )

@@ -1,0 +1,246 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Interfaces.IFareCalculationService
+  commentId: T:FareCalculator.Interfaces.IFareCalculationService
+  id: IFareCalculationService
+  parent: FareCalculator.Interfaces
+  children:
+  - FareCalculator.Interfaces.IFareCalculationService.CalculateFareAsync(FareCalculator.Models.FareRequest)
+  langs:
+  - csharp
+  - vb
+  name: IFareCalculationService
+  nameWithType: IFareCalculationService
+  fullName: FareCalculator.Interfaces.IFareCalculationService
+  type: Interface
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IFareCalculationService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: IFareCalculationService
+    path: src/FareCalculator/Interfaces/IFareCalculationService.cs
+    startLine: 8
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: >-
+    Provides services for calculating metro transit fares based on various parameters including 
+
+    origin, destination, passenger type, and travel time.
+  example: []
+  syntax:
+    content: public interface IFareCalculationService
+    content.vb: Public Interface IFareCalculationService
+- uid: FareCalculator.Interfaces.IFareCalculationService.CalculateFareAsync(FareCalculator.Models.FareRequest)
+  commentId: M:FareCalculator.Interfaces.IFareCalculationService.CalculateFareAsync(FareCalculator.Models.FareRequest)
+  id: CalculateFareAsync(FareCalculator.Models.FareRequest)
+  parent: FareCalculator.Interfaces.IFareCalculationService
+  langs:
+  - csharp
+  - vb
+  name: CalculateFareAsync(FareRequest)
+  nameWithType: IFareCalculationService.CalculateFareAsync(FareRequest)
+  fullName: FareCalculator.Interfaces.IFareCalculationService.CalculateFareAsync(FareCalculator.Models.FareRequest)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IFareCalculationService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: CalculateFareAsync
+    path: src/FareCalculator/Interfaces/IFareCalculationService.cs
+    startLine: 17
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Calculates the fare for a metro transit journey asynchronously.
+  example: []
+  syntax:
+    content: Task<FareResponse> CalculateFareAsync(FareRequest request)
+    parameters:
+    - id: request
+      type: FareCalculator.Models.FareRequest
+      description: The fare calculation request containing origin, destination, passenger type, and travel date.
+    return:
+      type: System.Threading.Tasks.Task{FareCalculator.Models.FareResponse}
+      description: A task that represents the asynchronous operation. The task result contains the calculated fare response with amount, currency, and additional details.
+    content.vb: Function CalculateFareAsync(request As FareRequest) As Task(Of FareResponse)
+  overload: FareCalculator.Interfaces.IFareCalculationService.CalculateFareAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the request parameter is null.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when no suitable calculation strategy can be found for the request.
+references:
+- uid: FareCalculator.Interfaces
+  commentId: N:FareCalculator.Interfaces
+  href: FareCalculator.html
+  name: FareCalculator.Interfaces
+  nameWithType: FareCalculator.Interfaces
+  fullName: FareCalculator.Interfaces
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: FareCalculator.Interfaces.IFareCalculationService.CalculateFareAsync*
+  commentId: Overload:FareCalculator.Interfaces.IFareCalculationService.CalculateFareAsync
+  href: FareCalculator.Interfaces.IFareCalculationService.html#FareCalculator_Interfaces_IFareCalculationService_CalculateFareAsync_FareCalculator_Models_FareRequest_
+  name: CalculateFareAsync
+  nameWithType: IFareCalculationService.CalculateFareAsync
+  fullName: FareCalculator.Interfaces.IFareCalculationService.CalculateFareAsync
+- uid: FareCalculator.Models.FareRequest
+  commentId: T:FareCalculator.Models.FareRequest
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.FareRequest.html
+  name: FareRequest
+  nameWithType: FareRequest
+  fullName: FareCalculator.Models.FareRequest
+- uid: System.Threading.Tasks.Task{FareCalculator.Models.FareResponse}
+  commentId: T:System.Threading.Tasks.Task{FareCalculator.Models.FareResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<FareResponse>
+  nameWithType: Task<FareResponse>
+  fullName: System.Threading.Tasks.Task<FareCalculator.Models.FareResponse>
+  nameWithType.vb: Task(Of FareResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of FareCalculator.Models.FareResponse)
+  name.vb: Task(Of FareResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: FareCalculator.Models.FareResponse
+    name: FareResponse
+    href: FareCalculator.Models.FareResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Models.FareResponse
+    name: FareResponse
+    href: FareCalculator.Models.FareResponse.html
+  - name: )
+- uid: FareCalculator.Models
+  commentId: N:FareCalculator.Models
+  href: FareCalculator.html
+  name: FareCalculator.Models
+  nameWithType: FareCalculator.Models
+  fullName: FareCalculator.Models
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

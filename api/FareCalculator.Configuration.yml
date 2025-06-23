@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Configuration
+  commentId: N:FareCalculator.Configuration
+  id: FareCalculator.Configuration
+  children:
+  - FareCalculator.Configuration.DistanceBasedFareOptions
+  - FareCalculator.Configuration.FareCalculationOptions
+  - FareCalculator.Configuration.GeographyOptions
+  - FareCalculator.Configuration.MetroLineOptions
+  - FareCalculator.Configuration.OffPeakHourOptions
+  - FareCalculator.Configuration.PeakHourOptions
+  - FareCalculator.Configuration.StationOptions
+  - FareCalculator.Configuration.StrategyPriorityOptions
+  - FareCalculator.Configuration.TimeBasedRulesOptions
+  langs:
+  - csharp
+  - vb
+  name: FareCalculator.Configuration
+  nameWithType: FareCalculator.Configuration
+  fullName: FareCalculator.Configuration
+  type: Namespace
+  assemblies:
+  - FareCalculator
+references:
+- uid: FareCalculator.Configuration.FareCalculationOptions
+  commentId: T:FareCalculator.Configuration.FareCalculationOptions
+  href: FareCalculator.Configuration.FareCalculationOptions.html
+  name: FareCalculationOptions
+  nameWithType: FareCalculationOptions
+  fullName: FareCalculator.Configuration.FareCalculationOptions
+- uid: FareCalculator.Configuration.DistanceBasedFareOptions
+  commentId: T:FareCalculator.Configuration.DistanceBasedFareOptions
+  parent: FareCalculator.Configuration
+  href: FareCalculator.Configuration.DistanceBasedFareOptions.html
+  name: DistanceBasedFareOptions
+  nameWithType: DistanceBasedFareOptions
+  fullName: FareCalculator.Configuration.DistanceBasedFareOptions
+- uid: FareCalculator.Configuration.TimeBasedRulesOptions
+  commentId: T:FareCalculator.Configuration.TimeBasedRulesOptions
+  parent: FareCalculator.Configuration
+  href: FareCalculator.Configuration.TimeBasedRulesOptions.html
+  name: TimeBasedRulesOptions
+  nameWithType: TimeBasedRulesOptions
+  fullName: FareCalculator.Configuration.TimeBasedRulesOptions
+- uid: FareCalculator.Configuration.PeakHourOptions
+  commentId: T:FareCalculator.Configuration.PeakHourOptions
+  parent: FareCalculator.Configuration
+  href: FareCalculator.Configuration.PeakHourOptions.html
+  name: PeakHourOptions
+  nameWithType: PeakHourOptions
+  fullName: FareCalculator.Configuration.PeakHourOptions
+- uid: FareCalculator.Configuration.OffPeakHourOptions
+  commentId: T:FareCalculator.Configuration.OffPeakHourOptions
+  parent: FareCalculator.Configuration
+  href: FareCalculator.Configuration.OffPeakHourOptions.html
+  name: OffPeakHourOptions
+  nameWithType: OffPeakHourOptions
+  fullName: FareCalculator.Configuration.OffPeakHourOptions
+- uid: FareCalculator.Configuration.StrategyPriorityOptions
+  commentId: T:FareCalculator.Configuration.StrategyPriorityOptions
+  parent: FareCalculator.Configuration
+  href: FareCalculator.Configuration.StrategyPriorityOptions.html
+  name: StrategyPriorityOptions
+  nameWithType: StrategyPriorityOptions
+  fullName: FareCalculator.Configuration.StrategyPriorityOptions
+- uid: FareCalculator.Configuration.GeographyOptions
+  commentId: T:FareCalculator.Configuration.GeographyOptions
+  href: FareCalculator.Configuration.GeographyOptions.html
+  name: GeographyOptions
+  nameWithType: GeographyOptions
+  fullName: FareCalculator.Configuration.GeographyOptions
+- uid: FareCalculator.Configuration.StationOptions
+  commentId: T:FareCalculator.Configuration.StationOptions
+  href: FareCalculator.Configuration.StationOptions.html
+  name: StationOptions
+  nameWithType: StationOptions
+  fullName: FareCalculator.Configuration.StationOptions
+- uid: FareCalculator.Configuration.MetroLineOptions
+  commentId: T:FareCalculator.Configuration.MetroLineOptions
+  href: FareCalculator.Configuration.MetroLineOptions.html
+  name: MetroLineOptions
+  nameWithType: MetroLineOptions
+  fullName: FareCalculator.Configuration.MetroLineOptions
+- uid: FareCalculator.Configuration
+  commentId: N:FareCalculator.Configuration
+  href: FareCalculator.html
+  name: FareCalculator.Configuration
+  nameWithType: FareCalculator.Configuration
+  fullName: FareCalculator.Configuration
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Configuration
+    name: Configuration
+    href: FareCalculator.Configuration.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Configuration
+    name: Configuration
+    href: FareCalculator.Configuration.html

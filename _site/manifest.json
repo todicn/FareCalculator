@@ -31,6 +31,692 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Configuration.DistanceBasedFareOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Configuration.DistanceBasedFareOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Configuration.DistanceBasedFareOptions",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Configuration.DistanceBasedFareOptions.yml\" sourcestartlinenumber=\"1\">Configuration options for distance-based fare calculation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Configuration.FareCalculationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Configuration.FareCalculationOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Configuration.FareCalculationOptions",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Configuration.FareCalculationOptions.yml\" sourcestartlinenumber=\"1\">Configuration options for fare calculation settings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Configuration.GeographyOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Configuration.GeographyOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Configuration.GeographyOptions",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Configuration.GeographyOptions.yml\" sourcestartlinenumber=\"1\">Configuration options for geographical calculations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Configuration.MetroLineOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Configuration.MetroLineOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Configuration.MetroLineOptions",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Configuration.MetroLineOptions.yml\" sourcestartlinenumber=\"1\">Configuration options for metro line data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Configuration.OffPeakHourOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Configuration.OffPeakHourOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Configuration.OffPeakHourOptions",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Configuration.OffPeakHourOptions.yml\" sourcestartlinenumber=\"1\">Configuration options for off-peak hour rules.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Configuration.PeakHourOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Configuration.PeakHourOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Configuration.PeakHourOptions",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Configuration.PeakHourOptions.yml\" sourcestartlinenumber=\"1\">Configuration options for peak hour rules.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Configuration.StationOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Configuration.StationOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Configuration.StationOptions",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Configuration.StationOptions.yml\" sourcestartlinenumber=\"1\">Configuration options for station data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Configuration.StrategyPriorityOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Configuration.StrategyPriorityOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Configuration.StrategyPriorityOptions",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Configuration.StrategyPriorityOptions.yml\" sourcestartlinenumber=\"1\">Configuration options for strategy priorities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Configuration.TimeBasedRulesOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Configuration.TimeBasedRulesOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Configuration.TimeBasedRulesOptions",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Configuration.TimeBasedRulesOptions.yml\" sourcestartlinenumber=\"1\">Configuration options for time-based fare rules.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Configuration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Configuration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Interfaces.FareCalculationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Interfaces.FareCalculationContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Interfaces.FareCalculationContext",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Interfaces.FareCalculationContext.yml\" sourcestartlinenumber=\"1\">Represents the context object that carries data and state information throughout the fare calculation workflow.\nThis class maintains the complete state of a fare calculation process as it moves through different processing stages.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Interfaces.IDiscountStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Interfaces.IDiscountStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Interfaces.IDiscountStrategy",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Interfaces.IDiscountStrategy.yml\" sourcestartlinenumber=\"1\">Defines the contract for discount strategies that can apply various types of discounts to base fares.\nImplements the Strategy pattern to allow flexible discount application based on passenger type and other criteria.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Interfaces.IFareCalculationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Interfaces.IFareCalculationService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Interfaces.IFareCalculationService",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Interfaces.IFareCalculationService.yml\" sourcestartlinenumber=\"1\">Provides services for calculating metro transit fares based on various parameters including\norigin, destination, passenger type, and travel time.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Interfaces.IFareCalculationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Interfaces.IFareCalculationState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Interfaces.IFareCalculationState",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Interfaces.IFareCalculationState.yml\" sourcestartlinenumber=\"1\">Defines the contract for states in the fare calculation state machine.\nImplements the State pattern to manage the fare calculation workflow through distinct processing phases.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Interfaces.IFareCalculationStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Interfaces.IFareCalculationStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Interfaces.IFareCalculationStrategy",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Interfaces.IFareCalculationStrategy.yml\" sourcestartlinenumber=\"1\">Defines the contract for fare calculation strategies that can compute base fares using different algorithms.\nImplements the Strategy pattern to allow runtime selection of fare calculation methods.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Interfaces.IFareRuleEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Interfaces.IFareRuleEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Interfaces.IFareRuleEngine",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Interfaces.IFareRuleEngine.yml\" sourcestartlinenumber=\"1\">Provides rule-based fare processing services including discount application and time-based fare adjustments.\nImplements business rules for fare calculations in the metro transit system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Interfaces.IMetroLineService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Interfaces.IMetroLineService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Interfaces.IMetroLineService",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Interfaces.IMetroLineService.yml\" sourcestartlinenumber=\"1\">Provides services for managing and retrieving metro line information and operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Interfaces.IStationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Interfaces.IStationService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Interfaces.IStationService",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Interfaces.IStationService.yml\" sourcestartlinenumber=\"1\">Provides services for managing and retrieving station information and calculating distances between stations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Interfaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Interfaces",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Models.FareRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Models.FareRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Models.FareRequest",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Models.FareRequest.yml\" sourcestartlinenumber=\"1\">Represents a request for fare calculation containing all necessary information for determining transit costs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Models.FareResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Models.FareResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Models.FareResponse",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Models.FareResponse.yml\" sourcestartlinenumber=\"1\">Represents the result of a fare calculation containing the final fare amount and related journey information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Models.MetroLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Models.MetroLine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Models.MetroLine",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Models.MetroLine.yml\" sourcestartlinenumber=\"1\">Represents a metro line with its characteristics and operational information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Models.MetroRoute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Models.MetroRoute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Models.MetroRoute",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Models.MetroRoute.yml\" sourcestartlinenumber=\"1\">Represents a calculated route between two stations in the metro system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Models.PassengerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Models.PassengerType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Models.PassengerType",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Models.PassengerType.yml\" sourcestartlinenumber=\"1\">Defines the types of passengers for fare calculation purposes, each with different discount eligibility.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Models.RouteSegment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Models.RouteSegment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Models.RouteSegment",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Models.RouteSegment.yml\" sourcestartlinenumber=\"1\">Represents a segment of a metro route on a specific metro line.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Models.Station.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Models.Station.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Models.Station",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Models.Station.yml\" sourcestartlinenumber=\"1\">Represents a metro station with its location, zone information, and geographical coordinates.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Services.FareCalculationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Services.FareCalculationService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Services.FareCalculationService",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Services.FareCalculationService.yml\" sourcestartlinenumber=\"1\">Provides fare calculation services using a state machine approach to process fare requests.\nThis service orchestrates the complete fare calculation workflow from initial request to final response.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Services.FareCalculationStateMachine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Services.FareCalculationStateMachine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Services.FareCalculationStateMachine",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Services.FareCalculationStateMachine.yml\" sourcestartlinenumber=\"1\">Implements a state machine that orchestrates fare calculation through a series of processing states.\nEach state handles a specific aspect of the fare calculation workflow, ensuring proper separation of concerns.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Services.FareRuleEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Services.FareRuleEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Services.FareRuleEngine",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Services.FareRuleEngine.yml\" sourcestartlinenumber=\"1\">Implements business rules for fare processing including passenger discounts, time-based adjustments, and zone calculations.\nContains the core logic for applying various fare rules and policies in the metro transit system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Services.IFareCalculationStateMachine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Services.IFareCalculationStateMachine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Services.IFareCalculationStateMachine",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Services.IFareCalculationStateMachine.yml\" sourcestartlinenumber=\"1\">Defines the contract for a state machine that orchestrates the fare calculation workflow through multiple processing states.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Services.MetroLineService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Services.MetroLineService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Services.MetroLineService",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Services.MetroLineService.yml\" sourcestartlinenumber=\"1\">Provides metro line management services including line lookup, route calculation, and transfer analysis.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Services.StationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Services.StationService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Services.StationService",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Services.StationService.yml\" sourcestartlinenumber=\"1\">Provides station management services including station lookup, retrieval, and distance calculations.\nUses configuration-based station data and geographical constants for calculations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Services",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.States.BaseFareCalculationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.States.BaseFareCalculationState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.States.BaseFareCalculationState",
+      "Summary": "<p sourcefile=\"api/FareCalculator.States.BaseFareCalculationState.yml\" sourcestartlinenumber=\"1\">Represents the base fare calculation state that determines the initial fare using available calculation strategies.\nThis state selects the most appropriate strategy based on priority and capability to handle the request.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.States.DiscountApplicationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.States.DiscountApplicationState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.States.DiscountApplicationState",
+      "Summary": "<p sourcefile=\"api/FareCalculator.States.DiscountApplicationState.yml\" sourcestartlinenumber=\"1\">Represents the discount application state that applies all applicable discount strategies to the base fare.\nThis state processes discounts in priority order and tracks the total discount amount applied.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.States.FinalCalculationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.States.FinalCalculationState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.States.FinalCalculationState",
+      "Summary": "<p sourcefile=\"api/FareCalculator.States.FinalCalculationState.yml\" sourcestartlinenumber=\"1\">Represents the final calculation state that completes the fare calculation process.\nThis state finalizes the fare amount, calculates zone information, and generates descriptive information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.States.InitialCalculationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.States.InitialCalculationState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.States.InitialCalculationState",
+      "Summary": "<p sourcefile=\"api/FareCalculator.States.InitialCalculationState.yml\" sourcestartlinenumber=\"1\">Represents the initial state in the fare calculation workflow that initializes the calculation context.\nThis state sets up the basic information and prepares the context for subsequent processing states.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.States.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.States.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.States",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Strategies.DistanceBasedFareStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Strategies.DistanceBasedFareStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Strategies.DistanceBasedFareStrategy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Strategies.MetroLineFareStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Strategies.MetroLineFareStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Strategies.MetroLineFareStrategy",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Strategies.MetroLineFareStrategy.yml\" sourcestartlinenumber=\"1\">Fare calculation strategy that considers metro line characteristics including line multipliers and transfer penalties.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Strategies.PassengerDiscountStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Strategies.PassengerDiscountStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Strategies.PassengerDiscountStrategy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Strategies.TimeBasedDiscountStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Strategies.TimeBasedDiscountStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Strategies.TimeBasedDiscountStrategy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Strategies.ZoneBasedFareStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Strategies.ZoneBasedFareStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Strategies.ZoneBasedFareStrategy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Strategies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Strategies.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Strategies",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Visualization.MapGeneratorApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Visualization.MapGeneratorApp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Visualization.MapGeneratorApp",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Visualization.MapGeneratorApp.yml\" sourcestartlinenumber=\"1\">Console application for generating metro system visualizations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Visualization.MetroMapGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Visualization.MetroMapGenerator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Visualization.MetroMapGenerator",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Visualization.MetroMapGenerator.yml\" sourcestartlinenumber=\"1\">Generates visual representations of the metro system for documentation purposes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Visualization.VisualizationDemo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Visualization.VisualizationDemo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Visualization.VisualizationDemo",
+      "Summary": "<p sourcefile=\"api/FareCalculator.Visualization.VisualizationDemo.yml\" sourcestartlinenumber=\"1\">Demo program to showcase metro system visualization capabilities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FareCalculator.Visualization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FareCalculator.Visualization.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "FareCalculator.Visualization",
+      "Summary": null
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
@@ -75,6 +761,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/Metro-System-Overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Metro-System-Overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/Test-Documentation.md",
       "output": {
         ".html": {
@@ -104,6 +800,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "docs/metro-system-map.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/metro-system-map.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "docs/toc.yml",
       "output": {
@@ -122,6 +828,16 @@
       "output": {
         ".html": {
           "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/FareCalculator/docs/generated/metro-system-map.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/FareCalculator/docs/generated/metro-system-map.html"
         }
       },
       "version": ""

@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Interfaces
+  commentId: N:FareCalculator.Interfaces
+  id: FareCalculator.Interfaces
+  children:
+  - FareCalculator.Interfaces.FareCalculationContext
+  - FareCalculator.Interfaces.IDiscountStrategy
+  - FareCalculator.Interfaces.IFareCalculationService
+  - FareCalculator.Interfaces.IFareCalculationState
+  - FareCalculator.Interfaces.IFareCalculationStrategy
+  - FareCalculator.Interfaces.IFareRuleEngine
+  - FareCalculator.Interfaces.IMetroLineService
+  - FareCalculator.Interfaces.IStationService
+  langs:
+  - csharp
+  - vb
+  name: FareCalculator.Interfaces
+  nameWithType: FareCalculator.Interfaces
+  fullName: FareCalculator.Interfaces
+  type: Namespace
+  assemblies:
+  - FareCalculator
+references:
+- uid: FareCalculator.Interfaces.IDiscountStrategy
+  commentId: T:FareCalculator.Interfaces.IDiscountStrategy
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.IDiscountStrategy.html
+  name: IDiscountStrategy
+  nameWithType: IDiscountStrategy
+  fullName: FareCalculator.Interfaces.IDiscountStrategy
+- uid: FareCalculator.Interfaces.IFareCalculationService
+  commentId: T:FareCalculator.Interfaces.IFareCalculationService
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.IFareCalculationService.html
+  name: IFareCalculationService
+  nameWithType: IFareCalculationService
+  fullName: FareCalculator.Interfaces.IFareCalculationService
+- uid: FareCalculator.Interfaces.IFareCalculationState
+  commentId: T:FareCalculator.Interfaces.IFareCalculationState
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.IFareCalculationState.html
+  name: IFareCalculationState
+  nameWithType: IFareCalculationState
+  fullName: FareCalculator.Interfaces.IFareCalculationState
+- uid: FareCalculator.Interfaces.FareCalculationContext
+  commentId: T:FareCalculator.Interfaces.FareCalculationContext
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.FareCalculationContext.html
+  name: FareCalculationContext
+  nameWithType: FareCalculationContext
+  fullName: FareCalculator.Interfaces.FareCalculationContext
+- uid: FareCalculator.Interfaces.IFareCalculationStrategy
+  commentId: T:FareCalculator.Interfaces.IFareCalculationStrategy
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.IFareCalculationStrategy.html
+  name: IFareCalculationStrategy
+  nameWithType: IFareCalculationStrategy
+  fullName: FareCalculator.Interfaces.IFareCalculationStrategy
+- uid: FareCalculator.Interfaces.IFareRuleEngine
+  commentId: T:FareCalculator.Interfaces.IFareRuleEngine
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.IFareRuleEngine.html
+  name: IFareRuleEngine
+  nameWithType: IFareRuleEngine
+  fullName: FareCalculator.Interfaces.IFareRuleEngine
+- uid: FareCalculator.Interfaces.IMetroLineService
+  commentId: T:FareCalculator.Interfaces.IMetroLineService
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.IMetroLineService.html
+  name: IMetroLineService
+  nameWithType: IMetroLineService
+  fullName: FareCalculator.Interfaces.IMetroLineService
+- uid: FareCalculator.Interfaces.IStationService
+  commentId: T:FareCalculator.Interfaces.IStationService
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.IStationService.html
+  name: IStationService
+  nameWithType: IStationService
+  fullName: FareCalculator.Interfaces.IStationService
+- uid: FareCalculator.Interfaces
+  commentId: N:FareCalculator.Interfaces
+  href: FareCalculator.html
+  name: FareCalculator.Interfaces
+  nameWithType: FareCalculator.Interfaces
+  fullName: FareCalculator.Interfaces
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html

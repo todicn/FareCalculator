@@ -1,0 +1,92 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Models
+  commentId: N:FareCalculator.Models
+  id: FareCalculator.Models
+  children:
+  - FareCalculator.Models.FareRequest
+  - FareCalculator.Models.FareResponse
+  - FareCalculator.Models.MetroLine
+  - FareCalculator.Models.MetroRoute
+  - FareCalculator.Models.PassengerType
+  - FareCalculator.Models.RouteSegment
+  - FareCalculator.Models.Station
+  langs:
+  - csharp
+  - vb
+  name: FareCalculator.Models
+  nameWithType: FareCalculator.Models
+  fullName: FareCalculator.Models
+  type: Namespace
+  assemblies:
+  - FareCalculator
+references:
+- uid: FareCalculator.Models.FareRequest
+  commentId: T:FareCalculator.Models.FareRequest
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.FareRequest.html
+  name: FareRequest
+  nameWithType: FareRequest
+  fullName: FareCalculator.Models.FareRequest
+- uid: FareCalculator.Models.FareResponse
+  commentId: T:FareCalculator.Models.FareResponse
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.FareResponse.html
+  name: FareResponse
+  nameWithType: FareResponse
+  fullName: FareCalculator.Models.FareResponse
+- uid: FareCalculator.Models.MetroLine
+  commentId: T:FareCalculator.Models.MetroLine
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.MetroLine.html
+  name: MetroLine
+  nameWithType: MetroLine
+  fullName: FareCalculator.Models.MetroLine
+- uid: FareCalculator.Models.MetroRoute
+  commentId: T:FareCalculator.Models.MetroRoute
+  href: FareCalculator.Models.MetroRoute.html
+  name: MetroRoute
+  nameWithType: MetroRoute
+  fullName: FareCalculator.Models.MetroRoute
+- uid: FareCalculator.Models.RouteSegment
+  commentId: T:FareCalculator.Models.RouteSegment
+  href: FareCalculator.Models.RouteSegment.html
+  name: RouteSegment
+  nameWithType: RouteSegment
+  fullName: FareCalculator.Models.RouteSegment
+- uid: FareCalculator.Models.PassengerType
+  commentId: T:FareCalculator.Models.PassengerType
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.PassengerType.html
+  name: PassengerType
+  nameWithType: PassengerType
+  fullName: FareCalculator.Models.PassengerType
+- uid: FareCalculator.Models.Station
+  commentId: T:FareCalculator.Models.Station
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.Station.html
+  name: Station
+  nameWithType: Station
+  fullName: FareCalculator.Models.Station
+- uid: FareCalculator.Models
+  commentId: N:FareCalculator.Models
+  href: FareCalculator.html
+  name: FareCalculator.Models
+  nameWithType: FareCalculator.Models
+  fullName: FareCalculator.Models
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html

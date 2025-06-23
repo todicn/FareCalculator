@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Strategies
+  commentId: N:FareCalculator.Strategies
+  id: FareCalculator.Strategies
+  children:
+  - FareCalculator.Strategies.DistanceBasedFareStrategy
+  - FareCalculator.Strategies.MetroLineFareStrategy
+  - FareCalculator.Strategies.PassengerDiscountStrategy
+  - FareCalculator.Strategies.TimeBasedDiscountStrategy
+  - FareCalculator.Strategies.ZoneBasedFareStrategy
+  langs:
+  - csharp
+  - vb
+  name: FareCalculator.Strategies
+  nameWithType: FareCalculator.Strategies
+  fullName: FareCalculator.Strategies
+  type: Namespace
+  assemblies:
+  - FareCalculator
+references:
+- uid: FareCalculator.Strategies.DistanceBasedFareStrategy
+  commentId: T:FareCalculator.Strategies.DistanceBasedFareStrategy
+  href: FareCalculator.Strategies.DistanceBasedFareStrategy.html
+  name: DistanceBasedFareStrategy
+  nameWithType: DistanceBasedFareStrategy
+  fullName: FareCalculator.Strategies.DistanceBasedFareStrategy
+- uid: FareCalculator.Strategies.MetroLineFareStrategy
+  commentId: T:FareCalculator.Strategies.MetroLineFareStrategy
+  href: FareCalculator.Strategies.MetroLineFareStrategy.html
+  name: MetroLineFareStrategy
+  nameWithType: MetroLineFareStrategy
+  fullName: FareCalculator.Strategies.MetroLineFareStrategy
+- uid: FareCalculator.Strategies.PassengerDiscountStrategy
+  commentId: T:FareCalculator.Strategies.PassengerDiscountStrategy
+  href: FareCalculator.Strategies.PassengerDiscountStrategy.html
+  name: PassengerDiscountStrategy
+  nameWithType: PassengerDiscountStrategy
+  fullName: FareCalculator.Strategies.PassengerDiscountStrategy
+- uid: FareCalculator.Strategies.TimeBasedDiscountStrategy
+  commentId: T:FareCalculator.Strategies.TimeBasedDiscountStrategy
+  href: FareCalculator.Strategies.TimeBasedDiscountStrategy.html
+  name: TimeBasedDiscountStrategy
+  nameWithType: TimeBasedDiscountStrategy
+  fullName: FareCalculator.Strategies.TimeBasedDiscountStrategy
+- uid: FareCalculator.Strategies.ZoneBasedFareStrategy
+  commentId: T:FareCalculator.Strategies.ZoneBasedFareStrategy
+  href: FareCalculator.Strategies.ZoneBasedFareStrategy.html
+  name: ZoneBasedFareStrategy
+  nameWithType: ZoneBasedFareStrategy
+  fullName: FareCalculator.Strategies.ZoneBasedFareStrategy

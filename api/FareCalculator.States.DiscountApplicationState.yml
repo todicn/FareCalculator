@@ -1,0 +1,922 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.States.DiscountApplicationState
+  commentId: T:FareCalculator.States.DiscountApplicationState
+  id: DiscountApplicationState
+  parent: FareCalculator.States
+  children:
+  - FareCalculator.States.DiscountApplicationState.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.States.DiscountApplicationState},System.Collections.Generic.IEnumerable{FareCalculator.Interfaces.IDiscountStrategy})
+  - FareCalculator.States.DiscountApplicationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+  - FareCalculator.States.DiscountApplicationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+  - FareCalculator.States.DiscountApplicationState.StateName
+  langs:
+  - csharp
+  - vb
+  name: DiscountApplicationState
+  nameWithType: DiscountApplicationState
+  fullName: FareCalculator.States.DiscountApplicationState
+  type: Class
+  source:
+    remote:
+      path: src/FareCalculator/States/DiscountApplicationState.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: DiscountApplicationState
+    path: src/FareCalculator/States/DiscountApplicationState.cs
+    startLine: 9
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.States
+  summary: >-
+    Represents the discount application state that applies all applicable discount strategies to the base fare.
+
+    This state processes discounts in priority order and tracks the total discount amount applied.
+  example: []
+  syntax:
+    content: 'public class DiscountApplicationState : IFareCalculationState'
+    content.vb: Public Class DiscountApplicationState Implements IFareCalculationState
+  inheritance:
+  - System.Object
+  implements:
+  - FareCalculator.Interfaces.IFareCalculationState
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: FareCalculator.States.DiscountApplicationState.StateName
+  commentId: P:FareCalculator.States.DiscountApplicationState.StateName
+  id: StateName
+  parent: FareCalculator.States.DiscountApplicationState
+  langs:
+  - csharp
+  - vb
+  name: StateName
+  nameWithType: DiscountApplicationState.StateName
+  fullName: FareCalculator.States.DiscountApplicationState.StateName
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/States/DiscountApplicationState.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: StateName
+    path: src/FareCalculator/States/DiscountApplicationState.cs
+    startLine: 18
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.States
+  summary: Gets the name of this state in the fare calculation workflow.
+  example: []
+  syntax:
+    content: public string StateName { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: Returns "DiscountApplication" to identify this as the discount application state.
+    content.vb: Public ReadOnly Property StateName As String
+  overload: FareCalculator.States.DiscountApplicationState.StateName*
+  implements:
+  - FareCalculator.Interfaces.IFareCalculationState.StateName
+- uid: FareCalculator.States.DiscountApplicationState.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.States.DiscountApplicationState},System.Collections.Generic.IEnumerable{FareCalculator.Interfaces.IDiscountStrategy})
+  commentId: M:FareCalculator.States.DiscountApplicationState.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.States.DiscountApplicationState},System.Collections.Generic.IEnumerable{FareCalculator.Interfaces.IDiscountStrategy})
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.States.DiscountApplicationState},System.Collections.Generic.IEnumerable{FareCalculator.Interfaces.IDiscountStrategy})'
+  parent: FareCalculator.States.DiscountApplicationState
+  langs:
+  - csharp
+  - vb
+  name: DiscountApplicationState(ILogger<DiscountApplicationState>, IEnumerable<IDiscountStrategy>)
+  nameWithType: DiscountApplicationState.DiscountApplicationState(ILogger<DiscountApplicationState>, IEnumerable<IDiscountStrategy>)
+  fullName: FareCalculator.States.DiscountApplicationState.DiscountApplicationState(Microsoft.Extensions.Logging.ILogger<FareCalculator.States.DiscountApplicationState>, System.Collections.Generic.IEnumerable<FareCalculator.Interfaces.IDiscountStrategy>)
+  type: Constructor
+  source:
+    remote:
+      path: src/FareCalculator/States/DiscountApplicationState.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: .ctor
+    path: src/FareCalculator/States/DiscountApplicationState.cs
+    startLine: 26
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.States
+  summary: Initializes a new instance of the <xref href="FareCalculator.States.DiscountApplicationState" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public DiscountApplicationState(ILogger<DiscountApplicationState> logger, IEnumerable<IDiscountStrategy> discountStrategies)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{FareCalculator.States.DiscountApplicationState}
+      description: The logger for capturing state execution information.
+    - id: discountStrategies
+      type: System.Collections.Generic.IEnumerable{FareCalculator.Interfaces.IDiscountStrategy}
+      description: The collection of available discount strategies.
+    content.vb: Public Sub New(logger As ILogger(Of DiscountApplicationState), discountStrategies As IEnumerable(Of IDiscountStrategy))
+  overload: FareCalculator.States.DiscountApplicationState.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when any parameter is null.
+  nameWithType.vb: DiscountApplicationState.New(ILogger(Of DiscountApplicationState), IEnumerable(Of IDiscountStrategy))
+  fullName.vb: FareCalculator.States.DiscountApplicationState.New(Microsoft.Extensions.Logging.ILogger(Of FareCalculator.States.DiscountApplicationState), System.Collections.Generic.IEnumerable(Of FareCalculator.Interfaces.IDiscountStrategy))
+  name.vb: New(ILogger(Of DiscountApplicationState), IEnumerable(Of IDiscountStrategy))
+- uid: FareCalculator.States.DiscountApplicationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+  commentId: M:FareCalculator.States.DiscountApplicationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+  id: ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+  parent: FareCalculator.States.DiscountApplicationState
+  langs:
+  - csharp
+  - vb
+  name: ProcessAsync(FareCalculationContext)
+  nameWithType: DiscountApplicationState.ProcessAsync(FareCalculationContext)
+  fullName: FareCalculator.States.DiscountApplicationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/States/DiscountApplicationState.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: ProcessAsync
+    path: src/FareCalculator/States/DiscountApplicationState.cs
+    startLine: 41
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.States
+  summary: >-
+    Processes the fare calculation context by applying all applicable discount strategies.
+
+    Strategies are applied in priority order (highest priority first) and the total discount is tracked.
+  example: []
+  syntax:
+    content: public Task<FareCalculationContext> ProcessAsync(FareCalculationContext context)
+    parameters:
+    - id: context
+      type: FareCalculator.Interfaces.FareCalculationContext
+      description: The fare calculation context containing the base fare and passenger details.
+    return:
+      type: System.Threading.Tasks.Task{FareCalculator.Interfaces.FareCalculationContext}
+      description: A task that represents the asynchronous operation. The task result contains the updated context with discounted fare.
+    content.vb: Public Function ProcessAsync(context As FareCalculationContext) As Task(Of FareCalculationContext)
+  overload: FareCalculator.States.DiscountApplicationState.ProcessAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the context parameter is null.
+  implements:
+  - FareCalculator.Interfaces.IFareCalculationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+- uid: FareCalculator.States.DiscountApplicationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+  commentId: M:FareCalculator.States.DiscountApplicationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+  id: CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+  parent: FareCalculator.States.DiscountApplicationState
+  langs:
+  - csharp
+  - vb
+  name: CanTransitionTo(IFareCalculationState)
+  nameWithType: DiscountApplicationState.CanTransitionTo(IFareCalculationState)
+  fullName: FareCalculator.States.DiscountApplicationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/States/DiscountApplicationState.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: CanTransitionTo
+    path: src/FareCalculator/States/DiscountApplicationState.cs
+    startLine: 88
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.States
+  summary: >-
+    Determines whether this state can transition to the specified next state.
+
+    The discount application state can only transition to the final calculation state.
+  example: []
+  syntax:
+    content: public bool CanTransitionTo(IFareCalculationState nextState)
+    parameters:
+    - id: nextState
+      type: FareCalculator.Interfaces.IFareCalculationState
+      description: The proposed next state in the workflow.
+    return:
+      type: System.Boolean
+      description: True if the next state is the final calculation state; otherwise, false.
+    content.vb: Public Function CanTransitionTo(nextState As IFareCalculationState) As Boolean
+  overload: FareCalculator.States.DiscountApplicationState.CanTransitionTo*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the nextState parameter is null.
+  implements:
+  - FareCalculator.Interfaces.IFareCalculationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+references:
+- uid: FareCalculator.States
+  commentId: N:FareCalculator.States
+  href: FareCalculator.html
+  name: FareCalculator.States
+  nameWithType: FareCalculator.States
+  fullName: FareCalculator.States
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.States
+    name: States
+    href: FareCalculator.States.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.States
+    name: States
+    href: FareCalculator.States.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: FareCalculator.Interfaces.IFareCalculationState
+  commentId: T:FareCalculator.Interfaces.IFareCalculationState
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.IFareCalculationState.html
+  name: IFareCalculationState
+  nameWithType: IFareCalculationState
+  fullName: FareCalculator.Interfaces.IFareCalculationState
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FareCalculator.Interfaces
+  commentId: N:FareCalculator.Interfaces
+  href: FareCalculator.html
+  name: FareCalculator.Interfaces
+  nameWithType: FareCalculator.Interfaces
+  fullName: FareCalculator.Interfaces
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+- uid: FareCalculator.States.DiscountApplicationState.StateName*
+  commentId: Overload:FareCalculator.States.DiscountApplicationState.StateName
+  href: FareCalculator.States.DiscountApplicationState.html#FareCalculator_States_DiscountApplicationState_StateName
+  name: StateName
+  nameWithType: DiscountApplicationState.StateName
+  fullName: FareCalculator.States.DiscountApplicationState.StateName
+- uid: FareCalculator.Interfaces.IFareCalculationState.StateName
+  commentId: P:FareCalculator.Interfaces.IFareCalculationState.StateName
+  parent: FareCalculator.Interfaces.IFareCalculationState
+  href: FareCalculator.Interfaces.IFareCalculationState.html#FareCalculator_Interfaces_IFareCalculationState_StateName
+  name: StateName
+  nameWithType: IFareCalculationState.StateName
+  fullName: FareCalculator.Interfaces.IFareCalculationState.StateName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: FareCalculator.States.DiscountApplicationState
+  commentId: T:FareCalculator.States.DiscountApplicationState
+  href: FareCalculator.States.DiscountApplicationState.html
+  name: DiscountApplicationState
+  nameWithType: DiscountApplicationState
+  fullName: FareCalculator.States.DiscountApplicationState
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: FareCalculator.States.DiscountApplicationState.#ctor*
+  commentId: Overload:FareCalculator.States.DiscountApplicationState.#ctor
+  href: FareCalculator.States.DiscountApplicationState.html#FareCalculator_States_DiscountApplicationState__ctor_Microsoft_Extensions_Logging_ILogger_FareCalculator_States_DiscountApplicationState__System_Collections_Generic_IEnumerable_FareCalculator_Interfaces_IDiscountStrategy__
+  name: DiscountApplicationState
+  nameWithType: DiscountApplicationState.DiscountApplicationState
+  fullName: FareCalculator.States.DiscountApplicationState.DiscountApplicationState
+  nameWithType.vb: DiscountApplicationState.New
+  fullName.vb: FareCalculator.States.DiscountApplicationState.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{FareCalculator.States.DiscountApplicationState}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{FareCalculator.States.DiscountApplicationState}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<DiscountApplicationState>
+  nameWithType: ILogger<DiscountApplicationState>
+  fullName: Microsoft.Extensions.Logging.ILogger<FareCalculator.States.DiscountApplicationState>
+  nameWithType.vb: ILogger(Of DiscountApplicationState)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of FareCalculator.States.DiscountApplicationState)
+  name.vb: ILogger(Of DiscountApplicationState)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: FareCalculator.States.DiscountApplicationState
+    name: DiscountApplicationState
+    href: FareCalculator.States.DiscountApplicationState.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.States.DiscountApplicationState
+    name: DiscountApplicationState
+    href: FareCalculator.States.DiscountApplicationState.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{FareCalculator.Interfaces.IDiscountStrategy}
+  commentId: T:System.Collections.Generic.IEnumerable{FareCalculator.Interfaces.IDiscountStrategy}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IDiscountStrategy>
+  nameWithType: IEnumerable<IDiscountStrategy>
+  fullName: System.Collections.Generic.IEnumerable<FareCalculator.Interfaces.IDiscountStrategy>
+  nameWithType.vb: IEnumerable(Of IDiscountStrategy)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of FareCalculator.Interfaces.IDiscountStrategy)
+  name.vb: IEnumerable(Of IDiscountStrategy)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: FareCalculator.Interfaces.IDiscountStrategy
+    name: IDiscountStrategy
+    href: FareCalculator.Interfaces.IDiscountStrategy.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Interfaces.IDiscountStrategy
+    name: IDiscountStrategy
+    href: FareCalculator.Interfaces.IDiscountStrategy.html
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: FareCalculator.States.DiscountApplicationState.ProcessAsync*
+  commentId: Overload:FareCalculator.States.DiscountApplicationState.ProcessAsync
+  href: FareCalculator.States.DiscountApplicationState.html#FareCalculator_States_DiscountApplicationState_ProcessAsync_FareCalculator_Interfaces_FareCalculationContext_
+  name: ProcessAsync
+  nameWithType: DiscountApplicationState.ProcessAsync
+  fullName: FareCalculator.States.DiscountApplicationState.ProcessAsync
+- uid: FareCalculator.Interfaces.IFareCalculationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+  commentId: M:FareCalculator.Interfaces.IFareCalculationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+  parent: FareCalculator.Interfaces.IFareCalculationState
+  href: FareCalculator.Interfaces.IFareCalculationState.html#FareCalculator_Interfaces_IFareCalculationState_ProcessAsync_FareCalculator_Interfaces_FareCalculationContext_
+  name: ProcessAsync(FareCalculationContext)
+  nameWithType: IFareCalculationState.ProcessAsync(FareCalculationContext)
+  fullName: FareCalculator.Interfaces.IFareCalculationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+  spec.csharp:
+  - uid: FareCalculator.Interfaces.IFareCalculationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+    name: ProcessAsync
+    href: FareCalculator.Interfaces.IFareCalculationState.html#FareCalculator_Interfaces_IFareCalculationState_ProcessAsync_FareCalculator_Interfaces_FareCalculationContext_
+  - name: (
+  - uid: FareCalculator.Interfaces.FareCalculationContext
+    name: FareCalculationContext
+    href: FareCalculator.Interfaces.FareCalculationContext.html
+  - name: )
+  spec.vb:
+  - uid: FareCalculator.Interfaces.IFareCalculationState.ProcessAsync(FareCalculator.Interfaces.FareCalculationContext)
+    name: ProcessAsync
+    href: FareCalculator.Interfaces.IFareCalculationState.html#FareCalculator_Interfaces_IFareCalculationState_ProcessAsync_FareCalculator_Interfaces_FareCalculationContext_
+  - name: (
+  - uid: FareCalculator.Interfaces.FareCalculationContext
+    name: FareCalculationContext
+    href: FareCalculator.Interfaces.FareCalculationContext.html
+  - name: )
+- uid: FareCalculator.Interfaces.FareCalculationContext
+  commentId: T:FareCalculator.Interfaces.FareCalculationContext
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.FareCalculationContext.html
+  name: FareCalculationContext
+  nameWithType: FareCalculationContext
+  fullName: FareCalculator.Interfaces.FareCalculationContext
+- uid: System.Threading.Tasks.Task{FareCalculator.Interfaces.FareCalculationContext}
+  commentId: T:System.Threading.Tasks.Task{FareCalculator.Interfaces.FareCalculationContext}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<FareCalculationContext>
+  nameWithType: Task<FareCalculationContext>
+  fullName: System.Threading.Tasks.Task<FareCalculator.Interfaces.FareCalculationContext>
+  nameWithType.vb: Task(Of FareCalculationContext)
+  fullName.vb: System.Threading.Tasks.Task(Of FareCalculator.Interfaces.FareCalculationContext)
+  name.vb: Task(Of FareCalculationContext)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: FareCalculator.Interfaces.FareCalculationContext
+    name: FareCalculationContext
+    href: FareCalculator.Interfaces.FareCalculationContext.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Interfaces.FareCalculationContext
+    name: FareCalculationContext
+    href: FareCalculator.Interfaces.FareCalculationContext.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: FareCalculator.States.DiscountApplicationState.CanTransitionTo*
+  commentId: Overload:FareCalculator.States.DiscountApplicationState.CanTransitionTo
+  href: FareCalculator.States.DiscountApplicationState.html#FareCalculator_States_DiscountApplicationState_CanTransitionTo_FareCalculator_Interfaces_IFareCalculationState_
+  name: CanTransitionTo
+  nameWithType: DiscountApplicationState.CanTransitionTo
+  fullName: FareCalculator.States.DiscountApplicationState.CanTransitionTo
+- uid: FareCalculator.Interfaces.IFareCalculationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+  commentId: M:FareCalculator.Interfaces.IFareCalculationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+  parent: FareCalculator.Interfaces.IFareCalculationState
+  href: FareCalculator.Interfaces.IFareCalculationState.html#FareCalculator_Interfaces_IFareCalculationState_CanTransitionTo_FareCalculator_Interfaces_IFareCalculationState_
+  name: CanTransitionTo(IFareCalculationState)
+  nameWithType: IFareCalculationState.CanTransitionTo(IFareCalculationState)
+  fullName: FareCalculator.Interfaces.IFareCalculationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+  spec.csharp:
+  - uid: FareCalculator.Interfaces.IFareCalculationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+    name: CanTransitionTo
+    href: FareCalculator.Interfaces.IFareCalculationState.html#FareCalculator_Interfaces_IFareCalculationState_CanTransitionTo_FareCalculator_Interfaces_IFareCalculationState_
+  - name: (
+  - uid: FareCalculator.Interfaces.IFareCalculationState
+    name: IFareCalculationState
+    href: FareCalculator.Interfaces.IFareCalculationState.html
+  - name: )
+  spec.vb:
+  - uid: FareCalculator.Interfaces.IFareCalculationState.CanTransitionTo(FareCalculator.Interfaces.IFareCalculationState)
+    name: CanTransitionTo
+    href: FareCalculator.Interfaces.IFareCalculationState.html#FareCalculator_Interfaces_IFareCalculationState_CanTransitionTo_FareCalculator_Interfaces_IFareCalculationState_
+  - name: (
+  - uid: FareCalculator.Interfaces.IFareCalculationState
+    name: IFareCalculationState
+    href: FareCalculator.Interfaces.IFareCalculationState.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

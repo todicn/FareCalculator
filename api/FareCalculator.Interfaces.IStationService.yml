@@ -1,0 +1,486 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Interfaces.IStationService
+  commentId: T:FareCalculator.Interfaces.IStationService
+  id: IStationService
+  parent: FareCalculator.Interfaces
+  children:
+  - FareCalculator.Interfaces.IStationService.CalculateDistanceAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  - FareCalculator.Interfaces.IStationService.GetAllStationsAsync
+  - FareCalculator.Interfaces.IStationService.GetStationByIdAsync(System.Int32)
+  - FareCalculator.Interfaces.IStationService.GetStationByNameAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IStationService
+  nameWithType: IStationService
+  fullName: FareCalculator.Interfaces.IStationService
+  type: Interface
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IStationService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: IStationService
+    path: src/FareCalculator/Interfaces/IStationService.cs
+    startLine: 7
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Provides services for managing and retrieving station information and calculating distances between stations.
+  example: []
+  syntax:
+    content: public interface IStationService
+    content.vb: Public Interface IStationService
+- uid: FareCalculator.Interfaces.IStationService.GetStationByIdAsync(System.Int32)
+  commentId: M:FareCalculator.Interfaces.IStationService.GetStationByIdAsync(System.Int32)
+  id: GetStationByIdAsync(System.Int32)
+  parent: FareCalculator.Interfaces.IStationService
+  langs:
+  - csharp
+  - vb
+  name: GetStationByIdAsync(int)
+  nameWithType: IStationService.GetStationByIdAsync(int)
+  fullName: FareCalculator.Interfaces.IStationService.GetStationByIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IStationService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GetStationByIdAsync
+    path: src/FareCalculator/Interfaces/IStationService.cs
+    startLine: 14
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Retrieves a station by its unique identifier asynchronously.
+  example: []
+  syntax:
+    content: Task<Station?> GetStationByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The unique identifier of the station.
+    return:
+      type: System.Threading.Tasks.Task{FareCalculator.Models.Station}
+      description: A task that represents the asynchronous operation. The task result contains the station if found, otherwise null.
+    content.vb: Function GetStationByIdAsync(id As Integer) As Task(Of Station)
+  overload: FareCalculator.Interfaces.IStationService.GetStationByIdAsync*
+  nameWithType.vb: IStationService.GetStationByIdAsync(Integer)
+  fullName.vb: FareCalculator.Interfaces.IStationService.GetStationByIdAsync(Integer)
+  name.vb: GetStationByIdAsync(Integer)
+- uid: FareCalculator.Interfaces.IStationService.GetStationByNameAsync(System.String)
+  commentId: M:FareCalculator.Interfaces.IStationService.GetStationByNameAsync(System.String)
+  id: GetStationByNameAsync(System.String)
+  parent: FareCalculator.Interfaces.IStationService
+  langs:
+  - csharp
+  - vb
+  name: GetStationByNameAsync(string)
+  nameWithType: IStationService.GetStationByNameAsync(string)
+  fullName: FareCalculator.Interfaces.IStationService.GetStationByNameAsync(string)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IStationService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GetStationByNameAsync
+    path: src/FareCalculator/Interfaces/IStationService.cs
+    startLine: 22
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Retrieves a station by its name asynchronously (case-insensitive search).
+  example: []
+  syntax:
+    content: Task<Station?> GetStationByNameAsync(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the station to search for.
+    return:
+      type: System.Threading.Tasks.Task{FareCalculator.Models.Station}
+      description: A task that represents the asynchronous operation. The task result contains the station if found, otherwise null.
+    content.vb: Function GetStationByNameAsync(name As String) As Task(Of Station)
+  overload: FareCalculator.Interfaces.IStationService.GetStationByNameAsync*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the name parameter is null or empty.
+  nameWithType.vb: IStationService.GetStationByNameAsync(String)
+  fullName.vb: FareCalculator.Interfaces.IStationService.GetStationByNameAsync(String)
+  name.vb: GetStationByNameAsync(String)
+- uid: FareCalculator.Interfaces.IStationService.GetAllStationsAsync
+  commentId: M:FareCalculator.Interfaces.IStationService.GetAllStationsAsync
+  id: GetAllStationsAsync
+  parent: FareCalculator.Interfaces.IStationService
+  langs:
+  - csharp
+  - vb
+  name: GetAllStationsAsync()
+  nameWithType: IStationService.GetAllStationsAsync()
+  fullName: FareCalculator.Interfaces.IStationService.GetAllStationsAsync()
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IStationService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GetAllStationsAsync
+    path: src/FareCalculator/Interfaces/IStationService.cs
+    startLine: 28
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Retrieves all available stations in the metro system asynchronously.
+  example: []
+  syntax:
+    content: Task<IEnumerable<Station>> GetAllStationsAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{FareCalculator.Models.Station}}
+      description: A task that represents the asynchronous operation. The task result contains a collection of all stations.
+    content.vb: Function GetAllStationsAsync() As Task(Of IEnumerable(Of Station))
+  overload: FareCalculator.Interfaces.IStationService.GetAllStationsAsync*
+- uid: FareCalculator.Interfaces.IStationService.CalculateDistanceAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  commentId: M:FareCalculator.Interfaces.IStationService.CalculateDistanceAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  id: CalculateDistanceAsync(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  parent: FareCalculator.Interfaces.IStationService
+  langs:
+  - csharp
+  - vb
+  name: CalculateDistanceAsync(Station, Station)
+  nameWithType: IStationService.CalculateDistanceAsync(Station, Station)
+  fullName: FareCalculator.Interfaces.IStationService.CalculateDistanceAsync(FareCalculator.Models.Station, FareCalculator.Models.Station)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IStationService.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: CalculateDistanceAsync
+    path: src/FareCalculator/Interfaces/IStationService.cs
+    startLine: 37
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Calculates the distance between two stations in kilometers using their geographical coordinates.
+  example: []
+  syntax:
+    content: Task<double> CalculateDistanceAsync(Station origin, Station destination)
+    parameters:
+    - id: origin
+      type: FareCalculator.Models.Station
+      description: The origin station.
+    - id: destination
+      type: FareCalculator.Models.Station
+      description: The destination station.
+    return:
+      type: System.Threading.Tasks.Task{System.Double}
+      description: A task that represents the asynchronous operation. The task result contains the distance in kilometers.
+    content.vb: Function CalculateDistanceAsync(origin As Station, destination As Station) As Task(Of Double)
+  overload: FareCalculator.Interfaces.IStationService.CalculateDistanceAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when either origin or destination parameter is null.
+references:
+- uid: FareCalculator.Interfaces
+  commentId: N:FareCalculator.Interfaces
+  href: FareCalculator.html
+  name: FareCalculator.Interfaces
+  nameWithType: FareCalculator.Interfaces
+  fullName: FareCalculator.Interfaces
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+- uid: FareCalculator.Interfaces.IStationService.GetStationByIdAsync*
+  commentId: Overload:FareCalculator.Interfaces.IStationService.GetStationByIdAsync
+  href: FareCalculator.Interfaces.IStationService.html#FareCalculator_Interfaces_IStationService_GetStationByIdAsync_System_Int32_
+  name: GetStationByIdAsync
+  nameWithType: IStationService.GetStationByIdAsync
+  fullName: FareCalculator.Interfaces.IStationService.GetStationByIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{FareCalculator.Models.Station}
+  commentId: T:System.Threading.Tasks.Task{FareCalculator.Models.Station}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Station>
+  nameWithType: Task<Station>
+  fullName: System.Threading.Tasks.Task<FareCalculator.Models.Station>
+  nameWithType.vb: Task(Of Station)
+  fullName.vb: System.Threading.Tasks.Task(Of FareCalculator.Models.Station)
+  name.vb: Task(Of Station)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: FareCalculator.Models.Station
+    name: Station
+    href: FareCalculator.Models.Station.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Models.Station
+    name: Station
+    href: FareCalculator.Models.Station.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: FareCalculator.Interfaces.IStationService.GetStationByNameAsync*
+  commentId: Overload:FareCalculator.Interfaces.IStationService.GetStationByNameAsync
+  href: FareCalculator.Interfaces.IStationService.html#FareCalculator_Interfaces_IStationService_GetStationByNameAsync_System_String_
+  name: GetStationByNameAsync
+  nameWithType: IStationService.GetStationByNameAsync
+  fullName: FareCalculator.Interfaces.IStationService.GetStationByNameAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: FareCalculator.Interfaces.IStationService.GetAllStationsAsync*
+  commentId: Overload:FareCalculator.Interfaces.IStationService.GetAllStationsAsync
+  href: FareCalculator.Interfaces.IStationService.html#FareCalculator_Interfaces_IStationService_GetAllStationsAsync
+  name: GetAllStationsAsync
+  nameWithType: IStationService.GetAllStationsAsync
+  fullName: FareCalculator.Interfaces.IStationService.GetAllStationsAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{FareCalculator.Models.Station}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{FareCalculator.Models.Station}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Station>>
+  nameWithType: Task<IEnumerable<Station>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<FareCalculator.Models.Station>>
+  nameWithType.vb: Task(Of IEnumerable(Of Station))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of FareCalculator.Models.Station))
+  name.vb: Task(Of IEnumerable(Of Station))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: FareCalculator.Models.Station
+    name: Station
+    href: FareCalculator.Models.Station.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Models.Station
+    name: Station
+    href: FareCalculator.Models.Station.html
+  - name: )
+  - name: )
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: FareCalculator.Interfaces.IStationService.CalculateDistanceAsync*
+  commentId: Overload:FareCalculator.Interfaces.IStationService.CalculateDistanceAsync
+  href: FareCalculator.Interfaces.IStationService.html#FareCalculator_Interfaces_IStationService_CalculateDistanceAsync_FareCalculator_Models_Station_FareCalculator_Models_Station_
+  name: CalculateDistanceAsync
+  nameWithType: IStationService.CalculateDistanceAsync
+  fullName: FareCalculator.Interfaces.IStationService.CalculateDistanceAsync
+- uid: FareCalculator.Models.Station
+  commentId: T:FareCalculator.Models.Station
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.Station.html
+  name: Station
+  nameWithType: Station
+  fullName: FareCalculator.Models.Station
+- uid: System.Threading.Tasks.Task{System.Double}
+  commentId: T:System.Threading.Tasks.Task{System.Double}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<double>
+  nameWithType: Task<double>
+  fullName: System.Threading.Tasks.Task<double>
+  nameWithType.vb: Task(Of Double)
+  fullName.vb: System.Threading.Tasks.Task(Of Double)
+  name.vb: Task(Of Double)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: FareCalculator.Models
+  commentId: N:FareCalculator.Models
+  href: FareCalculator.html
+  name: FareCalculator.Models
+  nameWithType: FareCalculator.Models
+  fullName: FareCalculator.Models
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html

@@ -1,0 +1,81 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Services
+  commentId: N:FareCalculator.Services
+  id: FareCalculator.Services
+  children:
+  - FareCalculator.Services.FareCalculationService
+  - FareCalculator.Services.FareCalculationStateMachine
+  - FareCalculator.Services.FareRuleEngine
+  - FareCalculator.Services.IFareCalculationStateMachine
+  - FareCalculator.Services.MetroLineService
+  - FareCalculator.Services.StationService
+  langs:
+  - csharp
+  - vb
+  name: FareCalculator.Services
+  nameWithType: FareCalculator.Services
+  fullName: FareCalculator.Services
+  type: Namespace
+  assemblies:
+  - FareCalculator
+references:
+- uid: FareCalculator.Services.FareCalculationService
+  commentId: T:FareCalculator.Services.FareCalculationService
+  href: FareCalculator.Services.FareCalculationService.html
+  name: FareCalculationService
+  nameWithType: FareCalculationService
+  fullName: FareCalculator.Services.FareCalculationService
+- uid: FareCalculator.Services.IFareCalculationStateMachine
+  commentId: T:FareCalculator.Services.IFareCalculationStateMachine
+  parent: FareCalculator.Services
+  href: FareCalculator.Services.IFareCalculationStateMachine.html
+  name: IFareCalculationStateMachine
+  nameWithType: IFareCalculationStateMachine
+  fullName: FareCalculator.Services.IFareCalculationStateMachine
+- uid: FareCalculator.Services.FareCalculationStateMachine
+  commentId: T:FareCalculator.Services.FareCalculationStateMachine
+  href: FareCalculator.Services.FareCalculationStateMachine.html
+  name: FareCalculationStateMachine
+  nameWithType: FareCalculationStateMachine
+  fullName: FareCalculator.Services.FareCalculationStateMachine
+- uid: FareCalculator.Services.FareRuleEngine
+  commentId: T:FareCalculator.Services.FareRuleEngine
+  href: FareCalculator.Services.FareRuleEngine.html
+  name: FareRuleEngine
+  nameWithType: FareRuleEngine
+  fullName: FareCalculator.Services.FareRuleEngine
+- uid: FareCalculator.Services.MetroLineService
+  commentId: T:FareCalculator.Services.MetroLineService
+  href: FareCalculator.Services.MetroLineService.html
+  name: MetroLineService
+  nameWithType: MetroLineService
+  fullName: FareCalculator.Services.MetroLineService
+- uid: FareCalculator.Services.StationService
+  commentId: T:FareCalculator.Services.StationService
+  href: FareCalculator.Services.StationService.html
+  name: StationService
+  nameWithType: StationService
+  fullName: FareCalculator.Services.StationService
+- uid: FareCalculator.Services
+  commentId: N:FareCalculator.Services
+  href: FareCalculator.html
+  name: FareCalculator.Services
+  nameWithType: FareCalculator.Services
+  fullName: FareCalculator.Services
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Services
+    name: Services
+    href: FareCalculator.Services.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Services
+    name: Services
+    href: FareCalculator.Services.html

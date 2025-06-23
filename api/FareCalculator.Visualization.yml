@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Visualization
+  commentId: N:FareCalculator.Visualization
+  id: FareCalculator.Visualization
+  children:
+  - FareCalculator.Visualization.MapGeneratorApp
+  - FareCalculator.Visualization.MetroMapGenerator
+  - FareCalculator.Visualization.VisualizationDemo
+  langs:
+  - csharp
+  - vb
+  name: FareCalculator.Visualization
+  nameWithType: FareCalculator.Visualization
+  fullName: FareCalculator.Visualization
+  type: Namespace
+  assemblies:
+  - FareCalculator
+references:
+- uid: FareCalculator.Visualization.MapGeneratorApp
+  commentId: T:FareCalculator.Visualization.MapGeneratorApp
+  href: FareCalculator.Visualization.MapGeneratorApp.html
+  name: MapGeneratorApp
+  nameWithType: MapGeneratorApp
+  fullName: FareCalculator.Visualization.MapGeneratorApp
+- uid: FareCalculator.Visualization.MetroMapGenerator
+  commentId: T:FareCalculator.Visualization.MetroMapGenerator
+  href: FareCalculator.Visualization.MetroMapGenerator.html
+  name: MetroMapGenerator
+  nameWithType: MetroMapGenerator
+  fullName: FareCalculator.Visualization.MetroMapGenerator
+- uid: FareCalculator.Visualization.VisualizationDemo
+  commentId: T:FareCalculator.Visualization.VisualizationDemo
+  href: FareCalculator.Visualization.VisualizationDemo.html
+  name: VisualizationDemo
+  nameWithType: VisualizationDemo
+  fullName: FareCalculator.Visualization.VisualizationDemo

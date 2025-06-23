@@ -1,0 +1,299 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Interfaces.IFareRuleEngine
+  commentId: T:FareCalculator.Interfaces.IFareRuleEngine
+  id: IFareRuleEngine
+  parent: FareCalculator.Interfaces
+  children:
+  - FareCalculator.Interfaces.IFareRuleEngine.ApplyDiscounts(System.Decimal,FareCalculator.Models.PassengerType)
+  - FareCalculator.Interfaces.IFareRuleEngine.ApplyTimeBasedRules(System.Decimal,System.DateTime)
+  - FareCalculator.Interfaces.IFareRuleEngine.CalculateNumberOfZones(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  langs:
+  - csharp
+  - vb
+  name: IFareRuleEngine
+  nameWithType: IFareRuleEngine
+  fullName: FareCalculator.Interfaces.IFareRuleEngine
+  type: Interface
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IFareRuleEngine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: IFareRuleEngine
+    path: src/FareCalculator/Interfaces/IFareRuleEngine.cs
+    startLine: 8
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: >-
+    Provides rule-based fare processing services including discount application and time-based fare adjustments.
+
+    Implements business rules for fare calculations in the metro transit system.
+  example: []
+  syntax:
+    content: public interface IFareRuleEngine
+    content.vb: Public Interface IFareRuleEngine
+- uid: FareCalculator.Interfaces.IFareRuleEngine.ApplyDiscounts(System.Decimal,FareCalculator.Models.PassengerType)
+  commentId: M:FareCalculator.Interfaces.IFareRuleEngine.ApplyDiscounts(System.Decimal,FareCalculator.Models.PassengerType)
+  id: ApplyDiscounts(System.Decimal,FareCalculator.Models.PassengerType)
+  parent: FareCalculator.Interfaces.IFareRuleEngine
+  langs:
+  - csharp
+  - vb
+  name: ApplyDiscounts(decimal, PassengerType)
+  nameWithType: IFareRuleEngine.ApplyDiscounts(decimal, PassengerType)
+  fullName: FareCalculator.Interfaces.IFareRuleEngine.ApplyDiscounts(decimal, FareCalculator.Models.PassengerType)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IFareRuleEngine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: ApplyDiscounts
+    path: src/FareCalculator/Interfaces/IFareRuleEngine.cs
+    startLine: 17
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Applies passenger-type-based discounts to the base fare according to business rules.
+  example: []
+  syntax:
+    content: decimal ApplyDiscounts(decimal baseFare, PassengerType passengerType)
+    parameters:
+    - id: baseFare
+      type: System.Decimal
+      description: The original base fare amount before discount application.
+    - id: passengerType
+      type: FareCalculator.Models.PassengerType
+      description: The type of passenger for which to calculate discounts.
+    return:
+      type: System.Decimal
+      description: The fare amount after applying applicable passenger discounts.
+    content.vb: Function ApplyDiscounts(baseFare As Decimal, passengerType As PassengerType) As Decimal
+  overload: FareCalculator.Interfaces.IFareRuleEngine.ApplyDiscounts*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when baseFare is negative.
+  nameWithType.vb: IFareRuleEngine.ApplyDiscounts(Decimal, PassengerType)
+  fullName.vb: FareCalculator.Interfaces.IFareRuleEngine.ApplyDiscounts(Decimal, FareCalculator.Models.PassengerType)
+  name.vb: ApplyDiscounts(Decimal, PassengerType)
+- uid: FareCalculator.Interfaces.IFareRuleEngine.ApplyTimeBasedRules(System.Decimal,System.DateTime)
+  commentId: M:FareCalculator.Interfaces.IFareRuleEngine.ApplyTimeBasedRules(System.Decimal,System.DateTime)
+  id: ApplyTimeBasedRules(System.Decimal,System.DateTime)
+  parent: FareCalculator.Interfaces.IFareRuleEngine
+  langs:
+  - csharp
+  - vb
+  name: ApplyTimeBasedRules(decimal, DateTime)
+  nameWithType: IFareRuleEngine.ApplyTimeBasedRules(decimal, DateTime)
+  fullName: FareCalculator.Interfaces.IFareRuleEngine.ApplyTimeBasedRules(decimal, System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IFareRuleEngine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: ApplyTimeBasedRules
+    path: src/FareCalculator/Interfaces/IFareRuleEngine.cs
+    startLine: 26
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Applies time-based fare adjustments such as peak hour surcharges or off-peak discounts.
+  example: []
+  syntax:
+    content: decimal ApplyTimeBasedRules(decimal baseFare, DateTime travelTime)
+    parameters:
+    - id: baseFare
+      type: System.Decimal
+      description: The original base fare amount before time-based adjustments.
+    - id: travelTime
+      type: System.DateTime
+      description: The date and time of the planned travel.
+    return:
+      type: System.Decimal
+      description: The fare amount after applying time-based rules (surcharges or discounts).
+    content.vb: Function ApplyTimeBasedRules(baseFare As Decimal, travelTime As Date) As Decimal
+  overload: FareCalculator.Interfaces.IFareRuleEngine.ApplyTimeBasedRules*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when baseFare is negative.
+  nameWithType.vb: IFareRuleEngine.ApplyTimeBasedRules(Decimal, Date)
+  fullName.vb: FareCalculator.Interfaces.IFareRuleEngine.ApplyTimeBasedRules(Decimal, Date)
+  name.vb: ApplyTimeBasedRules(Decimal, Date)
+- uid: FareCalculator.Interfaces.IFareRuleEngine.CalculateNumberOfZones(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  commentId: M:FareCalculator.Interfaces.IFareRuleEngine.CalculateNumberOfZones(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  id: CalculateNumberOfZones(FareCalculator.Models.Station,FareCalculator.Models.Station)
+  parent: FareCalculator.Interfaces.IFareRuleEngine
+  langs:
+  - csharp
+  - vb
+  name: CalculateNumberOfZones(Station, Station)
+  nameWithType: IFareRuleEngine.CalculateNumberOfZones(Station, Station)
+  fullName: FareCalculator.Interfaces.IFareRuleEngine.CalculateNumberOfZones(FareCalculator.Models.Station, FareCalculator.Models.Station)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IFareRuleEngine.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: CalculateNumberOfZones
+    path: src/FareCalculator/Interfaces/IFareRuleEngine.cs
+    startLine: 35
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Calculates the number of fare zones that will be traversed between the origin and destination stations.
+  example: []
+  syntax:
+    content: int CalculateNumberOfZones(Station origin, Station destination)
+    parameters:
+    - id: origin
+      type: FareCalculator.Models.Station
+      description: The starting station of the journey.
+    - id: destination
+      type: FareCalculator.Models.Station
+      description: The ending station of the journey.
+    return:
+      type: System.Int32
+      description: The number of zones that will be crossed during the journey, used for fare calculation.
+    content.vb: Function CalculateNumberOfZones(origin As Station, destination As Station) As Integer
+  overload: FareCalculator.Interfaces.IFareRuleEngine.CalculateNumberOfZones*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when either origin or destination parameter is null.
+references:
+- uid: FareCalculator.Interfaces
+  commentId: N:FareCalculator.Interfaces
+  href: FareCalculator.html
+  name: FareCalculator.Interfaces
+  nameWithType: FareCalculator.Interfaces
+  fullName: FareCalculator.Interfaces
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: FareCalculator.Interfaces.IFareRuleEngine.ApplyDiscounts*
+  commentId: Overload:FareCalculator.Interfaces.IFareRuleEngine.ApplyDiscounts
+  href: FareCalculator.Interfaces.IFareRuleEngine.html#FareCalculator_Interfaces_IFareRuleEngine_ApplyDiscounts_System_Decimal_FareCalculator_Models_PassengerType_
+  name: ApplyDiscounts
+  nameWithType: IFareRuleEngine.ApplyDiscounts
+  fullName: FareCalculator.Interfaces.IFareRuleEngine.ApplyDiscounts
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: FareCalculator.Models.PassengerType
+  commentId: T:FareCalculator.Models.PassengerType
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.PassengerType.html
+  name: PassengerType
+  nameWithType: PassengerType
+  fullName: FareCalculator.Models.PassengerType
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FareCalculator.Models
+  commentId: N:FareCalculator.Models
+  href: FareCalculator.html
+  name: FareCalculator.Models
+  nameWithType: FareCalculator.Models
+  fullName: FareCalculator.Models
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+- uid: FareCalculator.Interfaces.IFareRuleEngine.ApplyTimeBasedRules*
+  commentId: Overload:FareCalculator.Interfaces.IFareRuleEngine.ApplyTimeBasedRules
+  href: FareCalculator.Interfaces.IFareRuleEngine.html#FareCalculator_Interfaces_IFareRuleEngine_ApplyTimeBasedRules_System_Decimal_System_DateTime_
+  name: ApplyTimeBasedRules
+  nameWithType: IFareRuleEngine.ApplyTimeBasedRules
+  fullName: FareCalculator.Interfaces.IFareRuleEngine.ApplyTimeBasedRules
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: FareCalculator.Interfaces.IFareRuleEngine.CalculateNumberOfZones*
+  commentId: Overload:FareCalculator.Interfaces.IFareRuleEngine.CalculateNumberOfZones
+  href: FareCalculator.Interfaces.IFareRuleEngine.html#FareCalculator_Interfaces_IFareRuleEngine_CalculateNumberOfZones_FareCalculator_Models_Station_FareCalculator_Models_Station_
+  name: CalculateNumberOfZones
+  nameWithType: IFareRuleEngine.CalculateNumberOfZones
+  fullName: FareCalculator.Interfaces.IFareRuleEngine.CalculateNumberOfZones
+- uid: FareCalculator.Models.Station
+  commentId: T:FareCalculator.Models.Station
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.Station.html
+  name: Station
+  nameWithType: Station
+  fullName: FareCalculator.Models.Station
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

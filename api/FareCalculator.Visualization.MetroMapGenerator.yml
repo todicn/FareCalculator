@@ -1,0 +1,898 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Visualization.MetroMapGenerator
+  commentId: T:FareCalculator.Visualization.MetroMapGenerator
+  id: MetroMapGenerator
+  parent: FareCalculator.Visualization
+  children:
+  - FareCalculator.Visualization.MetroMapGenerator.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.Visualization.MetroMapGenerator},FareCalculator.Interfaces.IStationService,FareCalculator.Interfaces.IMetroLineService,Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.FareCalculationOptions},Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.MetroLineOptions})
+  - FareCalculator.Visualization.MetroMapGenerator.GenerateAsciiMapAsync
+  - FareCalculator.Visualization.MetroMapGenerator.GenerateFareExplanationAsync
+  - FareCalculator.Visualization.MetroMapGenerator.GenerateFareTableHtmlAsync
+  - FareCalculator.Visualization.MetroMapGenerator.GenerateHtmlVisualizationAsync
+  - FareCalculator.Visualization.MetroMapGenerator.GenerateMermaidDiagramAsync
+  langs:
+  - csharp
+  - vb
+  name: MetroMapGenerator
+  nameWithType: MetroMapGenerator
+  fullName: FareCalculator.Visualization.MetroMapGenerator
+  type: Class
+  source:
+    remote:
+      path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: MetroMapGenerator
+    path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+    startLine: 12
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Visualization
+  summary: Generates visual representations of the metro system for documentation purposes.
+  example: []
+  syntax:
+    content: public class MetroMapGenerator
+    content.vb: Public Class MetroMapGenerator
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: FareCalculator.Visualization.MetroMapGenerator.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.Visualization.MetroMapGenerator},FareCalculator.Interfaces.IStationService,FareCalculator.Interfaces.IMetroLineService,Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.FareCalculationOptions},Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.MetroLineOptions})
+  commentId: M:FareCalculator.Visualization.MetroMapGenerator.#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.Visualization.MetroMapGenerator},FareCalculator.Interfaces.IStationService,FareCalculator.Interfaces.IMetroLineService,Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.FareCalculationOptions},Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.MetroLineOptions})
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{FareCalculator.Visualization.MetroMapGenerator},FareCalculator.Interfaces.IStationService,FareCalculator.Interfaces.IMetroLineService,Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.FareCalculationOptions},Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.MetroLineOptions})'
+  parent: FareCalculator.Visualization.MetroMapGenerator
+  langs:
+  - csharp
+  - vb
+  name: MetroMapGenerator(ILogger<MetroMapGenerator>, IStationService, IMetroLineService, IOptions<FareCalculationOptions>, IOptions<MetroLineOptions>)
+  nameWithType: MetroMapGenerator.MetroMapGenerator(ILogger<MetroMapGenerator>, IStationService, IMetroLineService, IOptions<FareCalculationOptions>, IOptions<MetroLineOptions>)
+  fullName: FareCalculator.Visualization.MetroMapGenerator.MetroMapGenerator(Microsoft.Extensions.Logging.ILogger<FareCalculator.Visualization.MetroMapGenerator>, FareCalculator.Interfaces.IStationService, FareCalculator.Interfaces.IMetroLineService, Microsoft.Extensions.Options.IOptions<FareCalculator.Configuration.FareCalculationOptions>, Microsoft.Extensions.Options.IOptions<FareCalculator.Configuration.MetroLineOptions>)
+  type: Constructor
+  source:
+    remote:
+      path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: .ctor
+    path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+    startLine: 20
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Visualization
+  syntax:
+    content: public MetroMapGenerator(ILogger<MetroMapGenerator> logger, IStationService stationService, IMetroLineService metroLineService, IOptions<FareCalculationOptions> fareOptions, IOptions<MetroLineOptions> metroLineOptions)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{FareCalculator.Visualization.MetroMapGenerator}
+    - id: stationService
+      type: FareCalculator.Interfaces.IStationService
+    - id: metroLineService
+      type: FareCalculator.Interfaces.IMetroLineService
+    - id: fareOptions
+      type: Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.FareCalculationOptions}
+    - id: metroLineOptions
+      type: Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.MetroLineOptions}
+    content.vb: Public Sub New(logger As ILogger(Of MetroMapGenerator), stationService As IStationService, metroLineService As IMetroLineService, fareOptions As IOptions(Of FareCalculationOptions), metroLineOptions As IOptions(Of MetroLineOptions))
+  overload: FareCalculator.Visualization.MetroMapGenerator.#ctor*
+  nameWithType.vb: MetroMapGenerator.New(ILogger(Of MetroMapGenerator), IStationService, IMetroLineService, IOptions(Of FareCalculationOptions), IOptions(Of MetroLineOptions))
+  fullName.vb: FareCalculator.Visualization.MetroMapGenerator.New(Microsoft.Extensions.Logging.ILogger(Of FareCalculator.Visualization.MetroMapGenerator), FareCalculator.Interfaces.IStationService, FareCalculator.Interfaces.IMetroLineService, Microsoft.Extensions.Options.IOptions(Of FareCalculator.Configuration.FareCalculationOptions), Microsoft.Extensions.Options.IOptions(Of FareCalculator.Configuration.MetroLineOptions))
+  name.vb: New(ILogger(Of MetroMapGenerator), IStationService, IMetroLineService, IOptions(Of FareCalculationOptions), IOptions(Of MetroLineOptions))
+- uid: FareCalculator.Visualization.MetroMapGenerator.GenerateMermaidDiagramAsync
+  commentId: M:FareCalculator.Visualization.MetroMapGenerator.GenerateMermaidDiagramAsync
+  id: GenerateMermaidDiagramAsync
+  parent: FareCalculator.Visualization.MetroMapGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateMermaidDiagramAsync()
+  nameWithType: MetroMapGenerator.GenerateMermaidDiagramAsync()
+  fullName: FareCalculator.Visualization.MetroMapGenerator.GenerateMermaidDiagramAsync()
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GenerateMermaidDiagramAsync
+    path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+    startLine: 37
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Visualization
+  summary: Generates a Mermaid diagram representation of the metro system.
+  example: []
+  syntax:
+    content: public Task<string> GenerateMermaidDiagramAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Public Function GenerateMermaidDiagramAsync() As Task(Of String)
+  overload: FareCalculator.Visualization.MetroMapGenerator.GenerateMermaidDiagramAsync*
+- uid: FareCalculator.Visualization.MetroMapGenerator.GenerateAsciiMapAsync
+  commentId: M:FareCalculator.Visualization.MetroMapGenerator.GenerateAsciiMapAsync
+  id: GenerateAsciiMapAsync
+  parent: FareCalculator.Visualization.MetroMapGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateAsciiMapAsync()
+  nameWithType: MetroMapGenerator.GenerateAsciiMapAsync()
+  fullName: FareCalculator.Visualization.MetroMapGenerator.GenerateAsciiMapAsync()
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GenerateAsciiMapAsync
+    path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+    startLine: 103
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Visualization
+  summary: Generates an ASCII art representation of the metro system.
+  example: []
+  syntax:
+    content: public Task<string> GenerateAsciiMapAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Public Function GenerateAsciiMapAsync() As Task(Of String)
+  overload: FareCalculator.Visualization.MetroMapGenerator.GenerateAsciiMapAsync*
+- uid: FareCalculator.Visualization.MetroMapGenerator.GenerateHtmlVisualizationAsync
+  commentId: M:FareCalculator.Visualization.MetroMapGenerator.GenerateHtmlVisualizationAsync
+  id: GenerateHtmlVisualizationAsync
+  parent: FareCalculator.Visualization.MetroMapGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateHtmlVisualizationAsync()
+  nameWithType: MetroMapGenerator.GenerateHtmlVisualizationAsync()
+  fullName: FareCalculator.Visualization.MetroMapGenerator.GenerateHtmlVisualizationAsync()
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GenerateHtmlVisualizationAsync
+    path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+    startLine: 160
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Visualization
+  summary: Generates an HTML/SVG visualization of the metro system.
+  example: []
+  syntax:
+    content: public Task<string> GenerateHtmlVisualizationAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Public Function GenerateHtmlVisualizationAsync() As Task(Of String)
+  overload: FareCalculator.Visualization.MetroMapGenerator.GenerateHtmlVisualizationAsync*
+- uid: FareCalculator.Visualization.MetroMapGenerator.GenerateFareTableHtmlAsync
+  commentId: M:FareCalculator.Visualization.MetroMapGenerator.GenerateFareTableHtmlAsync
+  id: GenerateFareTableHtmlAsync
+  parent: FareCalculator.Visualization.MetroMapGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateFareTableHtmlAsync()
+  nameWithType: MetroMapGenerator.GenerateFareTableHtmlAsync()
+  fullName: FareCalculator.Visualization.MetroMapGenerator.GenerateFareTableHtmlAsync()
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GenerateFareTableHtmlAsync
+    path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+    startLine: 286
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Visualization
+  summary: Generates a fare explanation table in HTML format.
+  example: []
+  syntax:
+    content: public Task<string> GenerateFareTableHtmlAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Public Function GenerateFareTableHtmlAsync() As Task(Of String)
+  overload: FareCalculator.Visualization.MetroMapGenerator.GenerateFareTableHtmlAsync*
+- uid: FareCalculator.Visualization.MetroMapGenerator.GenerateFareExplanationAsync
+  commentId: M:FareCalculator.Visualization.MetroMapGenerator.GenerateFareExplanationAsync
+  id: GenerateFareExplanationAsync
+  parent: FareCalculator.Visualization.MetroMapGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateFareExplanationAsync()
+  nameWithType: MetroMapGenerator.GenerateFareExplanationAsync()
+  fullName: FareCalculator.Visualization.MetroMapGenerator.GenerateFareExplanationAsync()
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: GenerateFareExplanationAsync
+    path: src/FareCalculator/Visualization/MetroMapGenerator.cs
+    startLine: 397
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Visualization
+  syntax:
+    content: public Task<string> GenerateFareExplanationAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Public Function GenerateFareExplanationAsync() As Task(Of String)
+  overload: FareCalculator.Visualization.MetroMapGenerator.GenerateFareExplanationAsync*
+references:
+- uid: FareCalculator.Visualization
+  commentId: N:FareCalculator.Visualization
+  href: FareCalculator.html
+  name: FareCalculator.Visualization
+  nameWithType: FareCalculator.Visualization
+  fullName: FareCalculator.Visualization
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Visualization
+    name: Visualization
+    href: FareCalculator.Visualization.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Visualization
+    name: Visualization
+    href: FareCalculator.Visualization.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FareCalculator.Visualization.MetroMapGenerator.#ctor*
+  commentId: Overload:FareCalculator.Visualization.MetroMapGenerator.#ctor
+  href: FareCalculator.Visualization.MetroMapGenerator.html#FareCalculator_Visualization_MetroMapGenerator__ctor_Microsoft_Extensions_Logging_ILogger_FareCalculator_Visualization_MetroMapGenerator__FareCalculator_Interfaces_IStationService_FareCalculator_Interfaces_IMetroLineService_Microsoft_Extensions_Options_IOptions_FareCalculator_Configuration_FareCalculationOptions__Microsoft_Extensions_Options_IOptions_FareCalculator_Configuration_MetroLineOptions__
+  name: MetroMapGenerator
+  nameWithType: MetroMapGenerator.MetroMapGenerator
+  fullName: FareCalculator.Visualization.MetroMapGenerator.MetroMapGenerator
+  nameWithType.vb: MetroMapGenerator.New
+  fullName.vb: FareCalculator.Visualization.MetroMapGenerator.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{FareCalculator.Visualization.MetroMapGenerator}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{FareCalculator.Visualization.MetroMapGenerator}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<MetroMapGenerator>
+  nameWithType: ILogger<MetroMapGenerator>
+  fullName: Microsoft.Extensions.Logging.ILogger<FareCalculator.Visualization.MetroMapGenerator>
+  nameWithType.vb: ILogger(Of MetroMapGenerator)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of FareCalculator.Visualization.MetroMapGenerator)
+  name.vb: ILogger(Of MetroMapGenerator)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: FareCalculator.Visualization.MetroMapGenerator
+    name: MetroMapGenerator
+    href: FareCalculator.Visualization.MetroMapGenerator.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Visualization.MetroMapGenerator
+    name: MetroMapGenerator
+    href: FareCalculator.Visualization.MetroMapGenerator.html
+  - name: )
+- uid: FareCalculator.Interfaces.IStationService
+  commentId: T:FareCalculator.Interfaces.IStationService
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.IStationService.html
+  name: IStationService
+  nameWithType: IStationService
+  fullName: FareCalculator.Interfaces.IStationService
+- uid: FareCalculator.Interfaces.IMetroLineService
+  commentId: T:FareCalculator.Interfaces.IMetroLineService
+  parent: FareCalculator.Interfaces
+  href: FareCalculator.Interfaces.IMetroLineService.html
+  name: IMetroLineService
+  nameWithType: IMetroLineService
+  fullName: FareCalculator.Interfaces.IMetroLineService
+- uid: Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.FareCalculationOptions}
+  commentId: T:Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.FareCalculationOptions}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<FareCalculationOptions>
+  nameWithType: IOptions<FareCalculationOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<FareCalculator.Configuration.FareCalculationOptions>
+  nameWithType.vb: IOptions(Of FareCalculationOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of FareCalculator.Configuration.FareCalculationOptions)
+  name.vb: IOptions(Of FareCalculationOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - uid: FareCalculator.Configuration.FareCalculationOptions
+    name: FareCalculationOptions
+    href: FareCalculator.Configuration.FareCalculationOptions.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Configuration.FareCalculationOptions
+    name: FareCalculationOptions
+    href: FareCalculator.Configuration.FareCalculationOptions.html
+  - name: )
+- uid: Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.MetroLineOptions}
+  commentId: T:Microsoft.Extensions.Options.IOptions{FareCalculator.Configuration.MetroLineOptions}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<MetroLineOptions>
+  nameWithType: IOptions<MetroLineOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<FareCalculator.Configuration.MetroLineOptions>
+  nameWithType.vb: IOptions(Of MetroLineOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of FareCalculator.Configuration.MetroLineOptions)
+  name.vb: IOptions(Of MetroLineOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - uid: FareCalculator.Configuration.MetroLineOptions
+    name: MetroLineOptions
+    href: FareCalculator.Configuration.MetroLineOptions.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FareCalculator.Configuration.MetroLineOptions
+    name: MetroLineOptions
+    href: FareCalculator.Configuration.MetroLineOptions.html
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: FareCalculator.Interfaces
+  commentId: N:FareCalculator.Interfaces
+  href: FareCalculator.html
+  name: FareCalculator.Interfaces
+  nameWithType: FareCalculator.Interfaces
+  fullName: FareCalculator.Interfaces
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - name: TOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: FareCalculator.Visualization.MetroMapGenerator.GenerateMermaidDiagramAsync*
+  commentId: Overload:FareCalculator.Visualization.MetroMapGenerator.GenerateMermaidDiagramAsync
+  href: FareCalculator.Visualization.MetroMapGenerator.html#FareCalculator_Visualization_MetroMapGenerator_GenerateMermaidDiagramAsync
+  name: GenerateMermaidDiagramAsync
+  nameWithType: MetroMapGenerator.GenerateMermaidDiagramAsync
+  fullName: FareCalculator.Visualization.MetroMapGenerator.GenerateMermaidDiagramAsync
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: FareCalculator.Visualization.MetroMapGenerator.GenerateAsciiMapAsync*
+  commentId: Overload:FareCalculator.Visualization.MetroMapGenerator.GenerateAsciiMapAsync
+  href: FareCalculator.Visualization.MetroMapGenerator.html#FareCalculator_Visualization_MetroMapGenerator_GenerateAsciiMapAsync
+  name: GenerateAsciiMapAsync
+  nameWithType: MetroMapGenerator.GenerateAsciiMapAsync
+  fullName: FareCalculator.Visualization.MetroMapGenerator.GenerateAsciiMapAsync
+- uid: FareCalculator.Visualization.MetroMapGenerator.GenerateHtmlVisualizationAsync*
+  commentId: Overload:FareCalculator.Visualization.MetroMapGenerator.GenerateHtmlVisualizationAsync
+  href: FareCalculator.Visualization.MetroMapGenerator.html#FareCalculator_Visualization_MetroMapGenerator_GenerateHtmlVisualizationAsync
+  name: GenerateHtmlVisualizationAsync
+  nameWithType: MetroMapGenerator.GenerateHtmlVisualizationAsync
+  fullName: FareCalculator.Visualization.MetroMapGenerator.GenerateHtmlVisualizationAsync
+- uid: FareCalculator.Visualization.MetroMapGenerator.GenerateFareTableHtmlAsync*
+  commentId: Overload:FareCalculator.Visualization.MetroMapGenerator.GenerateFareTableHtmlAsync
+  href: FareCalculator.Visualization.MetroMapGenerator.html#FareCalculator_Visualization_MetroMapGenerator_GenerateFareTableHtmlAsync
+  name: GenerateFareTableHtmlAsync
+  nameWithType: MetroMapGenerator.GenerateFareTableHtmlAsync
+  fullName: FareCalculator.Visualization.MetroMapGenerator.GenerateFareTableHtmlAsync
+- uid: FareCalculator.Visualization.MetroMapGenerator.GenerateFareExplanationAsync*
+  commentId: Overload:FareCalculator.Visualization.MetroMapGenerator.GenerateFareExplanationAsync
+  href: FareCalculator.Visualization.MetroMapGenerator.html#FareCalculator_Visualization_MetroMapGenerator_GenerateFareExplanationAsync
+  name: GenerateFareExplanationAsync
+  nameWithType: MetroMapGenerator.GenerateFareExplanationAsync
+  fullName: FareCalculator.Visualization.MetroMapGenerator.GenerateFareExplanationAsync

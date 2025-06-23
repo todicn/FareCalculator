@@ -1,0 +1,335 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Interfaces.IDiscountStrategy
+  commentId: T:FareCalculator.Interfaces.IDiscountStrategy
+  id: IDiscountStrategy
+  parent: FareCalculator.Interfaces
+  children:
+  - FareCalculator.Interfaces.IDiscountStrategy.AppliesTo(FareCalculator.Models.PassengerType)
+  - FareCalculator.Interfaces.IDiscountStrategy.ApplyDiscount(System.Decimal,FareCalculator.Models.FareRequest)
+  - FareCalculator.Interfaces.IDiscountStrategy.Priority
+  - FareCalculator.Interfaces.IDiscountStrategy.StrategyName
+  langs:
+  - csharp
+  - vb
+  name: IDiscountStrategy
+  nameWithType: IDiscountStrategy
+  fullName: FareCalculator.Interfaces.IDiscountStrategy
+  type: Interface
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IDiscountStrategy.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: IDiscountStrategy
+    path: src/FareCalculator/Interfaces/IDiscountStrategy.cs
+    startLine: 8
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: >-
+    Defines the contract for discount strategies that can apply various types of discounts to base fares.
+
+    Implements the Strategy pattern to allow flexible discount application based on passenger type and other criteria.
+  example: []
+  syntax:
+    content: public interface IDiscountStrategy
+    content.vb: Public Interface IDiscountStrategy
+- uid: FareCalculator.Interfaces.IDiscountStrategy.StrategyName
+  commentId: P:FareCalculator.Interfaces.IDiscountStrategy.StrategyName
+  id: StrategyName
+  parent: FareCalculator.Interfaces.IDiscountStrategy
+  langs:
+  - csharp
+  - vb
+  name: StrategyName
+  nameWithType: IDiscountStrategy.StrategyName
+  fullName: FareCalculator.Interfaces.IDiscountStrategy.StrategyName
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IDiscountStrategy.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: StrategyName
+    path: src/FareCalculator/Interfaces/IDiscountStrategy.cs
+    startLine: 14
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Gets the unique name of this discount strategy.
+  example: []
+  syntax:
+    content: string StrategyName { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: A descriptive name identifying the strategy (e.g., "PassengerDiscount", "TimeBasedDiscount").
+    content.vb: ReadOnly Property StrategyName As String
+  overload: FareCalculator.Interfaces.IDiscountStrategy.StrategyName*
+- uid: FareCalculator.Interfaces.IDiscountStrategy.ApplyDiscount(System.Decimal,FareCalculator.Models.FareRequest)
+  commentId: M:FareCalculator.Interfaces.IDiscountStrategy.ApplyDiscount(System.Decimal,FareCalculator.Models.FareRequest)
+  id: ApplyDiscount(System.Decimal,FareCalculator.Models.FareRequest)
+  parent: FareCalculator.Interfaces.IDiscountStrategy
+  langs:
+  - csharp
+  - vb
+  name: ApplyDiscount(decimal, FareRequest)
+  nameWithType: IDiscountStrategy.ApplyDiscount(decimal, FareRequest)
+  fullName: FareCalculator.Interfaces.IDiscountStrategy.ApplyDiscount(decimal, FareCalculator.Models.FareRequest)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IDiscountStrategy.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: ApplyDiscount
+    path: src/FareCalculator/Interfaces/IDiscountStrategy.cs
+    startLine: 24
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Applies this discount strategy to the specified base fare for the given request.
+  example: []
+  syntax:
+    content: decimal ApplyDiscount(decimal baseFare, FareRequest request)
+    parameters:
+    - id: baseFare
+      type: System.Decimal
+      description: The original base fare amount before discount application.
+    - id: request
+      type: FareCalculator.Models.FareRequest
+      description: The fare calculation request containing passenger type and travel details.
+    return:
+      type: System.Decimal
+      description: The fare amount after applying the discount. Returns the original amount if no discount applies.
+    content.vb: Function ApplyDiscount(baseFare As Decimal, request As FareRequest) As Decimal
+  overload: FareCalculator.Interfaces.IDiscountStrategy.ApplyDiscount*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when baseFare is negative.
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the request parameter is null.
+  nameWithType.vb: IDiscountStrategy.ApplyDiscount(Decimal, FareRequest)
+  fullName.vb: FareCalculator.Interfaces.IDiscountStrategy.ApplyDiscount(Decimal, FareCalculator.Models.FareRequest)
+  name.vb: ApplyDiscount(Decimal, FareRequest)
+- uid: FareCalculator.Interfaces.IDiscountStrategy.AppliesTo(FareCalculator.Models.PassengerType)
+  commentId: M:FareCalculator.Interfaces.IDiscountStrategy.AppliesTo(FareCalculator.Models.PassengerType)
+  id: AppliesTo(FareCalculator.Models.PassengerType)
+  parent: FareCalculator.Interfaces.IDiscountStrategy
+  langs:
+  - csharp
+  - vb
+  name: AppliesTo(PassengerType)
+  nameWithType: IDiscountStrategy.AppliesTo(PassengerType)
+  fullName: FareCalculator.Interfaces.IDiscountStrategy.AppliesTo(FareCalculator.Models.PassengerType)
+  type: Method
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IDiscountStrategy.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: AppliesTo
+    path: src/FareCalculator/Interfaces/IDiscountStrategy.cs
+    startLine: 31
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: Determines whether this discount strategy applies to the specified passenger type.
+  example: []
+  syntax:
+    content: bool AppliesTo(PassengerType passengerType)
+    parameters:
+    - id: passengerType
+      type: FareCalculator.Models.PassengerType
+      description: The type of passenger to evaluate for discount eligibility.
+    return:
+      type: System.Boolean
+      description: True if this discount strategy applies to the passenger type; otherwise, false.
+    content.vb: Function AppliesTo(passengerType As PassengerType) As Boolean
+  overload: FareCalculator.Interfaces.IDiscountStrategy.AppliesTo*
+- uid: FareCalculator.Interfaces.IDiscountStrategy.Priority
+  commentId: P:FareCalculator.Interfaces.IDiscountStrategy.Priority
+  id: Priority
+  parent: FareCalculator.Interfaces.IDiscountStrategy
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: IDiscountStrategy.Priority
+  fullName: FareCalculator.Interfaces.IDiscountStrategy.Priority
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Interfaces/IDiscountStrategy.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Priority
+    path: src/FareCalculator/Interfaces/IDiscountStrategy.cs
+    startLine: 38
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Interfaces
+  summary: >-
+    Gets the priority of this discount strategy for application when multiple strategies apply.
+
+    Higher values indicate higher priority and are applied first.
+  example: []
+  syntax:
+    content: int Priority { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: An integer representing the strategy's priority. Higher numbers are applied first.
+    content.vb: ReadOnly Property Priority As Integer
+  overload: FareCalculator.Interfaces.IDiscountStrategy.Priority*
+references:
+- uid: FareCalculator.Interfaces
+  commentId: N:FareCalculator.Interfaces
+  href: FareCalculator.html
+  name: FareCalculator.Interfaces
+  nameWithType: FareCalculator.Interfaces
+  fullName: FareCalculator.Interfaces
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Interfaces
+    name: Interfaces
+    href: FareCalculator.Interfaces.html
+- uid: FareCalculator.Interfaces.IDiscountStrategy.StrategyName*
+  commentId: Overload:FareCalculator.Interfaces.IDiscountStrategy.StrategyName
+  href: FareCalculator.Interfaces.IDiscountStrategy.html#FareCalculator_Interfaces_IDiscountStrategy_StrategyName
+  name: StrategyName
+  nameWithType: IDiscountStrategy.StrategyName
+  fullName: FareCalculator.Interfaces.IDiscountStrategy.StrategyName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: FareCalculator.Interfaces.IDiscountStrategy.ApplyDiscount*
+  commentId: Overload:FareCalculator.Interfaces.IDiscountStrategy.ApplyDiscount
+  href: FareCalculator.Interfaces.IDiscountStrategy.html#FareCalculator_Interfaces_IDiscountStrategy_ApplyDiscount_System_Decimal_FareCalculator_Models_FareRequest_
+  name: ApplyDiscount
+  nameWithType: IDiscountStrategy.ApplyDiscount
+  fullName: FareCalculator.Interfaces.IDiscountStrategy.ApplyDiscount
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: FareCalculator.Models.FareRequest
+  commentId: T:FareCalculator.Models.FareRequest
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.FareRequest.html
+  name: FareRequest
+  nameWithType: FareRequest
+  fullName: FareCalculator.Models.FareRequest
+- uid: FareCalculator.Models
+  commentId: N:FareCalculator.Models
+  href: FareCalculator.html
+  name: FareCalculator.Models
+  nameWithType: FareCalculator.Models
+  fullName: FareCalculator.Models
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+- uid: FareCalculator.Interfaces.IDiscountStrategy.AppliesTo*
+  commentId: Overload:FareCalculator.Interfaces.IDiscountStrategy.AppliesTo
+  href: FareCalculator.Interfaces.IDiscountStrategy.html#FareCalculator_Interfaces_IDiscountStrategy_AppliesTo_FareCalculator_Models_PassengerType_
+  name: AppliesTo
+  nameWithType: IDiscountStrategy.AppliesTo
+  fullName: FareCalculator.Interfaces.IDiscountStrategy.AppliesTo
+- uid: FareCalculator.Models.PassengerType
+  commentId: T:FareCalculator.Models.PassengerType
+  parent: FareCalculator.Models
+  href: FareCalculator.Models.PassengerType.html
+  name: PassengerType
+  nameWithType: PassengerType
+  fullName: FareCalculator.Models.PassengerType
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: FareCalculator.Interfaces.IDiscountStrategy.Priority*
+  commentId: Overload:FareCalculator.Interfaces.IDiscountStrategy.Priority
+  href: FareCalculator.Interfaces.IDiscountStrategy.html#FareCalculator_Interfaces_IDiscountStrategy_Priority
+  name: Priority
+  nameWithType: IDiscountStrategy.Priority
+  fullName: FareCalculator.Interfaces.IDiscountStrategy.Priority
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

@@ -1,14 +1,157 @@
-- name: API Overview
-  href: index.md
-- name: Configuration
-  href: FareCalculator.Configuration.yml
-- name: Interfaces
-  href: FareCalculator.Interfaces.yml
-- name: Models
-  href: FareCalculator.Models.yml
-- name: Services
-  href: FareCalculator.Services.yml
-- name: Strategies
-  href: FareCalculator.Strategies.yml
-- name: States
-  href: FareCalculator.States.yml 
+### YamlMime:TableOfContent
+items:
+- uid: FareCalculator.Configuration
+  name: FareCalculator.Configuration
+  type: Namespace
+  items:
+  - uid: FareCalculator.Configuration.DistanceBasedFareOptions
+    name: DistanceBasedFareOptions
+    type: Class
+  - uid: FareCalculator.Configuration.FareCalculationOptions
+    name: FareCalculationOptions
+    type: Class
+  - uid: FareCalculator.Configuration.GeographyOptions
+    name: GeographyOptions
+    type: Class
+  - uid: FareCalculator.Configuration.MetroLineOptions
+    name: MetroLineOptions
+    type: Class
+  - uid: FareCalculator.Configuration.OffPeakHourOptions
+    name: OffPeakHourOptions
+    type: Class
+  - uid: FareCalculator.Configuration.PeakHourOptions
+    name: PeakHourOptions
+    type: Class
+  - uid: FareCalculator.Configuration.StationOptions
+    name: StationOptions
+    type: Class
+  - uid: FareCalculator.Configuration.StrategyPriorityOptions
+    name: StrategyPriorityOptions
+    type: Class
+  - uid: FareCalculator.Configuration.TimeBasedRulesOptions
+    name: TimeBasedRulesOptions
+    type: Class
+- uid: FareCalculator.Interfaces
+  name: FareCalculator.Interfaces
+  type: Namespace
+  items:
+  - uid: FareCalculator.Interfaces.FareCalculationContext
+    name: FareCalculationContext
+    type: Class
+  - uid: FareCalculator.Interfaces.IDiscountStrategy
+    name: IDiscountStrategy
+    type: Interface
+  - uid: FareCalculator.Interfaces.IFareCalculationService
+    name: IFareCalculationService
+    type: Interface
+  - uid: FareCalculator.Interfaces.IFareCalculationState
+    name: IFareCalculationState
+    type: Interface
+  - uid: FareCalculator.Interfaces.IFareCalculationStrategy
+    name: IFareCalculationStrategy
+    type: Interface
+  - uid: FareCalculator.Interfaces.IFareRuleEngine
+    name: IFareRuleEngine
+    type: Interface
+  - uid: FareCalculator.Interfaces.IMetroLineService
+    name: IMetroLineService
+    type: Interface
+  - uid: FareCalculator.Interfaces.IStationService
+    name: IStationService
+    type: Interface
+- uid: FareCalculator.Models
+  name: FareCalculator.Models
+  type: Namespace
+  items:
+  - uid: FareCalculator.Models.FareRequest
+    name: FareRequest
+    type: Class
+  - uid: FareCalculator.Models.FareResponse
+    name: FareResponse
+    type: Class
+  - uid: FareCalculator.Models.MetroLine
+    name: MetroLine
+    type: Class
+  - uid: FareCalculator.Models.MetroRoute
+    name: MetroRoute
+    type: Class
+  - uid: FareCalculator.Models.PassengerType
+    name: PassengerType
+    type: Enum
+  - uid: FareCalculator.Models.RouteSegment
+    name: RouteSegment
+    type: Class
+  - uid: FareCalculator.Models.Station
+    name: Station
+    type: Class
+- uid: FareCalculator.Services
+  name: FareCalculator.Services
+  type: Namespace
+  items:
+  - uid: FareCalculator.Services.FareCalculationService
+    name: FareCalculationService
+    type: Class
+  - uid: FareCalculator.Services.FareCalculationStateMachine
+    name: FareCalculationStateMachine
+    type: Class
+  - uid: FareCalculator.Services.FareRuleEngine
+    name: FareRuleEngine
+    type: Class
+  - uid: FareCalculator.Services.IFareCalculationStateMachine
+    name: IFareCalculationStateMachine
+    type: Interface
+  - uid: FareCalculator.Services.MetroLineService
+    name: MetroLineService
+    type: Class
+  - uid: FareCalculator.Services.StationService
+    name: StationService
+    type: Class
+- uid: FareCalculator.States
+  name: FareCalculator.States
+  type: Namespace
+  items:
+  - uid: FareCalculator.States.BaseFareCalculationState
+    name: BaseFareCalculationState
+    type: Class
+  - uid: FareCalculator.States.DiscountApplicationState
+    name: DiscountApplicationState
+    type: Class
+  - uid: FareCalculator.States.FinalCalculationState
+    name: FinalCalculationState
+    type: Class
+  - uid: FareCalculator.States.InitialCalculationState
+    name: InitialCalculationState
+    type: Class
+- uid: FareCalculator.Strategies
+  name: FareCalculator.Strategies
+  type: Namespace
+  items:
+  - uid: FareCalculator.Strategies.DistanceBasedFareStrategy
+    name: DistanceBasedFareStrategy
+    type: Class
+  - uid: FareCalculator.Strategies.MetroLineFareStrategy
+    name: MetroLineFareStrategy
+    type: Class
+  - uid: FareCalculator.Strategies.PassengerDiscountStrategy
+    name: PassengerDiscountStrategy
+    type: Class
+  - uid: FareCalculator.Strategies.TimeBasedDiscountStrategy
+    name: TimeBasedDiscountStrategy
+    type: Class
+  - uid: FareCalculator.Strategies.ZoneBasedFareStrategy
+    name: ZoneBasedFareStrategy
+    type: Class
+- uid: FareCalculator.Visualization
+  name: FareCalculator.Visualization
+  type: Namespace
+  items:
+  - uid: FareCalculator.Visualization.MapGeneratorApp
+    name: MapGeneratorApp
+    type: Class
+  - uid: FareCalculator.Visualization.MetroMapGenerator
+    name: MetroMapGenerator
+    type: Class
+  - uid: FareCalculator.Visualization.VisualizationDemo
+    name: VisualizationDemo
+    type: Class
+memberLayout: SamePage

@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.States
+  commentId: N:FareCalculator.States
+  id: FareCalculator.States
+  children:
+  - FareCalculator.States.BaseFareCalculationState
+  - FareCalculator.States.DiscountApplicationState
+  - FareCalculator.States.FinalCalculationState
+  - FareCalculator.States.InitialCalculationState
+  langs:
+  - csharp
+  - vb
+  name: FareCalculator.States
+  nameWithType: FareCalculator.States
+  fullName: FareCalculator.States
+  type: Namespace
+  assemblies:
+  - FareCalculator
+references:
+- uid: FareCalculator.States.BaseFareCalculationState
+  commentId: T:FareCalculator.States.BaseFareCalculationState
+  href: FareCalculator.States.BaseFareCalculationState.html
+  name: BaseFareCalculationState
+  nameWithType: BaseFareCalculationState
+  fullName: FareCalculator.States.BaseFareCalculationState
+- uid: FareCalculator.States.DiscountApplicationState
+  commentId: T:FareCalculator.States.DiscountApplicationState
+  href: FareCalculator.States.DiscountApplicationState.html
+  name: DiscountApplicationState
+  nameWithType: DiscountApplicationState
+  fullName: FareCalculator.States.DiscountApplicationState
+- uid: FareCalculator.States.FinalCalculationState
+  commentId: T:FareCalculator.States.FinalCalculationState
+  href: FareCalculator.States.FinalCalculationState.html
+  name: FinalCalculationState
+  nameWithType: FinalCalculationState
+  fullName: FareCalculator.States.FinalCalculationState
+- uid: FareCalculator.States.InitialCalculationState
+  commentId: T:FareCalculator.States.InitialCalculationState
+  href: FareCalculator.States.InitialCalculationState.html
+  name: InitialCalculationState
+  nameWithType: InitialCalculationState
+  fullName: FareCalculator.States.InitialCalculationState

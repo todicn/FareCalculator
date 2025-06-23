@@ -1,0 +1,512 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Configuration.PeakHourOptions
+  commentId: T:FareCalculator.Configuration.PeakHourOptions
+  id: PeakHourOptions
+  parent: FareCalculator.Configuration
+  children:
+  - FareCalculator.Configuration.PeakHourOptions.Surcharge
+  - FareCalculator.Configuration.PeakHourOptions.WeekdayEveningEnd
+  - FareCalculator.Configuration.PeakHourOptions.WeekdayEveningStart
+  - FareCalculator.Configuration.PeakHourOptions.WeekdayMorningEnd
+  - FareCalculator.Configuration.PeakHourOptions.WeekdayMorningStart
+  langs:
+  - csharp
+  - vb
+  name: PeakHourOptions
+  nameWithType: PeakHourOptions
+  fullName: FareCalculator.Configuration.PeakHourOptions
+  type: Class
+  source:
+    remote:
+      path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: PeakHourOptions
+    path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+    startLine: 115
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Configuration
+  summary: Configuration options for peak hour rules.
+  example: []
+  syntax:
+    content: public class PeakHourOptions
+    content.vb: Public Class PeakHourOptions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: FareCalculator.Configuration.PeakHourOptions.Surcharge
+  commentId: P:FareCalculator.Configuration.PeakHourOptions.Surcharge
+  id: Surcharge
+  parent: FareCalculator.Configuration.PeakHourOptions
+  langs:
+  - csharp
+  - vb
+  name: Surcharge
+  nameWithType: PeakHourOptions.Surcharge
+  fullName: FareCalculator.Configuration.PeakHourOptions.Surcharge
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Surcharge
+    path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+    startLine: 120
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Configuration
+  summary: Gets or sets the surcharge percentage for peak hours.
+  example: []
+  syntax:
+    content: public decimal Surcharge { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property Surcharge As Decimal
+  overload: FareCalculator.Configuration.PeakHourOptions.Surcharge*
+- uid: FareCalculator.Configuration.PeakHourOptions.WeekdayMorningStart
+  commentId: P:FareCalculator.Configuration.PeakHourOptions.WeekdayMorningStart
+  id: WeekdayMorningStart
+  parent: FareCalculator.Configuration.PeakHourOptions
+  langs:
+  - csharp
+  - vb
+  name: WeekdayMorningStart
+  nameWithType: PeakHourOptions.WeekdayMorningStart
+  fullName: FareCalculator.Configuration.PeakHourOptions.WeekdayMorningStart
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: WeekdayMorningStart
+    path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+    startLine: 125
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Configuration
+  summary: Gets or sets the weekday morning peak start hour.
+  example: []
+  syntax:
+    content: public int WeekdayMorningStart { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property WeekdayMorningStart As Integer
+  overload: FareCalculator.Configuration.PeakHourOptions.WeekdayMorningStart*
+- uid: FareCalculator.Configuration.PeakHourOptions.WeekdayMorningEnd
+  commentId: P:FareCalculator.Configuration.PeakHourOptions.WeekdayMorningEnd
+  id: WeekdayMorningEnd
+  parent: FareCalculator.Configuration.PeakHourOptions
+  langs:
+  - csharp
+  - vb
+  name: WeekdayMorningEnd
+  nameWithType: PeakHourOptions.WeekdayMorningEnd
+  fullName: FareCalculator.Configuration.PeakHourOptions.WeekdayMorningEnd
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: WeekdayMorningEnd
+    path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+    startLine: 130
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Configuration
+  summary: Gets or sets the weekday morning peak end hour.
+  example: []
+  syntax:
+    content: public int WeekdayMorningEnd { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property WeekdayMorningEnd As Integer
+  overload: FareCalculator.Configuration.PeakHourOptions.WeekdayMorningEnd*
+- uid: FareCalculator.Configuration.PeakHourOptions.WeekdayEveningStart
+  commentId: P:FareCalculator.Configuration.PeakHourOptions.WeekdayEveningStart
+  id: WeekdayEveningStart
+  parent: FareCalculator.Configuration.PeakHourOptions
+  langs:
+  - csharp
+  - vb
+  name: WeekdayEveningStart
+  nameWithType: PeakHourOptions.WeekdayEveningStart
+  fullName: FareCalculator.Configuration.PeakHourOptions.WeekdayEveningStart
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: WeekdayEveningStart
+    path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+    startLine: 135
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Configuration
+  summary: Gets or sets the weekday evening peak start hour.
+  example: []
+  syntax:
+    content: public int WeekdayEveningStart { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property WeekdayEveningStart As Integer
+  overload: FareCalculator.Configuration.PeakHourOptions.WeekdayEveningStart*
+- uid: FareCalculator.Configuration.PeakHourOptions.WeekdayEveningEnd
+  commentId: P:FareCalculator.Configuration.PeakHourOptions.WeekdayEveningEnd
+  id: WeekdayEveningEnd
+  parent: FareCalculator.Configuration.PeakHourOptions
+  langs:
+  - csharp
+  - vb
+  name: WeekdayEveningEnd
+  nameWithType: PeakHourOptions.WeekdayEveningEnd
+  fullName: FareCalculator.Configuration.PeakHourOptions.WeekdayEveningEnd
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: WeekdayEveningEnd
+    path: src/FareCalculator/Configuration/FareCalculationConfig.cs
+    startLine: 140
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Configuration
+  summary: Gets or sets the weekday evening peak end hour.
+  example: []
+  syntax:
+    content: public int WeekdayEveningEnd { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property WeekdayEveningEnd As Integer
+  overload: FareCalculator.Configuration.PeakHourOptions.WeekdayEveningEnd*
+references:
+- uid: FareCalculator.Configuration
+  commentId: N:FareCalculator.Configuration
+  href: FareCalculator.html
+  name: FareCalculator.Configuration
+  nameWithType: FareCalculator.Configuration
+  fullName: FareCalculator.Configuration
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Configuration
+    name: Configuration
+    href: FareCalculator.Configuration.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Configuration
+    name: Configuration
+    href: FareCalculator.Configuration.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FareCalculator.Configuration.PeakHourOptions.Surcharge*
+  commentId: Overload:FareCalculator.Configuration.PeakHourOptions.Surcharge
+  href: FareCalculator.Configuration.PeakHourOptions.html#FareCalculator_Configuration_PeakHourOptions_Surcharge
+  name: Surcharge
+  nameWithType: PeakHourOptions.Surcharge
+  fullName: FareCalculator.Configuration.PeakHourOptions.Surcharge
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: FareCalculator.Configuration.PeakHourOptions.WeekdayMorningStart*
+  commentId: Overload:FareCalculator.Configuration.PeakHourOptions.WeekdayMorningStart
+  href: FareCalculator.Configuration.PeakHourOptions.html#FareCalculator_Configuration_PeakHourOptions_WeekdayMorningStart
+  name: WeekdayMorningStart
+  nameWithType: PeakHourOptions.WeekdayMorningStart
+  fullName: FareCalculator.Configuration.PeakHourOptions.WeekdayMorningStart
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: FareCalculator.Configuration.PeakHourOptions.WeekdayMorningEnd*
+  commentId: Overload:FareCalculator.Configuration.PeakHourOptions.WeekdayMorningEnd
+  href: FareCalculator.Configuration.PeakHourOptions.html#FareCalculator_Configuration_PeakHourOptions_WeekdayMorningEnd
+  name: WeekdayMorningEnd
+  nameWithType: PeakHourOptions.WeekdayMorningEnd
+  fullName: FareCalculator.Configuration.PeakHourOptions.WeekdayMorningEnd
+- uid: FareCalculator.Configuration.PeakHourOptions.WeekdayEveningStart*
+  commentId: Overload:FareCalculator.Configuration.PeakHourOptions.WeekdayEveningStart
+  href: FareCalculator.Configuration.PeakHourOptions.html#FareCalculator_Configuration_PeakHourOptions_WeekdayEveningStart
+  name: WeekdayEveningStart
+  nameWithType: PeakHourOptions.WeekdayEveningStart
+  fullName: FareCalculator.Configuration.PeakHourOptions.WeekdayEveningStart
+- uid: FareCalculator.Configuration.PeakHourOptions.WeekdayEveningEnd*
+  commentId: Overload:FareCalculator.Configuration.PeakHourOptions.WeekdayEveningEnd
+  href: FareCalculator.Configuration.PeakHourOptions.html#FareCalculator_Configuration_PeakHourOptions_WeekdayEveningEnd
+  name: WeekdayEveningEnd
+  nameWithType: PeakHourOptions.WeekdayEveningEnd
+  fullName: FareCalculator.Configuration.PeakHourOptions.WeekdayEveningEnd

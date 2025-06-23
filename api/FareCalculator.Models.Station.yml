@@ -1,0 +1,756 @@
+### YamlMime:ManagedReference
+items:
+- uid: FareCalculator.Models.Station
+  commentId: T:FareCalculator.Models.Station
+  id: Station
+  parent: FareCalculator.Models
+  children:
+  - FareCalculator.Models.Station.Id
+  - FareCalculator.Models.Station.IsTransferStation
+  - FareCalculator.Models.Station.Latitude
+  - FareCalculator.Models.Station.Longitude
+  - FareCalculator.Models.Station.MetroLineIds
+  - FareCalculator.Models.Station.Name
+  - FareCalculator.Models.Station.StationType
+  - FareCalculator.Models.Station.Zone
+  langs:
+  - csharp
+  - vb
+  name: Station
+  nameWithType: Station
+  fullName: FareCalculator.Models.Station
+  type: Class
+  source:
+    remote:
+      path: src/FareCalculator/Models/Station.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Station
+    path: src/FareCalculator/Models/Station.cs
+    startLine: 5
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Represents a metro station with its location, zone information, and geographical coordinates.
+  example: []
+  syntax:
+    content: public class Station
+    content.vb: Public Class Station
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: FareCalculator.Models.Station.Id
+  commentId: P:FareCalculator.Models.Station.Id
+  id: Id
+  parent: FareCalculator.Models.Station
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Station.Id
+  fullName: FareCalculator.Models.Station.Id
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/Station.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Id
+    path: src/FareCalculator/Models/Station.cs
+    startLine: 11
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the unique identifier for the station.
+  example: []
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: A positive integer that uniquely identifies the station within the metro system.
+    content.vb: Public Property Id As Integer
+  overload: FareCalculator.Models.Station.Id*
+- uid: FareCalculator.Models.Station.Name
+  commentId: P:FareCalculator.Models.Station.Name
+  id: Name
+  parent: FareCalculator.Models.Station
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Station.Name
+  fullName: FareCalculator.Models.Station.Name
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/Station.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Name
+    path: src/FareCalculator/Models/Station.cs
+    startLine: 17
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the name of the station.
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: The human-readable name of the station as displayed to passengers.
+    content.vb: Public Property Name As String
+  overload: FareCalculator.Models.Station.Name*
+- uid: FareCalculator.Models.Station.Zone
+  commentId: P:FareCalculator.Models.Station.Zone
+  id: Zone
+  parent: FareCalculator.Models.Station
+  langs:
+  - csharp
+  - vb
+  name: Zone
+  nameWithType: Station.Zone
+  fullName: FareCalculator.Models.Station.Zone
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/Station.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Zone
+    path: src/FareCalculator/Models/Station.cs
+    startLine: 23
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the fare zone designation for the station.
+  example: []
+  syntax:
+    content: public string Zone { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: A string identifier (e.g., "A", "B", "C") indicating which fare zone the station belongs to.
+    content.vb: Public Property Zone As String
+  overload: FareCalculator.Models.Station.Zone*
+- uid: FareCalculator.Models.Station.Latitude
+  commentId: P:FareCalculator.Models.Station.Latitude
+  id: Latitude
+  parent: FareCalculator.Models.Station
+  langs:
+  - csharp
+  - vb
+  name: Latitude
+  nameWithType: Station.Latitude
+  fullName: FareCalculator.Models.Station.Latitude
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/Station.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Latitude
+    path: src/FareCalculator/Models/Station.cs
+    startLine: 29
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the latitude coordinate of the station's geographical location.
+  example: []
+  syntax:
+    content: public double Latitude { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+      description: The latitude in decimal degrees, used for distance calculations between stations.
+    content.vb: Public Property Latitude As Double
+  overload: FareCalculator.Models.Station.Latitude*
+- uid: FareCalculator.Models.Station.Longitude
+  commentId: P:FareCalculator.Models.Station.Longitude
+  id: Longitude
+  parent: FareCalculator.Models.Station
+  langs:
+  - csharp
+  - vb
+  name: Longitude
+  nameWithType: Station.Longitude
+  fullName: FareCalculator.Models.Station.Longitude
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/Station.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: Longitude
+    path: src/FareCalculator/Models/Station.cs
+    startLine: 35
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the longitude coordinate of the station's geographical location.
+  example: []
+  syntax:
+    content: public double Longitude { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+      description: The longitude in decimal degrees, used for distance calculations between stations.
+    content.vb: Public Property Longitude As Double
+  overload: FareCalculator.Models.Station.Longitude*
+- uid: FareCalculator.Models.Station.MetroLineIds
+  commentId: P:FareCalculator.Models.Station.MetroLineIds
+  id: MetroLineIds
+  parent: FareCalculator.Models.Station
+  langs:
+  - csharp
+  - vb
+  name: MetroLineIds
+  nameWithType: Station.MetroLineIds
+  fullName: FareCalculator.Models.Station.MetroLineIds
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/Station.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: MetroLineIds
+    path: src/FareCalculator/Models/Station.cs
+    startLine: 41
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the collection of metro line IDs that serve this station.
+  example: []
+  syntax:
+    content: public List<int> MetroLineIds { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Int32}
+      description: A list of metro line identifiers indicating which lines stop at this station.
+    content.vb: Public Property MetroLineIds As List(Of Integer)
+  overload: FareCalculator.Models.Station.MetroLineIds*
+- uid: FareCalculator.Models.Station.IsTransferStation
+  commentId: P:FareCalculator.Models.Station.IsTransferStation
+  id: IsTransferStation
+  parent: FareCalculator.Models.Station
+  langs:
+  - csharp
+  - vb
+  name: IsTransferStation
+  nameWithType: Station.IsTransferStation
+  fullName: FareCalculator.Models.Station.IsTransferStation
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/Station.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: IsTransferStation
+    path: src/FareCalculator/Models/Station.cs
+    startLine: 47
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets a value indicating whether this station is a transfer station.
+  example: []
+  syntax:
+    content: public bool IsTransferStation { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: True if the station allows transfers between different metro lines; otherwise, false.
+    content.vb: Public Property IsTransferStation As Boolean
+  overload: FareCalculator.Models.Station.IsTransferStation*
+- uid: FareCalculator.Models.Station.StationType
+  commentId: P:FareCalculator.Models.Station.StationType
+  id: StationType
+  parent: FareCalculator.Models.Station
+  langs:
+  - csharp
+  - vb
+  name: StationType
+  nameWithType: Station.StationType
+  fullName: FareCalculator.Models.Station.StationType
+  type: Property
+  source:
+    remote:
+      path: src/FareCalculator/Models/Station.cs
+      branch: fare-calculator
+      repo: https://github.com/todicn/FareCalculator.git
+    id: StationType
+    path: src/FareCalculator/Models/Station.cs
+    startLine: 53
+  assemblies:
+  - FareCalculator
+  namespace: FareCalculator.Models
+  summary: Gets or sets the station type (e.g., "Standard", "Express", "Terminal").
+  example: []
+  syntax:
+    content: public string StationType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: A string describing the type or category of the station.
+    content.vb: Public Property StationType As String
+  overload: FareCalculator.Models.Station.StationType*
+references:
+- uid: FareCalculator.Models
+  commentId: N:FareCalculator.Models
+  href: FareCalculator.html
+  name: FareCalculator.Models
+  nameWithType: FareCalculator.Models
+  fullName: FareCalculator.Models
+  spec.csharp:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+  spec.vb:
+  - uid: FareCalculator
+    name: FareCalculator
+    href: FareCalculator.html
+  - name: .
+  - uid: FareCalculator.Models
+    name: Models
+    href: FareCalculator.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FareCalculator.Models.Station.Id*
+  commentId: Overload:FareCalculator.Models.Station.Id
+  href: FareCalculator.Models.Station.html#FareCalculator_Models_Station_Id
+  name: Id
+  nameWithType: Station.Id
+  fullName: FareCalculator.Models.Station.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: FareCalculator.Models.Station.Name*
+  commentId: Overload:FareCalculator.Models.Station.Name
+  href: FareCalculator.Models.Station.html#FareCalculator_Models_Station_Name
+  name: Name
+  nameWithType: Station.Name
+  fullName: FareCalculator.Models.Station.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: FareCalculator.Models.Station.Zone*
+  commentId: Overload:FareCalculator.Models.Station.Zone
+  href: FareCalculator.Models.Station.html#FareCalculator_Models_Station_Zone
+  name: Zone
+  nameWithType: Station.Zone
+  fullName: FareCalculator.Models.Station.Zone
+- uid: FareCalculator.Models.Station.Latitude*
+  commentId: Overload:FareCalculator.Models.Station.Latitude
+  href: FareCalculator.Models.Station.html#FareCalculator_Models_Station_Latitude
+  name: Latitude
+  nameWithType: Station.Latitude
+  fullName: FareCalculator.Models.Station.Latitude
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: FareCalculator.Models.Station.Longitude*
+  commentId: Overload:FareCalculator.Models.Station.Longitude
+  href: FareCalculator.Models.Station.html#FareCalculator_Models_Station_Longitude
+  name: Longitude
+  nameWithType: Station.Longitude
+  fullName: FareCalculator.Models.Station.Longitude
+- uid: FareCalculator.Models.Station.MetroLineIds*
+  commentId: Overload:FareCalculator.Models.Station.MetroLineIds
+  href: FareCalculator.Models.Station.html#FareCalculator_Models_Station_MetroLineIds
+  name: MetroLineIds
+  nameWithType: Station.MetroLineIds
+  fullName: FareCalculator.Models.Station.MetroLineIds
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<int>
+  nameWithType: List<int>
+  fullName: System.Collections.Generic.List<int>
+  nameWithType.vb: List(Of Integer)
+  fullName.vb: System.Collections.Generic.List(Of Integer)
+  name.vb: List(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: FareCalculator.Models.Station.IsTransferStation*
+  commentId: Overload:FareCalculator.Models.Station.IsTransferStation
+  href: FareCalculator.Models.Station.html#FareCalculator_Models_Station_IsTransferStation
+  name: IsTransferStation
+  nameWithType: Station.IsTransferStation
+  fullName: FareCalculator.Models.Station.IsTransferStation
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: FareCalculator.Models.Station.StationType*
+  commentId: Overload:FareCalculator.Models.Station.StationType
+  href: FareCalculator.Models.Station.html#FareCalculator_Models_Station_StationType
+  name: StationType
+  nameWithType: Station.StationType
+  fullName: FareCalculator.Models.Station.StationType
